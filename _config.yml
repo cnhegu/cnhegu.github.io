@@ -23,9 +23,9 @@ email: comitist@gmail.com
 description: Attention is All You Need.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://www.hegu.me" # the base hostname & protocol for your site, e.g. http://example.com
-X_username: NullCause
-github_username:  cnhegu
-
+twitter_username: NullCause
+github_username: cnhegu
+facebook_username: xchegu
 # Build settings
 theme: minima
 plugins:
