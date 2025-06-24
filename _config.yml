@@ -21,7 +21,7 @@
 title: 何故小站
 email: comitist@gmail.com
 description: Attention is All You Need.
-baseurl: "/blog" # the subpath of your site, e.g. /blog
+baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://www.hegu.me" # the base hostname & protocol for your site, e.g. http://example.com
 X_username: NullCause
 github_username:  cnhegu
