@@ -31,25 +31,6 @@ theme: minima
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
-  - simple-jekyll-search # 添加这一行
-
-# Simple-Jekyll-Search 配置
-simple_jekyll_search:
-  output: true # 确保生成 search.json 文件
-  limit: 10 # 搜索结果数量限制
-  min_length: 3 # 最小搜索字符数
-  fields: # 定义搜索字段及其权重
-    - title
-    - categories
-    - tags
-    - content
-  path: '/assets/search.json' # 搜索索引文件的路径，确保可访问
-  template: | # 搜索结果的 HTML 模板，这将在搜索页面中呈现每个结果
-    <article>
-      <h3><a href="{url}" title="{title}">{title}</a></h3>
-      <p>{snippet}</p>
-    </article>
-  name: search_page # 给搜索页面起个名字，这将影响生成的 HTML 文件名
 
 # - jekyll-gist # 如果您启用了，这里会有
 # Google Analytics 4 (GA4) 配置 - 添加或修改这一行
