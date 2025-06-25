@@ -8,20 +8,19 @@ layout: default # 或者你的主模板文件，如 base.html
 
   <div class="post-content">
     {{ content }} </div><script src="https://giscus.app/client.js"
-        data-repo="cnhegu/cnhegu.github.io"
-        data-repo-id="R_kgDOPA0cjA"
-        data-category="General"
-        data-category-id="DIC_kwDOPA0cjM4Cr7Ov"
-        data-mapping="title"
+        data-repo="[在此输入仓库]"
+        data-repo-id="[在此输入仓库 ID]"
+        data-category="[在此输入分类名]"
+        data-category-id="[在此输入分类 ID]"
+        data-mapping="pathname"
         data-strict="0"
         data-reactions-enabled="1"
         data-emit-metadata="0"
         data-input-position="bottom"
-        data-theme="dark"
+        data-theme="light_high_contrast"
         data-lang="zh-CN"
         crossorigin="anonymous"
         async>
 </script>
-
   ---
   </article>
