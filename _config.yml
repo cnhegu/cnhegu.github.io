@@ -30,6 +30,11 @@ facebook_username: xchegu
 theme: minima
 plugins:
   - jekyll-feed
+  - jekyll-seo-tag
+# - jekyll-gist # 如果您启用了，这里会有
+
+# Google Analytics 4 (GA4) 配置 - 添加或修改这一行
+google_analytics: G-4BMXNHL73E # <-- 把这里替换成您的实际衡量 ID，例如 G-ABCDEF1234
 future: true
 paginate: 5 # 每页显示的文章数量
 paginate_path: "/page:num/" # 分页链接的路径结构，:num 会被页码替换
