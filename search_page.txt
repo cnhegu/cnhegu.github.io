@@ -1,0 +1,74 @@
+---
+layout: default # 使用你的默认布局，确保页面有完整的头部和底部
+title: 文章搜索
+permalink: /search/ # 定义这个页面的 URL，方便在导航栏链接
+---
+
+<div class="search-container">
+  <h1>文章搜索</h1>
+  <input type="text" id="search-input" placeholder="输入关键词进行搜索...">
+  <div id="search-results"></div>
+</div>
+
+<script src="{{ '/assets/js/simple-jekyll-search.min.js' | relative_url }}"></script>
+<script>
+  SimpleJekyllSearch({
+    searchInput: document.getElementById('search-input'),
+    resultsContainer: document.getElementById('search-results'),
+    json: '{{ site.simple_jekyll_search.path }}', // 使用 _config.yml 中定义的 JSON 路径
+    searchResultTemplate: '{{ site.simple_jekyll_search.template | remove: "\n" | remove: "\r" | remove: '"' | replace: "'", "\'" }}',
+    noResultsText: '未找到相关文章。',
+    limit: {{ site.simple_jekyll_search.limit | default: 10 }},
+    fuzzy: false, // 设为 true 启用模糊搜索，设为 false 精确匹配
+    // 其他 Simple-Jekyll-Search 选项可以根据需要添加
+  });
+</script>
+
+<style>
+  /* 简单的搜索页面样式，你可以放到你的主 CSS 文件中 */
+  .search-container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  }
+  .search-container h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  #search-input {
+    width: calc(100% - 22px); /* 减去 border */
+    padding: 10px;
+    font-size: 1.1em;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box; /* 包含 padding 和 border 在宽度内 */
+    margin-bottom: 20px;
+  }
+  #search-results article {
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px dashed #eee;
+  }
+  #search-results article:last-child {
+    border-bottom: none;
+  }
+  #search-results h3 {
+    margin-top: 0;
+    font-size: 1.2em;
+    margin-bottom: 5px;
+  }
+  #search-results h3 a {
+    text-decoration: none;
+    color: #007bff; /* 链接颜色 */
+    font-weight: bold;
+  }
+  #search-results p {
+    font-size: 0.9em;
+    color: #666;
+    line-height: 1.5;
+  }
+</style>
