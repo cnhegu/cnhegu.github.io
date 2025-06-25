@@ -22,6 +22,5 @@ layout: default # 或者你的主模板文件，如 base.html
         crossorigin="anonymous"
         async>
 </script>
-
-  ---
+---
   </article>
