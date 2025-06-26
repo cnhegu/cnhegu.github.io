@@ -1,8 +1,7 @@
 header class=site-header role=banner
 <nav class="site-nav">
   <a class="page-link" href="{{ "/about/" | relative_url }}">About</a>
-  <a class="page-link" href="{{ "/search/" | relative_url }}">Search</a> {# 注意这里的链接是 /search/ #}
-</nav>
+  </nav>
   div class=wrapper
     {%- assign default_paths = site.pages  map path -%}
     {%- assign page_paths = site.header_pages  default default_paths -%}
