@@ -19,8 +19,6 @@
 # in the templates via {{ site.myvariable }}.
 
 title: 何故小站
-author: 何故
-  name: 
 email: #comitist@gmail.com
 description: Attention is All You Need.
 baseurl: "" # the subpath of your site, e.g. /blog
@@ -28,6 +26,8 @@ url: "http://www.hegu.me" # the base hostname & protocol for your site, e.g. htt
 twitter_username: NullCause
 github_username: cnhegu
 facebook_username: xchegu
+author:
+  name: 何故
 
 # Build settings
 theme: minima
