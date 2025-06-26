@@ -26,7 +26,6 @@ url: "http://www.hegu.me" # the base hostname & protocol for your site, e.g. htt
 twitter_username: NullCause
 github_username: cnhegu
 facebook_username: xchegu
-youtube_username: @xchegu
 
 # Build settings
 theme: minima
