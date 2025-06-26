@@ -2,22 +2,13 @@
   <data class="u-url" href="{{ "/" | relative_url }}"></data>
 
   <div class="wrapper">
-
-    <h2 class="footer-heading">{{ site.title | escape }}</h2> {# <-- 唯一保留的站点标题输出 #}
+    {# 原来的 h2 标题已删除 #}
 
     <div class="footer-col-wrapper">
       <div class="footer-col footer-col-1">
         <ul class="contact-list">
           <li class="p-name">
-            {# 直接删除或注释掉整个 if/else 块，避免任何关于 author 或 title 的不确定输出 #}
-            {# 原代码：
-            {%- if site.author -%}
-              {{ site.author | escape }}
-            {%- else -%}
-              {# {{ site.title | escape }} #}
-            {%- endif -%}
-            #}
-            {# 如果您想在这里放作者名或您的名字，可以手动写死，例如： #}
+            {# 已确认此处显示的是 Hegu，而非 "何故小站" #}
             Hegu
           </li>
           {%- if site.email -%}
@@ -27,7 +18,7 @@
       </div>
 
       <div class="footer-col footer-col-2">
-        {%- include social.html -%} {# 此文件已确认无重复 #}
+        {%- include social.html -%}
       </div>
 
       <div class="footer-col footer-col-3">
