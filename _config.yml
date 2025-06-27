@@ -20,8 +20,8 @@
 
 
 title: 何故小站
-author:
-  name: 何故
+author: 何故
+name: #何故
 email: comitist@gmail.com
 description: Attention is All You Need.
 baseurl: "" # the subpath of your site, e.g. /blog
