@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "Article Search"
+title: "Search"
 permalink: /search/
 ---
 
