@@ -18,19 +18,18 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: 何故小站
+
 title: 何故小站
 author:
   name: 何故
-email: #comitist@gmail.com
+email: comitist@gmail.com
 description: Attention is All You Need.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://www.hegu.me" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: NullCause
 github_username: cnhegu
 facebook_username: xchegu
-author:
-  name: 何故
+
 
 # Build settings
 theme: minima
