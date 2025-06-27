@@ -1,5 +1,10 @@
 <header class="site-header" role="banner">
-  <div class="wrapper">
+  <div class="wrapper" style="display: flex; align-items: center;">
+    <!-- GitHub Logo 左侧添加 -->
+    <a href="https://github.com/cnhegu" target="_blank" class="site-github-logo" style="display:inline-block;margin-right:12px;">
+      <img src="/assets/images/github-logo.png" alt="GitHub" style="height:32px;width:32px;">
+      <!-- 你的 logo 路径可以根据实际存放位置调整 -->
+    </a>
     <a class="site-title" rel="author" href="{{ '/' | relative_url }}">{{ site.title | escape }}</a>
 
     {%- assign default_paths = site.pages | map: "path" -%}
