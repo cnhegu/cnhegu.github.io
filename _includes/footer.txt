@@ -2,14 +2,17 @@
   <data class="u-url" href="{{ "/" | relative_url }}"></data>
 
   <div class="wrapper">
-    {# 原来的 h2 标题已删除 #}
+    {# 确保这里没有 <h2 class="footer-heading">{{ site.title | escape }}</h2> #}
 
     <div class="footer-col-wrapper">
       <div class="footer-col footer-col-1">
         <ul class="contact-list">
           <li class="p-name">
-            {# 已确认此处显示的是 Hegu，而非 "何故小站" #}
-            Hegu
+            {# 这里是关键！确保这里不是 "何故小站" 或 {{ site.title }} #}
+            {# 如果您想显示作者名，手动写在这里，例如： #}
+            hegu
+            {# 或者，如果您不想显示任何作者/名称，这里就留空： #}
+            {# <li class="p-name"></li> #}
           </li>
           {%- if site.email -%}
           <li><a class="u-email" href="mailto:{{ site.email }}">{{ site.email }}</a></li>
