@@ -21,7 +21,5 @@ layout: default # 或者你的主模板文件，如 base.html
         data-lang="zh-CN"
         crossorigin="anonymous"
         async>
-</script>
-<script src="https://cdn.consentmanager.net/trackless/delivery/fe975432a5df.js" async type="text/javascript"></script>
 ---
   </article>
