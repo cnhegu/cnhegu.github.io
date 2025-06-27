@@ -1,12 +1,11 @@
 <header class="site-header" role="banner">
   <nav class="site-nav">
-    <a class="page-link" href="{{ '/about/' | relative_url }}">About</a>
-  </nav>
-  <script async src="https://cse.google.com/cse.js?cx=b3909f465b7bb41d5">
+    <a class="page-link" href="{{ '/about/' | relative_url }}">About</a><script async src="https://cse.google.com/cse.js?cx=b3909f465b7bb41d5">
   </script>
   <div class="gcse-searchbox-only"></div>
+  </nav>
 
-  <div class="wrapper">
+ <div class="wrapper">
     {%- assign default_paths = site.pages | map: "path" -%}
     {%- assign page_paths = site.header_pages | default: default_paths -%}
 
