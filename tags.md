@@ -1,15 +1,17 @@
 ---
 layout: page
-title: "Tags"
+title: Tags
 permalink: /tags/
 ---
 
-{% for tag in site.tags %}
-  <h2 id="{{ tag | first | slugify }}">{{ tag | first }}</h2>
+<h1>所有标签</h1>
+
+{% assign tags = site.tags | sort %}
+{% for tag in tags %}
+  <h2 id="{{ tag | slugify }}">{{ tag }}</h2>
   <ul>
-    {% for post in tag | last %}
+    {% for post in site.tags[tag] %}
       <li><a href="{{ post.url | relative_url }}">{{ post.title }}</a></li>
     {% endfor %}
   </ul>
-{% endfor %}
--
+{% endfor %} 
