@@ -3,7 +3,8 @@
 
   <div class="wrapper">
 
-    {# <h2 class="footer-heading">{{ site.title | escape }}</h2> #} 
+    {# <h2 class="footer-heading">{{ site.title | escape }}</h2> #} {# <-- 这一行被注释掉了 #}
+    {# 或者您可以直接删除上面这一行 #}
 
     <div class="footer-col-wrapper">
       <div class="footer-col footer-col-1">
@@ -20,7 +21,7 @@
       </div>
 
       <div class="footer-col footer-col-3">
-        <p>{{ site.description | escape }}</p>
+        <p>{{ site.description | escape }}</p> {# 如果您也不希望显示描述，也可以在这里删除或注释掉 #}
       </div>
     </div>
 
