@@ -3,10 +3,8 @@
 
   <div class="wrapper">
 
-    {# <h2 class="footer-heading">{{ site.title | escape }}</h2> #} {# <-- 这一行被注释掉了 #}
-    {# 或者您可以直接删除上面这一行 #}
-
-    <div class="footer-col-wrapper">
+    
+  <div class="footer-col-wrapper">
       <div class="footer-col footer-col-1">
         <ul class="contact-list">
           <li class="p-name">{{ site.author | escape }}</li>
