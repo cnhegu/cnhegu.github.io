@@ -71,6 +71,22 @@
   </div>
   {% endif %}
 
+<script src="https://giscus.app/client.js"
+        data-repo="cnhegu/cnhegu.github.io"
+        data-repo-id="R_kgDOPA0cjA"
+        data-category="comment"
+        data-category-id="DIC_kwDOPA0cjM4Cr9b6"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="bottom"
+        data-theme="light_high_contrast"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+
   <a class="back-link" href="{{ "/" | relative_url }}">← Back to Home</a>
 </body>
 </html>
