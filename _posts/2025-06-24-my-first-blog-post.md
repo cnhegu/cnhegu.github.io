@@ -3,11 +3,9 @@ layout: post # Ensure this is 'post' unless you have customized layouts
 title: "My First Blog Post"
 date: 2025-06-24 11:00:00 +0800 # Precise to the second, with timezone
 categories: 
-  - jekyll
-  - update # Blog categories (optional)
+- jekyll # Blog categories (optional)
 tags: 
-  - tutorial
-  - beginner # Tags (optional, separated by spaces or commas depending on theme)
+- beginner # Tags (optional, separated by spaces or commas depending on theme)
 ---
 
 Welcome to my blog!
