@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: page # 或者你的页面布局，比如 default
 title: Tags
 permalink: /tags/
 ---
@@ -14,4 +14,4 @@ permalink: /tags/
       <li><a href="{{ post.url | relative_url }}">{{ post.title }}</a></li>
     {% endfor %}
   </ul>
-{% endfor %} 
+{% endfor %}
