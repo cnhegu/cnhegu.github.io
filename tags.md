@@ -4,7 +4,7 @@ title: Tags
 permalink: /tags/ # 这是标签页面的 URL，例如 https://www.hegu.me/tags/
 ---
 
-<h1>所有标签</h1>
+
 
 
 {% assign sorted_tags = site.tags | sort %}
