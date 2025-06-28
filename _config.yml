@@ -26,7 +26,7 @@ telegram_username: ynfct
 email: comitist@gmail.com
 description: Attention is All You Need.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://www.hegu.me" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://www.hegu.me" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: NullCause
 github_username: cnhegu
 facebook_username: xchegu
