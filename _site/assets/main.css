@@ -14,7 +14,7 @@ dl, dd, ol, ul, figure {
 body {
   font: 400 16px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   color: #FFFFFF;
-  background-color: #2b283a;
+  background-color: #05152f;
   -webkit-text-size-adjust: 100%;
   -webkit-font-feature-settings: "kern" 1;
   -moz-font-feature-settings: "kern" 1;
@@ -125,7 +125,7 @@ code {
   font-size: 15px;
   border: 1px solid #e8e8e8;
   border-radius: 3px;
-  background-color: #eef;
+  background-color: rgb(4, 21, 42);
 }
 
 code {
@@ -263,7 +263,7 @@ table td {
     text-align: right;
   }
   .site-nav label[for=nav-trigger] {
-    display: block;
+    display: none;
     float: right;
     width: 36px;
     height: 36px;
@@ -390,7 +390,7 @@ table td {
 
 .post-meta {
   font-size: 14px;
-  color: #828282;
+  color: #FFFFFF;
 }
 
 .post-link {
