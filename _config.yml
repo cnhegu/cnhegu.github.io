@@ -22,7 +22,6 @@
 title: 何故小站 #不在页脚显示
 author: 何故
 
-telegram_username: ynfct
 email: comitist@gmail.com
 description: ©2025 hegu.me All rights reserved.
 baseurl: "" # the subpath of your site, e.g. /blog
@@ -44,9 +43,6 @@ google_analytics: G-4BMXNHL73E # <-- 把这里替换成您的实际衡量 ID，�
 future: true
 paginate: 5 # 每页显示的文章数量
 paginate_path: "/page:num/" # 分页链接的路径结构，:num 会被页码替换
-
-
-
 
 
 # Exclude from processing.
