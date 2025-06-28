@@ -71,6 +71,9 @@
   </div>
   {% endif %}
 
+<a class="back-link" href="{{ "/" | relative_url }}">← Back to Home</a>
+</body>
+
 <script src="https://giscus.app/client.js"
         data-repo="cnhegu/cnhegu.github.io"
         data-repo-id="R_kgDOPA0cjA"
@@ -87,6 +90,4 @@
         async>
 </script>
 
-  <a class="back-link" href="{{ "/" | relative_url }}">← Back to Home</a>
-</body>
 </html>
