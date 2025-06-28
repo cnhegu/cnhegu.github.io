@@ -45,9 +45,7 @@ future: true
 paginate: 5 # 每页显示的文章数量
 paginate_path: "/page:num/" # 分页链接的路径结构，:num 会被页码替换
 
-nav:
-  - title: "Categories"
-    url: "/categories/"
+
 
 
 
