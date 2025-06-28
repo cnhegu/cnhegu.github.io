@@ -13,8 +13,8 @@ dl, dd, ol, ul, figure {
  */
 body {
   font: 400 16px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-  color: #FFFFFF;
-  background-color: #05152f;
+  color: #FFFFFF; /* 全局文字颜色改为白色 */
+  background-color: #0d1117; /* 类似 GitHub 的深蓝色背景 */
   -webkit-text-size-adjust: 100%;
   -webkit-font-feature-settings: "kern" 1;
   -moz-font-feature-settings: "kern" 1;
@@ -60,6 +60,7 @@ figure > img {
 
 figcaption {
   font-size: 14px;
+  color: #c9d1d9; /* 调整标题颜色，确保在深色背景下可见 */
 }
 
 /**
@@ -79,20 +80,21 @@ li > ol {
  */
 h1, h2, h3, h4, h5, h6 {
   font-weight: 400;
+  color: #FFFFFF; /* 标题颜色改为白色 */
 }
 
 /**
  * Links
  */
 a {
-  color: #2a7ae2;
+  color: #2a7ae2; /* 链接颜色保持不变 */
   text-decoration: none;
 }
 a:visited {
-  color: rgb(22.9483471074, 86.2541322314, 168.5516528926);
+  color: #58a6ff; /* 访问过的链接颜色，可以稍微调整使其在深色背景下更明显 */
 }
 a:hover {
-  color: #111;
+  color: #8be9fd; /* 鼠标悬停时颜色可以更亮，提高可见性 */
   text-decoration: underline;
 }
 .social-media-list a:hover {
@@ -107,7 +109,7 @@ a:hover {
  */
 blockquote {
   color: #828282;
-  border-left: 4px solid #e8e8e8;
+  border-left: 4px solid #444; /* 边框颜色调整为深色背景下的浅色 */
   padding-left: 15px;
   font-size: 18px;
   letter-spacing: -1px;
@@ -123,9 +125,10 @@ blockquote > :last-child {
 pre,
 code {
   font-size: 15px;
-  border: 1px solid #e8e8e8;
+  border: 1px solid #333; /* 边框颜色调整 */
   border-radius: 3px;
-  background-color: rgb(4, 21, 42);
+  background-color: #161b22; /* 代码块背景色调整为深色 */
+  color: #c9d1d9; /* 代码文字颜色调整为浅色 */
 }
 
 code {
@@ -178,7 +181,7 @@ pre > code {
   width: 16px;
   height: 16px;
   display: inline-block;
-  fill: #828282;
+  fill: #c9d1d9; /* 图标填充色调整 */
   padding-right: 5px;
   vertical-align: text-top;
 }
@@ -194,31 +197,31 @@ table {
   margin-bottom: 30px;
   width: 100%;
   text-align: left;
-  color: rgb(62.9, 62.9, 62.9);
+  color: #c9d1d9; /* 表格文字颜色改为浅色 */
   border-collapse: collapse;
-  border: 1px solid #e8e8e8;
+  border: 1px solid #333; /* 边框颜色调整 */
 }
 table tr:nth-child(even) {
-  background-color: rgb(247.3, 247.3, 247.3);
+  background-color: #1a222c; /* 偶数行背景色调整 */
 }
 table th, table td {
   padding: 9.999999999px 15px;
 }
 table th {
-  background-color: rgb(239.65, 239.65, 239.65);
-  border: 1px solid rgb(221.8, 221.8, 221.8);
-  border-bottom-color: rgb(201.4, 201.4, 201.4);
+  background-color: #21262d; /* 表头背景色调整 */
+  border: 1px solid #333; /* 边框颜色调整 */
+  border-bottom-color: #444; /* 边框颜色调整 */
 }
 table td {
-  border: 1px solid #e8e8e8;
+  border: 1px solid #333; /* 边框颜色调整 */
 }
 
 /**
  * Site header
  */
 .site-header {
-  border-top: 5px solid rgb(66.25, 66.25, 66.25);
-  border-bottom: 1px solid #e8e8e8;
+  border-top: 5px solid #21262d; /* 顶部边框颜色调整 */
+  border-bottom: 1px solid #333; /* 底部边框颜色调整 */
   min-height: 55.95px;
   position: relative;
 }
@@ -232,7 +235,7 @@ table td {
   float: left;
 }
 .site-title, .site-title:visited {
-  color: rgb(66.25, 66.25, 66.25);
+  color: #c9d1d9; /* 站点标题颜色调整为浅色 */
 }
 
 .site-nav {
@@ -246,7 +249,7 @@ table td {
   display: none;
 }
 .site-nav .page-link {
-  color: #111;
+  color: #c9d1d9; /* 导航链接颜色调整 */
   line-height: 1.5;
 }
 .site-nav .page-link:not(:last-child) {
@@ -257,8 +260,8 @@ table td {
     position: absolute;
     top: 9px;
     right: 15px;
-    background-color: #fdfdfd;
-    border: 1px solid #e8e8e8;
+    background-color: #161b22; /* 移动端导航背景色调整 */
+    border: 1px solid #333; /* 移动端导航边框颜色调整 */
     border-radius: 5px;
     text-align: right;
   }
@@ -280,7 +283,7 @@ table td {
     text-align: center;
   }
   .site-nav .menu-icon > svg {
-    fill: rgb(66.25, 66.25, 66.25);
+    fill: #c9d1d9; /* 移动端菜单图标颜色调整 */
   }
   .site-nav input ~ .trigger {
     clear: both;
@@ -304,13 +307,14 @@ table td {
  * Site footer
  */
 .site-footer {
-  border-top: 1px solid #e8e8e8;
+  border-top: 1px solid #333; /* 底部边框颜色调整 */
   padding: 30px 0;
 }
 
 .footer-heading {
   font-size: 18px;
   margin-bottom: 15px;
+  color: #c9d1d9; /* 底部标题颜色调整 */
 }
 
 .contact-list,
@@ -321,7 +325,7 @@ table td {
 
 .footer-col-wrapper {
   font-size: 15px;
-  color: #828282;
+  color: #828282; /* 底部文字颜色保持不变，或者根据需要调整为更浅的颜色 */
   margin-left: -15px;
 }
 
@@ -374,10 +378,12 @@ table td {
 
 .page-heading {
   font-size: 32px;
+  color: #FFFFFF; /* 页面标题颜色改为白色 */
 }
 
 .post-list-heading {
   font-size: 28px;
+  color: #FFFFFF; /* 文章列表标题颜色改为白色 */
 }
 
 .post-list {
@@ -390,12 +396,13 @@ table td {
 
 .post-meta {
   font-size: 14px;
-  color: #FFFFFF;
+  color: #c9d1d9; /* 文章元数据颜色调整为浅色 */
 }
 
 .post-link {
   display: block;
   font-size: 24px;
+  color: #FFFFFF; /* 文章链接标题颜色改为白色 */
 }
 
 /**
@@ -409,6 +416,7 @@ table td {
   font-size: 42px;
   letter-spacing: -1px;
   line-height: 1;
+  color: #FFFFFF; /* 文章标题颜色改为白色 */
 }
 @media screen and (max-width: 800px) {
   .post-title {
@@ -418,9 +426,11 @@ table td {
 
 .post-content {
   margin-bottom: 30px;
+  color: #c9d1d9; /* 文章内容文字颜色改为浅灰色，与白色形成对比 */
 }
 .post-content h2 {
   font-size: 32px;
+  color: #FFFFFF; /* 文章内二级标题颜色改为白色 */
 }
 @media screen and (max-width: 800px) {
   .post-content h2 {
@@ -429,6 +439,7 @@ table td {
 }
 .post-content h3 {
   font-size: 26px;
+  color: #FFFFFF; /* 文章内三级标题颜色改为白色 */
 }
 @media screen and (max-width: 800px) {
   .post-content h3 {
@@ -437,6 +448,7 @@ table td {
 }
 .post-content h4 {
   font-size: 20px;
+  color: #FFFFFF; /* 文章内四级标题颜色改为白色 */
 }
 @media screen and (max-width: 800px) {
   .post-content h4 {
@@ -448,202 +460,210 @@ table td {
  * Syntax highlighting styles
  */
 .highlight {
-  background: #4a50807e;
+  background: #21262d; /* 代码块整体背景色调整 */
+  color: #c9d1d9; /* 代码文字颜色 */
 }
 .highlighter-rouge .highlight {
-  background: #eef;
+  background: #21262d; /* 确保 Rouge 高亮器的背景色也一致 */
 }
 .highlight .c {
-  color: #998;
+  color: #8b949e; /* 注释颜色 */
   font-style: italic;
 }
 .highlight .err {
-  color: #a61717;
-  background-color: #e3d2d2;
+  color: #f85149; /* 错误颜色 */
+  background-color: #6a0000;
 }
 .highlight .k {
+  color: #ff7b72; /* 关键字 */
   font-weight: bold;
 }
 .highlight .o {
+  color: #d2a8ff; /* 运算符 */
   font-weight: bold;
 }
 .highlight .cm {
-  color: #998;
+  color: #8b949e; /* 多行注释 */
   font-style: italic;
 }
 .highlight .cp {
-  color: #999;
+  color: #8b949e; /* 预处理器指令 */
   font-weight: bold;
 }
 .highlight .c1 {
-  color: #998;
+  color: #8b949e; /* 单行注释 */
   font-style: italic;
 }
 .highlight .cs {
-  color: #999;
+  color: #8b949e; /* 文档注释 */
   font-weight: bold;
   font-style: italic;
 }
 .highlight .gd {
-  color: #000;
-  background-color: #fdd;
+  color: #f85149; /* 删除行 */
+  background-color: #490202;
 }
 .highlight .gd .x {
-  color: #000;
-  background-color: #faa;
+  color: #f85149;
+  background-color: #6a0000;
 }
 .highlight .ge {
   font-style: italic;
 }
 .highlight .gr {
-  color: #a00;
+  color: #f85149; /* 严重错误 */
 }
 .highlight .gh {
-  color: #999;
+  color: #c9d1d9; /* 高亮头部 */
 }
 .highlight .gi {
-  color: #000;
-  background-color: #dfd;
+  color: #56d364; /* 插入行 */
+  background-color: #0c2602;
 }
 .highlight .gi .x {
-  color: #000;
-  background-color: #afa;
+  color: #56d364;
+  background-color: #0c2602;
 }
 .highlight .go {
-  color: #888;
+  color: #8b949e; /* 垃圾输出 */
 }
 .highlight .gp {
-  color: #555;
+  color: #c9d1d9; /* shell 提示符 */
 }
 .highlight .gs {
   font-weight: bold;
 }
 .highlight .gu {
-  color: #aaa;
+  color: #8b949e; /* 高亮组 */
 }
 .highlight .gt {
-  color: #a00;
+  color: #f85149; /* 追踪 */
 }
 .highlight .kc {
+  color: #ff7b72; /* 关键字常量 */
   font-weight: bold;
 }
 .highlight .kd {
+  color: #ff7b72; /* 关键字声明 */
   font-weight: bold;
 }
 .highlight .kp {
+  color: #ff7b72; /* 关键字伪类 */
   font-weight: bold;
 }
 .highlight .kr {
+  color: #ff7b72; /* 关键字保留 */
   font-weight: bold;
 }
 .highlight .kt {
-  color: #458;
+  color: #8be9fd; /* 类型 */
   font-weight: bold;
 }
 .highlight .m {
-  color: #099;
+  color: #79c0ff; /* 数字 */
 }
 .highlight .s {
-  color: #d14;
+  color: #a5d6ff; /* 字符串 */
 }
 .highlight .na {
-  color: #008080;
+  color: #79c0ff; /* 属性名称 */
 }
 .highlight .nb {
-  color: #0086B3;
+  color: #ff7b72; /* 内建 */
 }
 .highlight .nc {
-  color: #458;
+  color: #8be9fd; /* 类名称 */
   font-weight: bold;
 }
 .highlight .no {
-  color: #008080;
+  color: #79c0ff; /* 常量 */
 }
 .highlight .ni {
-  color: #800080;
+  color: #d2a8ff; /* 插入 */
 }
 .highlight .ne {
-  color: #900;
+  color: #ff7b72; /* 异常 */
   font-weight: bold;
 }
 .highlight .nf {
-  color: #900;
+  color: #d2a8ff; /* 函数名称 */
   font-weight: bold;
 }
 .highlight .nn {
-  color: #555;
+  color: #c9d1d9; /* 命名空间 */
 }
 .highlight .nt {
-  color: #000080;
+  color: #79c0ff; /* 标签名称 */
 }
 .highlight .nv {
-  color: #008080;
+  color: #79c0ff; /* 变量名称 */
 }
 .highlight .ow {
+  color: #d2a8ff; /* 运算符字 */
   font-weight: bold;
 }
 .highlight .w {
-  color: #bbb;
+  color: #8b949e; /* 空白 */
 }
 .highlight .mf {
-  color: #099;
+  color: #79c0ff; /* 浮点数 */
 }
 .highlight .mh {
-  color: #099;
+  color: #79c0ff; /* 十六进制数 */
 }
 .highlight .mi {
-  color: #099;
+  color: #79c0ff; /* 整数 */
 }
 .highlight .mo {
-  color: #099;
+  color: #79c0ff; /* 八进制数 */
 }
 .highlight .sb {
-  color: #d14;
+  color: #a5d6ff; /* 单引号字符串 */
 }
 .highlight .sc {
-  color: #d14;
+  color: #a5d6ff; /* 字符 */
 }
 .highlight .sd {
-  color: #d14;
+  color: #a5d6ff; /* 文档字符串 */
 }
 .highlight .s2 {
-  color: #d14;
+  color: #a5d6ff; /* 双引号字符串 */
 }
 .highlight .se {
-  color: #d14;
+  color: #a5d6ff; /* 转义序列 */
 }
 .highlight .sh {
-  color: #d14;
+  color: #a5d6ff; /* shell 字符串 */
 }
 .highlight .si {
-  color: #d14;
+  color: #a5d6ff; /* 插入 */
 }
 .highlight .sx {
-  color: #d14;
+  color: #a5d6ff; /* 其他字符串 */
 }
 .highlight .sr {
-  color: #009926;
+  color: #56d364; /* 正则表达式 */
 }
 .highlight .s1 {
-  color: #d14;
+  color: #a5d6ff; /* 单引号字符串 */
 }
 .highlight .ss {
-  color: #990073;
+  color: #d2a8ff; /* 符号 */
 }
 .highlight .bp {
-  color: #999;
+  color: #8b949e; /* 内建伪变量 */
 }
 .highlight .vc {
-  color: #008080;
+  color: #79c0ff; /* 类变量 */
 }
 .highlight .vg {
-  color: #008080;
+  color: #79c0ff; /* 全局变量 */
 }
 .highlight .vi {
-  color: #008080;
+  color: #79c0ff; /* 实例变量 */
 }
 .highlight .il {
-  color: #099;
+  color: #79c0ff; /* 长整数 */
 }
 
 /*# sourceMappingURL=main.css.map */
