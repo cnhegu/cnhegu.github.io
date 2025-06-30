@@ -1,10 +1,14 @@
 <header class="site-header" role="banner">
-  <div class="wrapper header-flex">
+  <div class="wrapper"> {# 移除了 header-flex 类，因为 SCSS 中 .site-header .wrapper 已经负责其布局 #}
     <a class="site-title" rel="author" href="{{ '/' | relative_url }}">{{ site.title | escape }}</a>
+
     <input type="checkbox" id="nav-trigger" class="nav-trigger" />
     <label for="nav-trigger" class="nav-toggle" aria-label="菜单">
-      <span></span><span></span><span></span>
+      <span></span>
+      <span></span>
+      <span></span>
     </label>
+
     <nav class="site-nav">
       <ul>
         {% for item in site.nav %}
