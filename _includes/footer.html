@@ -2,7 +2,6 @@
   <data class="u-url" href="{{ "/" | relative_url }}"></data>
   <div class="wrapper">
     <div class="footer-col-wrapper">
-      <!-- 作者与联系方式 -->
       <div class="footer-col footer-col-1">
         <ul class="contact-list">
           <li class="p-name">{{ site.author | escape }}</li>
@@ -12,15 +11,14 @@
         </ul>
       </div>
 
-      <!-- 社交账号 -->
       <div class="footer-col footer-col-2">
         {% if site.social_links %}
         <ul class="social-icons">
-          {% for key, url in site.social_links %}
+          {% for item in site.social_links %}
             <li>
-              <a href="{{ url }}" target="_blank" rel="noopener noreferrer" title="{{ key }}">
+              <a href="{{ item[1] }}" target="_blank" rel="noopener noreferrer" title="{{ item[0] }}">
                 <svg class="svg-icon">
-                  <use xlink:href="{{ '/assets/minima-social-icons.svg#' | append: key | relative_url }}"></use>
+                  <use xlink:href="{{ '/assets/minima-social-icons.svg#' | append: item[0] | relative_url }}"></use>
                 </svg>
               </a>
             </li>
@@ -31,8 +29,7 @@
         {% endif %}
       </div>
 
-      <!-- 站点描述及版权备案 -->
-      <div class="footer-col footer-col-3">
+    <div class="footer-col footer-col-3">
         <p>{{ site.description | escape }}</p>
         {% if site.copyright %}
           <p style="margin-top:1em;color:#888;font-size:0.92em;">{{ site.copyright }}</p>
