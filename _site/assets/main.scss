@@ -1,35 +1,35 @@
 @charset "utf-8";
 
 // ===================
-// 基础变量设置
+// 基础变量设置（保持不变）
 // ===================
 $base-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
-$base-font-size:   16px !default;
+$base-font-size:   16px !default;
 $base-font-weight: 400 !default;
-$small-font-size:  $base-font-size * 0.875 !default;
+$small-font-size:  $base-font-size * 0.875 !default;
 $base-line-height: 1.5 !default;
-$spacing-unit:     30px !default;
+$spacing-unit:     30px !default;
 
 // ===================
-// 颜色方案（暗色为主）
+// 颜色方案（暗色为主，保持不变）
 // ===================
-$text-color:       #c9d1d9 !default;   // 主文字浅灰
-$background-color: #0d1117 !default;   // 深色背景
-$brand-color:      #2a7ae2 !default;   // 品牌蓝
-$grey-color:       #8b949e !default;   // 边框/次要文字
-$grey-color-light: #21262d !default;   // 浅灰背景
-$grey-color-dark:  #010409 !default;   // 深灰hover等
+$text-color:       #c9d1d9 !default;   // 主文字浅灰
+$background-color: #0d1117 !default;   // 深色背景
+$brand-color:      #2a7ae2 !default;   // 品牌蓝
+$grey-color:       #8b949e !default;   // 边框/次要文字
+$grey-color-light: #21262d !default;   // 浅灰背景
+$grey-color-dark:  #010409 !default;   // 深灰hover等
 
 // ===================
-// 表格、内容宽度等
+// 表格、内容宽度等（保持不变）
 // ===================
 $table-text-align: left !default;
-$content-width:    800px !default;
-$on-palm:          600px !default;
-$on-laptop:        800px !default;
+$content-width:    800px !default;
+$on-palm:          600px !default;
+$on-laptop:        800px !default;
 
 // ===================
-// 响应式 Mixin
+// 响应式 Mixin（保持不变）
 // ===================
 @mixin media-query($device) {
   @media screen and (max-width: $device) {
@@ -42,7 +42,7 @@ $on-laptop:        800px !default;
 }
 
 // ===================
-// 全局基础样式
+// 全局基础样式（保持不变）
 // ===================
 body {
   background: $background-color;
@@ -96,6 +96,19 @@ table {
   padding: 0 $spacing-unit / 2;
 }
 
+// ===================
+// 引入 minima 主题默认样式 (!!! 将它放在自定义样式之前 !!!)
+// ===================
+@import
+  "minima/base",
+  "minima/layout",
+  "minima/syntax-highlighting"
+;
+
+// ===================
+// 在这里放置你的所有自定义样式，确保它们在 minima 导入之后
+// ===================
+
 // ---
 // **头部区域**
 // 实现博客名称与导航栏横向排列的关键部分
@@ -106,17 +119,15 @@ table {
   line-height: 56px; /* 垂直居中 */
   position: relative; /* 为绝对定位的导航菜单提供上下文 */
   background: $background-color; /* 确保背景色 */
-  padding: 0 $spacing-unit / 2; /* 左右内边距 */
+  // padding: 0 $spacing-unit / 2; /* 左右内边距，wrapper已经有 */
 
   .wrapper {
     display: flex; /* 启用 Flexbox */
     align-items: center; /* 垂直居中对齐 */
     justify-content: space-between; /* 博客名称和导航栏推到两边 */
-
-    @include media-query($on-palm) {
-      justify-content: flex-start; /* 移动端标题靠左，汉堡菜单靠右 */
-      gap: 1em; /* 移动端元素间距 */
-    }
+    // 移除 Minima 默认的浮动影响
+    float: none;
+    width: auto;
   }
 }
 
@@ -125,12 +136,8 @@ table {
   font-weight: bold;
   color: $text-color;
   text-decoration: none;
-  margin-right: 2em; /* 与导航的间隔 */
+  // margin-right: 2em; /* 与导航的间隔，可以调整 */
   white-space: nowrap; /* 防止标题换行 */
-
-  @include media-query($on-palm) {
-    margin-right: auto; /* 移动端推开汉堡菜单 */
-  }
 }
 
 // ---
@@ -138,8 +145,12 @@ table {
 // ---
 .site-nav {
   /* 桌面端默认样式 */
+  // 移除 Minima 默认的浮动影响
+  float: none;
+  width: auto;
   flex-grow: 1; /* 占据剩余空间 */
   text-align: right; /* 导航链接靠右 */
+  line-height: inherit; /* 继承 site-header 的行高 */
 
   ul {
     margin: 0;
@@ -151,7 +162,7 @@ table {
   }
 
   li {
-    display: inline-block; /* 兼容性写法，虽然flexbox下一般不需要 */
+    display: inline-block; /* 兼容性写法 */
   }
 
   a {
@@ -176,7 +187,7 @@ table {
 // ---
 /* 汉堡菜单开关（隐藏的 checkbox） */
 .nav-trigger {
-  display: none; /* 始终隐藏 checkbox */
+  display: none !important; /* !! 确保彻底隐藏 !! */
 }
 
 /* 汉堡图标样式 */
@@ -191,6 +202,7 @@ table {
   margin-left: auto; /* 推到最右边 */
   z-index: 30; /* 确保在最上层 */
   padding: 5px; /* 增加点击区域 */
+  order: 2; /* 确保在移动端时排在导航后面 */
 
   span {
     display: block;
@@ -276,7 +288,7 @@ table {
 }
 
 // ---
-// **社交图标栏样式**
+// **社交图标栏样式** (以及所有其他你自定义的样式，放在这里)
 // ---
 .social-icons {
   display: flex;
@@ -304,9 +316,7 @@ table {
   }
 }
 
-// ---
-// **文章页 header、tags、返回按钮等细节美化**
-// ---
+// 文章页 header、tags、返回按钮等细节美化
 .post-header {
   border-bottom: 1px solid $grey-color;
   margin-bottom: 2em;
@@ -356,12 +366,3 @@ table {
     padding-right: $spacing-unit / 4;
   }
 }
-
-// ===================
-// 引入 minima 主题默认样式（可选）
-// ===================
-@import
-  "minima/base",
-  "minima/layout",
-  "minima/syntax-highlighting"
-;
