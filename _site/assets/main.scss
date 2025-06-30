@@ -97,7 +97,8 @@ table {
 }
 
 // ===================
-// 引入 minima 主题默认样式 (!!! 将它放在自定义样式之前 !!!)
+// !!! 关键步骤 !!!
+// 引入 minima 主题默认样式 (必须放在你自定义样式之前)
 // ===================
 @import
   "minima/base",
@@ -106,7 +107,8 @@ table {
 ;
 
 // ===================
-// 在这里放置你的所有自定义样式，确保它们在 minima 导入之后
+// 在这里放置你的所有自定义样式。
+// 因为它们在 @import 之后，所以会覆盖 minima 的默认规则。
 // ===================
 
 // ---
@@ -119,15 +121,17 @@ table {
   line-height: 56px; /* 垂直居中 */
   position: relative; /* 为绝对定位的导航菜单提供上下文 */
   background: $background-color; /* 确保背景色 */
-  // padding: 0 $spacing-unit / 2; /* 左右内边距，wrapper已经有 */
 
   .wrapper {
-    display: flex; /* 启用 Flexbox */
-    align-items: center; /* 垂直居中对齐 */
+    // 强制使用 Flexbox 布局来横向排列标题和导航
+    display: flex !important; /* !! 强制覆盖 Minima 的 display: block; !! */
+    align-items: center;     /* 垂直居中对齐 */
     justify-content: space-between; /* 博客名称和导航栏推到两边 */
+
     // 移除 Minima 默认的浮动影响
-    float: none;
-    width: auto;
+    float: none !important;
+    width: auto !important;
+    padding: 0 $spacing-unit / 2; /* 左右内边距 */
   }
 }
 
@@ -136,7 +140,7 @@ table {
   font-weight: bold;
   color: $text-color;
   text-decoration: none;
-  // margin-right: 2em; /* 与导航的间隔，可以调整 */
+  // margin-right: 2em; /* 与导航的间隔，如果需要可以再加 */
   white-space: nowrap; /* 防止标题换行 */
 }
 
@@ -144,19 +148,19 @@ table {
 // **主导航样式**
 // ---
 .site-nav {
-  /* 桌面端默认样式 */
-  // 移除 Minima 默认的浮动影响
-  float: none;
-  width: auto;
+  // 强制移除 Minima 默认的浮动影响
+  float: none !important;
+  width: auto !important;
+  line-height: inherit !important; /* 强制继承 site-header 的行高 */
   flex-grow: 1; /* 占据剩余空间 */
   text-align: right; /* 导航链接靠右 */
-  line-height: inherit; /* 继承 site-header 的行高 */
 
   ul {
     margin: 0;
     padding: 0;
     list-style: none;
-    display: flex; /* 横向排列导航链接 */
+    // 强制使用 Flexbox 来横向排列导航链接
+    display: flex !important; /* !! 强制覆盖 Minima 的默认样式 !! */
     justify-content: flex-end; /* 导航链接靠右对齐 */
     gap: 1.5em; /* 链接间距 */
   }
@@ -187,7 +191,8 @@ table {
 // ---
 /* 汉堡菜单开关（隐藏的 checkbox） */
 .nav-trigger {
-  display: none !important; /* !! 确保彻底隐藏 !! */
+  // 强制隐藏复选框，确保它不会显示
+  display: none !important; /* !!! 最关键的修复之一 !!! */
 }
 
 /* 汉堡图标样式 */
