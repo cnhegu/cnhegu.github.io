@@ -1,0 +1,218 @@
+@charset "utf-8";
+
+// ===================
+// 基础变量设置
+// ===================
+$base-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
+$base-font-size:   16px !default;
+$base-font-weight: 400 !default;
+$small-font-size:  $base-font-size * 0.875 !default;
+$base-line-height: 1.5 !default;
+$spacing-unit:     30px !default;
+
+// ===================
+// 颜色方案（暗色为主）
+// ===================
+$text-color:       #c9d1d9 !default;   // 主文字浅灰
+$background-color: #0d1117 !default;   // 深色背景
+$brand-color:      #2a7ae2 !default;   // 品牌蓝
+$grey-color:       #8b949e !default;   // 边框/次要文字
+$grey-color-light: #21262d !default;   // 浅灰背景
+$grey-color-dark:  #010409 !default;   // 深灰hover等
+
+// ===================
+// 表格、内容宽度等
+// ===================
+$table-text-align: left !default;
+$content-width:    800px !default;
+$on-palm:          600px !default;
+$on-laptop:        800px !default;
+
+// ===================
+// 响应式 Mixin
+// ===================
+@mixin media-query($device) {
+  @media screen and (max-width: $device) {
+    @content;
+  }
+}
+
+@mixin relative-font-size($ratio) {
+  font-size: $base-font-size * $ratio;
+}
+
+// ===================
+// 全局基础样式
+// ===================
+body {
+  background: $background-color;
+  color: $text-color;
+  font-family: $base-font-family;
+  font-size: $base-font-size;
+  font-weight: $base-font-weight;
+  line-height: $base-line-height;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
+
+a {
+  color: $brand-color;
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: $text-color;
+  margin-top: 1.5em;
+  margin-bottom: .5em;
+  font-weight: 600;
+}
+
+code, pre {
+  background: $grey-color-light;
+  color: $text-color;
+  font-family: "Fira Mono", "Menlo", "Monaco", "Consolas", monospace;
+  border-radius: 3px;
+  padding: 2px 6px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5em 0;
+  th, td {
+    border: 1px solid $grey-color;
+    padding: 8px 12px;
+    text-align: $table-text-align;
+  }
+}
+
+.container, .wrapper {
+  max-width: $content-width;
+  margin: 0 auto;
+  padding: 0 $spacing-unit / 2;
+}
+
+// 自定义导航栏样式
+.site-nav {
+  background: $grey-color-light;
+  padding: 0.5em 0;
+  margin-bottom: 2em;
+
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 1.5em;
+  }
+
+  li {
+    display: inline-block;
+  }
+
+  a {
+    color: $text-color;
+    font-weight: 500;
+    font-size: 1.1em;
+    padding: 6px 16px;
+    border-radius: 4px;
+    transition: background 0.2s, color 0.2s;
+
+    &:hover,
+    &.active {
+      background: $brand-color;
+      color: #fff;
+      text-decoration: none;
+    }
+  }
+}
+
+// 社交图标栏样式
+.social-icons {
+  display: flex;
+  gap: 1em;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  a {
+    display: inline-flex;
+    align-items: center;
+    color: inherit;
+    transition: color 0.2s;
+    &:hover {
+      color: $brand-color;
+    }
+  }
+
+  .svg-icon {
+    width: 1.4em;
+    height: 1.4em;
+    fill: currentColor;
+    vertical-align: middle;
+  }
+}
+
+// 文章页 header、tags、返回按钮等细节美化
+.post-header {
+  border-bottom: 1px solid $grey-color;
+  margin-bottom: 2em;
+}
+
+.post-title {
+  font-size: 2em;
+  margin: 0;
+}
+
+.post-date {
+  color: $grey-color;
+  font-size: 0.95em;
+  margin-top: 0.5em;
+}
+
+.tags {
+  margin-top: 1em;
+  font-size: 0.85em;
+  color: $grey-color;
+  span {
+    background: $grey-color-light;
+    padding: 0.2em 0.5em;
+    border-radius: 4px;
+    margin-right: 0.5em;
+    color: $text-color;
+  }
+}
+
+.back-link {
+  display: block;
+  margin-top: 3em;
+  font-size: 0.95em;
+  color: $brand-color;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+// 响应式优化
+@include media-query($on-palm) {
+  .container, .wrapper {
+    max-width: 100%;
+    padding-left: $spacing-unit / 4;
+    padding-right: $spacing-unit / 4;
+  }
+}
+
+// ===================
+// 引入 minima 主题默认样式（可选）
+// ===================
+@import
+  "minima/base",
+  "minima/layout",
+  "minima/syntax-highlighting"
+;
