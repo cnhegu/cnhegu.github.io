@@ -1,7 +1,10 @@
 <header class="site-header" role="banner">
-  <div class="wrapper">
+  <div class="wrapper header-flex">
     <a class="site-title" rel="author" href="{{ '/' | relative_url }}">{{ site.title | escape }}</a>
-
+    <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+    <label for="nav-trigger" class="nav-toggle" aria-label="菜单">
+      <span></span><span></span><span></span>
+    </label>
     <nav class="site-nav">
       <ul>
         {% for item in site.nav %}

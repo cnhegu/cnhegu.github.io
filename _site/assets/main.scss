@@ -207,7 +207,124 @@ table {
     padding-right: $spacing-unit / 4;
   }
 }
+.header-flex {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 2em;
+  position: relative;
+}
 
+.site-title {
+  font-size: 1.6em;
+  font-weight: bold;
+  color: $text-color;
+  text-decoration: none;
+  margin-right: 2em;
+  white-space: nowrap;
+}
+
+/* 经典横排菜单 */
+.site-nav ul {
+  display: flex;
+  gap: 1.5em;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.site-nav li {
+  display: inline-block;
+}
+
+.site-nav a {
+  color: $text-color;
+  font-weight: 500;
+  font-size: 1.1em;
+  padding: 6px 16px;
+  border-radius: 4px;
+  transition: background 0.2s, color 0.2s;
+  &:hover,
+  &.active {
+    background: $brand-color;
+    color: #fff;
+    text-decoration: none;
+  }
+}
+
+/* 汉堡菜单开关（隐藏） */
+.nav-trigger {
+  display: none;
+}
+
+/* 汉堡图标样式 */
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  cursor: pointer;
+  margin-left: auto;
+  z-index: 30;
+}
+.nav-toggle span {
+  display: block;
+  width: 28px;
+  height: 4px;
+  margin: 4px auto;
+  background: $text-color;
+  border-radius: 2px;
+  transition: all 0.3s;
+}
+
+/* 移动端适配 */
+@media (max-width: 700px) {
+  .header-flex {
+    gap: 1em;
+  }
+  .site-nav ul {
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 92vw;
+    max-width: 340px;
+    background: $grey-color-light;
+    border-radius: 0 0 10px 10px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.13);
+    padding: 1em 1em 1.5em 1.5em;
+    margin-top: 5px;
+    transform: translateX(-110%);
+    transition: transform 0.3s;
+    z-index: 20;
+  }
+  .site-nav li {
+    margin-bottom: 0.6em;
+  }
+  .nav-toggle {
+    display: flex;
+  }
+  .nav-trigger:checked ~ .nav-toggle span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+  .nav-trigger:checked ~ .nav-toggle span:nth-child(2) {
+    opacity: 0;
+  }
+  .nav-trigger:checked ~ .nav-toggle span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+  .nav-trigger:checked ~ .site-nav ul {
+    transform: translateX(0);
+  }
+  .site-nav ul {
+    /* 默认隐藏 */
+    pointer-events: none;
+  }
+  .nav-trigger:checked ~ .site-nav ul {
+    pointer-events: auto;
+  }
+}
 // ===================
 // 引入 minima 主题默认样式（可选）
 // ===================
