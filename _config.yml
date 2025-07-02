@@ -1,4 +1,16 @@
-# https://learnxinyminutes.com/docs/yaml/ 
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely edit after that. If you find
+# yourself editing this file very often, consider using Jekyll's data files
+# feature for the data you need to update frequently.
+#
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
+#
+# If you need help with YAML syntax, here are some quick references for you:
+# https://learn-the-web.algonquindesign.ca/topics/markdown-yaml-cheat-sheet/#yaml
+# https://learnxinyminutes.com/docs/yaml/
 #
 # Site settings
 # These are used to personalize your new site. If you look in the HTML files,
@@ -6,65 +18,49 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: 何故小站
+
+title: 何故小站 #不在页脚显示
 author: 何故
-# 删除此处的 nav 及其下方所有内容：
-# nav:
-#   - title: 分类
-#     url: /categories/
-#   - title: 标签
-#     url: /tags/
-#   - title: 归档
-#     url: /archive/
-#   - title: 关于
-#     url: /about/
 
 email: comitist@gmail.com
-description: 何故小站，分享技术、生活与随笔。
-keywords: 个人博客,技术分享,生活随笔,何故
+description: ©2025 hegu.me All rights reserved.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://www.hegu.me" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: NullCause
 github_username: cnhegu
 facebook_username: xchegu
-youtube_username: xchegu
-# 其他支持的图标：dribbble, flickr, googleplus, instagram, linkedin, mastodon, pinterest, rss, stackoverflow, youtube
 
-# 社交链接，用于页脚图标显示
-social_links:
-  github: https://github.com/cnhegu
-  twitter: https://twitter.com/NullCause
-  facebook: https://facebook.com/xchegu
-  youtube: https://www.youtube.com/@xchegu
-  # 可继续添加 dribbble、flickr、linkedin、rss 等
-
-copyright: ©2025 hegu.me All rights reserved.
-icp: 沪ICP备XXXXXXX号
 
 # Build settings
 theme: minima
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
-  - jekyll-sitemap
-  - jekyll-minifier
+
 # - jekyll-gist # 如果您启用了，这里会有
-
-# Google Analytics 4 (GA4) 配置
-google_analytics: G-4BMXNHL73E # <-- 替换成您的实际衡量 ID
-
+# Google Analytics 4 (GA4) 配置 - 添加或修改这一行
+google_analytics: G-4BMXNHL73E # <-- 把这里替换成您的实际衡量 ID，例如 G-ABCDEF1234
 future: true
 paginate: 5 # 每页显示的文章数量
 paginate_path: "/page:num/" # 分页链接的路径结构，:num 会被页码替换
 
+
 # Exclude from processing.
-exclude:
-  - .sass-cache/
-  - .jekyll-cache/
-  - gemfiles/
-  - Gemfile
-  - Gemfile.lock
-  - node_modules/
-  - vendor/
-  - README.md
-  - LICENSE
+# The following items will not be processed, by default.
+# Any item listed under the `exclude:` key here will be automatically added to
+# the internal "default list".
+#
+# Excluded items can be processed by explicitly listing the directories or
+# their entries' file path in the `include:` list.
+#
+# exclude:
+#   - .sass-cache/
+#   - .jekyll-cache/
+#   - gemfiles/
+#   - Gemfile
+#   - Gemfile.lock
+#   - node_modules/
+#   - vendor/bundle/
+#   - vendor/cache/
+#   - vendor/gems/
+#   - vendor/ruby/
