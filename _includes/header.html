@@ -1,24 +1,17 @@
-<header class="site-header" role="banner">
+<header class="site-header">
   <div class="wrapper">
-<a class="site-title" rel="author" href="{{ '/' | relative_url }}">{{ site.title | escape }}</a>
+    <div class="site-title-container">
+      <a class="site-title" href="{{ "/" | relative_url }}">{{ site.title }}</a>
+    </div>
 
-    <input type="checkbox" id="nav-trigger" class="nav-trigger" />
-    <label for="nav-trigger" class="nav-toggle" aria-label="菜单">
-      <span></span>
-      <span></span>
-      <span></span>
-    </label>
-
-    <nav class="site-nav">
-      <ul>
-        {% for item in site.nav %}
-          <li>
-            <a href="{{ item.url | relative_url }}"{% if page.url == item.url %} class="active"{% endif %}>
-              {{ item.title }}
-            </a>
+    <nav class="main-nav">
+      <ul class="nav-list">
+        {% for item in site.data.navigation %}
+          <li class="nav-item{% if page.url == item.url %} active{% endif %}">
+            <a href="{{ item.url | relative_url }}">{{ item.title }}</a>
           </li>
         {% endfor %}
       </ul>
     </nav>
-  </div>
+    </div>
 </header>
