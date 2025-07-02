@@ -68,71 +68,88 @@ table td { border: 1px solid #e8e8e8; }
 ---
 
 /**
- * 站点头部与导航栏样式
- * 整合了站点标题和新的导航栏布局。
+ * 站点头部与导航栏样式 - 主标题与分支导航风格
  */
 .site-header {
   border-top: 5px solid #424242;
   border-bottom: 1px solid #e8e8e8;
-  padding: 15px 0; /* 增加头部上下内边距 */
-  text-align: center; /* 默认让标题和导航整体居中 */
+  padding: 15px 0;
+  text-align: center; /* 居中所有内容 */
+  display: flex; /* 使用 Flexbox */
+  flex-direction: column; /* 垂直排列标题和导航区 */
+  align-items: center; /* 居中内容 */
 }
 
-/* 博客标题容器 */
-.site-title-container {
-  margin-bottom: 15px; /* 标题与导航之间的间距 */
-}
-
-.site-title {
-  font-size: 26px;
-  font-weight: 300;
-  line-height: 1.5; /* 调整行高，使其看起来更自然 */
+/* 博客主标题 - 保持 H1 级别字体大小 */
+.site-title-combined {
+  font-size: 42px; /* 保持 H1 级别字体大小 */
+  font-weight: 400; /* 可以调整字重 */
+  line-height: 1.2;
+  margin: 0 0 15px 0; /* 底部留白，与导航区隔开 */
   letter-spacing: -1px;
-  margin: 0; /* 移除默认margin，由父容器控制间距 */
-  color: #424242;
-  display: inline-block; /* 保持标题为行内块，以便居中 */
-}
-.site-title:visited {
-  color: #424242;
 }
 
-/* 主导航栏样式 */
-.main-nav {
-  margin-top: 0;
+.site-title-combined a {
+  color: #424242; /* 标题链接颜色 */
+  text-decoration: none;
+}
+.site-title-combined a:visited {
+  color: #424242;
+}
+.site-title-combined a:hover {
+  color: #2a7ae2;
+  text-decoration: underline;
 }
 
-.main-nav .nav-list {
+/* 主导航栏样式 - 作为 H1 标题的分支 */
+.main-nav-h1-style {
+  width: 100%; /* 确保导航占据全部宽度，便于居中 */
+  margin-top: 0; /* 移除额外的顶部间距 */
+}
+
+.nav-list-h1-style {
   list-style: none; /* 移除列表默认样式 */
   margin: 0;
   padding: 0;
   display: flex; /* 使用 Flexbox 实现横向布局 */
   justify-content: center; /* 导航项水平居中 */
   flex-wrap: wrap; /* 如果导航项过多，允许换行 */
+  gap: 25px; /* 导航项之间的间距 */
 }
 
-.main-nav .nav-item {
-  margin: 0 15px; /* 导航项之间的水平间距 */
+.nav-item-h1-style {
+  /* margin 已经被 gap 代替，保持简洁 */
 }
 
-.main-nav .nav-item a {
+.nav-item-h1-style a {
   color: #555; /* 导航链接颜色 */
   text-decoration: none; /* 移除链接下划线 */
-  padding: 8px 0; /* 调整填充，确保点击区域足够 */
+  padding: 8px 12px; /* 增加内边距，使点击区域更舒适 */
   display: block; /* 使整个链接区域可点击 */
   transition: color 0.3s ease, border-bottom 0.3s ease; /* 添加过渡效果 */
-  font-weight: 400; /* 默认字体粗细 */
+  font-size: 22px; /* 导航项字体大小，比 H1 小，但比普通文本大 */
+  font-weight: 400; /* 可以调整字重，使其不那么抢眼 */
+  line-height: 1.5;
 }
 
-.main-nav .nav-item a:hover {
-  color: #2a7ae2; /* 鼠标悬停时的链接颜色 (与现有链接颜色保持一致) */
+.nav-item-h1-style a:hover {
+  color: #2a7ae2; /* 鼠标悬停时的链接颜色 */
   text-decoration: underline; /* 鼠标悬停时显示下划线 */
 }
 
-.main-nav .nav-item.active a {
+.nav-item-h1-style.active a {
   color: #2a7ae2; /* 当前页面的链接颜色 */
   font-weight: 600; /* 当前页面链接加粗 */
   border-bottom: 2px solid #2a7ae2; /* 当前页面底部高亮线 */
   text-decoration: none; /* 移除当前页面的下划线 */
+}
+
+/* 确保 .wrapper 在头部也能正常工作，但其最大宽度限制不变 */
+.site-header .wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
 }
 
 /* 针对小屏幕的导航样式调整 */
@@ -140,20 +157,17 @@ table td { border: 1px solid #e8e8e8; }
   .site-header {
     padding: 10px 0; /* 小屏幕下头部内边距减少 */
   }
-  .site-title-container {
+  .site-title-combined {
+    font-size: 32px; /* 小屏幕下标题字体减小 */
     margin-bottom: 10px;
   }
-  .site-title {
-    font-size: 22px; /* 小屏幕下标题字体减小 */
-  }
-  .main-nav .nav-list {
+  .main-nav-h1-style .nav-list-h1-style {
     flex-direction: column; /* 小屏幕下导航项垂直堆叠 */
     align-items: center; /* 导航项居中对齐 */
+    gap: 8px; /* 垂直堆叠时的间距 */
   }
-  .main-nav .nav-item {
-    margin: 5px 0; /* 垂直堆叠时的间距 */
-  }
-  .main-nav .nav-item a {
+  .nav-item-h1-style a {
+    font-size: 18px; /* 小屏幕下导航项字体进一步减小 */
     padding: 5px 10px; /* 调整垂直导航的内边距 */
   }
 }
@@ -269,4 +283,4 @@ table td { border: 1px solid #e8e8e8; }
 .highlight .vc { color: #008080; }
 .highlight .vg { color: #008080; }
 .highlight .vi { color: #008080; }
-.highlight .il { color: #099; }
+.highlight .il { color: #099; } 

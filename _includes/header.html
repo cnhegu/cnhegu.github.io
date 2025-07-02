@@ -1,17 +1,16 @@
 <header class="site-header">
   <div class="wrapper">
-    <div class="site-title-container">
-      <a class="site-title" href="{{ "/" | relative_url }}">{{ site.title }}</a>
-    </div>
-
-    <nav class="main-nav">
-      <ul class="nav-list">
+    <h1 class="site-title-combined">
+      <a href="{{ "/" | relative_url }}">{{ site.title }}</a>
+    </h1>
+    <nav class="main-nav-h1-style">
+      <ul class="nav-list-h1-style">
         {% for item in site.data.navigation %}
-          <li class="nav-item{% if page.url == item.url %} active{% endif %}">
+          <li class="nav-item-h1-style{% if page.url == item.url %} active{% endif %}">
             <a href="{{ item.url | relative_url }}">{{ item.title }}</a>
           </li>
         {% endfor %}
       </ul>
     </nav>
-    </div>
+  </div>
 </header>
