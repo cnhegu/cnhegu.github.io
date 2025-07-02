@@ -1,5 +1,4 @@
-
-# https://learnxinyminutes.com/docs/yaml/
+# https://learnxinyminutes.com/docs/yaml/ 
 #
 # Site settings
 # These are used to personalize your new site. If you look in the HTML files,
@@ -9,16 +8,16 @@
 
 title: 何故小站
 author: 何故
-# 自定义导航栏菜单
-nav:
-  - title: 分类
-    url: /categories/
-  - title: 标签
-    url: /tags/
-  - title: 归档
-    url: /archive/
-  - title: 关于
-    url: /about/
+# 删除此处的 nav 及其下方所有内容：
+# nav:
+#   - title: 分类
+#     url: /categories/
+#   - title: 标签
+#     url: /tags/
+#   - title: 归档
+#     url: /archive/
+#   - title: 关于
+#     url: /about/
 
 email: comitist@gmail.com
 description: 何故小站，分享技术、生活与随笔。

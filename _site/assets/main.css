@@ -19,6 +19,7 @@ figure > img { display: block; }
 figcaption { font-size: 14px; }
 
 /** Lists */
+/* 这里的 ul, ol 默认样式可能与导航冲突，但我们针对 .nav-list 进行了更具体的覆盖 */
 ul, ol { margin-left: 30px; }
 
 li > ul, li > ol { margin-bottom: 0; }
@@ -68,9 +69,7 @@ table td { border: 1px solid #e8e8e8; }
 
 /**
  * 站点头部与导航栏样式
- * * 整合了站点标题和新的导航栏布局。
- * 移除了旧的 .site-nav 浮动和响应式菜单逻辑，
- * 采用 Flexbox 实现横向居中导航。
+ * 整合了站点标题和新的导航栏布局。
  */
 .site-header {
   border-top: 5px solid #424242;
@@ -99,7 +98,7 @@ table td { border: 1px solid #e8e8e8; }
 
 /* 主导航栏样式 */
 .main-nav {
-  margin-top: 0; /* 移除上一个组件建议的额外顶部间距 */
+  margin-top: 0;
 }
 
 .main-nav .nav-list {
