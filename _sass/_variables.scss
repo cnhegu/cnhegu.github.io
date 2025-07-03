@@ -1,0 +1,16 @@
+// _sass/_variables.scss
+
+// Font family - 这里定义你想要覆盖的字体
+$body-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+
+// 自定义的字体大小，如果 Minima 使用这个变量名
+$body-font-size: 16px;
+
+// 你在 _config.yml 中定义的颜色变量
+// $text-color:       #c9d1d9; // 这些变量如果已在 _config.yml 中定义，这里可以省略，或用于更复杂的 Sass 内部逻辑
+// $background-color: #0d1117;
+
+// 你原先的自定义变量，如果它们不与 Minima 内部冲突，可以保留
+$base-font-size: 16px; // 保持你的自定义 mixin 所需
+$base-line-height: 1.5;
+$spacing-unit: 30px; // 你自定义的间距单位
