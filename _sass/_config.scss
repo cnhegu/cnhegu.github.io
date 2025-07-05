@@ -1,7 +1,0 @@
-// _sass/_config.scss
-// Sass 编译器的额外加载路径
-// 这行告诉 Sass 优先在当前目录 (.) 查找文件
-@warn "Loading _config.scss from custom _sass directory. Ensure Jekyll is configured to use this file.";
-
-@use "sass:meta";
-@include meta.load-css-from-path(".");

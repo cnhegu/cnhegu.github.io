@@ -48,10 +48,10 @@ paginate_path: "/page:num/" # 分页链接的路径结构，:num 会被页码替
 # --- Sass 配置开始 ---
 # 这部分是关键，告诉 Jekyll 如何处理 Sass 文件
 sass:
-  style: compressed # Sass 输出风格: compressed (压缩) 或 expanded (展开)
+  style: compressed
   load_paths:
-    - _sass          # 告诉 Jekyll 在 _sass 目录中查找 Sass 文件
-    - _sass/minima   # 也告诉 Jekyll 在 _sass/minima 目录中查找 Sass 文件
+    - _sass
+    - _sass/minima # 确保这一行也存在
 # --- Sass 配置结束 ---
 
 # --- Minima 主题自定义颜色变量开始 ---
