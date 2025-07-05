@@ -1,0 +1,7 @@
+@media (prefers-color-scheme: dark) {
+  @import "minima/skins/dark";
+}
+
+@media (prefers-color-scheme: light), (prefers-color-scheme: no-preference) {
+  @import "minima/skins/classic";
+}

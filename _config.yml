@@ -58,10 +58,13 @@ sass:
 # 这部分是 Minima 主题特有的自定义方式
 # 它会覆盖 Minima 内部 _variables.scss 中带有 !default 标记的同名变量
 minima:
+  # 设置 Minima 主题的皮肤为 'dark'
+  # 这会告诉 Minima 加载 _sass/minima/skins/_dark.scss
+  skin: dark # <-- 关键行！
   colors:
     text_color: "#c9d1d9"        # 主要文字颜色改为浅灰色
     background_color: "#0d1117"  # 全局背景色改为类似 GitHub 的深蓝色
-    brand_color: "#2a7ae2"      # 品牌色（用于链接等），保持不变
+    brand_color: "#2a7ae2"       # 品牌色（用于链接等），保持不变
     grey_color: "#8b949e"
     grey_color_light: "#21262d"
     grey_color_dark: "#010409"
