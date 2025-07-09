@@ -1,4 +1,24 @@
 <!DOCTYPE html>
+<div class="progress-bar-container">
+    <div class="progress-bar"></div>
+</div>
+<style>
+    .progress-bar-container {
+        position: fixed; /* 固定在屏幕顶部 */
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 4px; /* 进度条高度 */
+        background-color: #eee; /* 进度条底色 */
+        z-index: 999;
+    }
+    .progress-bar {
+        width: 0%; /* 初始宽度为0 */
+        height: 100%;
+        background-color: #42b983; /* 进度条颜色，可以和引用边框颜色一样 */
+        transition: width 0.1s; /* 让宽度变化平滑一点 */
+    }
+</style>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -60,6 +80,7 @@
 
   gtag('config', 'G-4BMXNHL73E');
 </script>
+<link rel="stylesheet" href="{{ "/assets/css/prism.css" | relative_url }}">
 </head>
 <body>
   <div class="post-header">
@@ -94,5 +115,23 @@
         crossorigin="anonymous"
         async>
 </script>
+<script src="{{ "/assets/js/prism.js" | relative_url }}"></script>
 </body>
 </html>
+<script>
+    const progressBar = document.querySelector('.progress-bar');
+    const postContent = document.querySelector('article'); // 假设您的文章主体在<article>标签内
+
+    function updateProgressBar() {
+        const scrollableHeight = postContent.offsetHeight - window.innerHeight;
+        const scrollTop = window.scrollY;
+        const progress = (scrollTop / scrollableHeight) * 100;
+
+        if (progressBar) {
+            progressBar.style.width = (progress > 100 ? 100 : progress) + '%';
+        }
+    }
+
+    window.addEventListener('scroll', updateProgressBar);
+    updateProgressBar(); // 初始加载时也更新一次
+</script>
