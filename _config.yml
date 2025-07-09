@@ -64,3 +64,4 @@ paginate_path: "/page:num/" # 分页链接的路径结构，:num 会被页码替
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
+# test
