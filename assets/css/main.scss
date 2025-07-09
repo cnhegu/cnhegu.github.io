@@ -1,0 +1,142 @@
+@charset "utf-8";
+
+// Define defaults for each variable.
+
+$base-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
+$base-font-size:   16px !default;
+$base-font-weight: 400 !default;
+$small-font-size:  $base-font-size * 0.875 !default;
+$base-line-height: 1.5 !default;
+
+$spacing-unit:     30px !default;
+
+// --- 核心颜色变量修改开始 (适应深灰色背景，白色高亮文字) ---
+$text-color:       #f0f6fc !default;      // 主要文字颜色改为白色高亮 (接近 GitHub 白色文字)
+$background-color: #0d1117 !default;      // 全局背景色改为类似 GitHub 的深蓝色 (深灰色)
+$brand-color:      #58a6ff !default;      // 品牌色（用于链接等），调整为在深色背景下更亮的蓝色
+$link-hover-color: #79c0ff !default;      // 链接悬停颜色，比品牌色更亮
+
+$grey-color:       #8b949e !default;      // 中性灰色，用于边框、图标、次要文本 (与 GitHub 保持一致)
+$grey-color-light: #21262d !default;      // 更浅的灰色，用于一些背景和边框 (与 GitHub 保持一致)
+$grey-color-dark:  #010409 !default;      // 更深的灰色，例如用于 hover 状态或更暗的边框 (与 GitHub 保持一致)
+$code-background:  #161b22 !default;      // 代码块背景色 (与 GitHub 保持一致)
+// --- 核心颜色变量修改结束 ---
+
+
+$table-text-align: left !default;
+
+// Width of the content area
+$content-width:    800px !default;
+
+$on-palm:          600px !default;
+$on-laptop:        800px !default;
+
+// Use media queries like this:
+// @include media-query($on-palm) {
+//   .wrapper {
+//     padding-right: $spacing-unit / 2;
+//     padding-left: $spacing-unit / 2;
+//   }
+// }
+@mixin media-query($device) {
+  @media screen and (max-width: $device) {
+    @content;
+  }
+}
+
+@mixin relative-font-size($ratio) {
+  font-size: $base-font-size * $ratio;
+}
+
+// ============== 从 _layouts/post.html 迁移过来的样式和新增优化样式 ==============
+
+body {
+  font-family: $base-font-family; // 统一使用 SCSS 变量定义的字体堆栈
+  max-width: $content-width; // 使用变量 $content-width，保持内容区域宽度
+  margin: auto; // 保持内容居中
+  padding: $spacing-unit; // 使用变量 $spacing-unit 作为内边距
+  line-height: $base-line-height; // 统一使用 SCSS 变量定义的行高
+  background: $background-color; // **统一使用全局背景色 (深灰色)**
+  color: $text-color; // **统一使用全局文字颜色 (白色高亮)**
+
+  @include media-query($on-palm) {
+    padding: $spacing-unit / 2; // 在小屏幕上减小内边距，提供更好的移动体验
+  }
+}
+
+a {
+  color: $brand-color; // 使用调整后的品牌色 (亮蓝色)
+  text-decoration: none; // 保持无下划线
+}
+
+a:hover {
+  text-decoration: underline; // 悬停时显示下划线
+  color: $link-hover-color; // 链接悬停时使用更亮的颜色
+}
+
+.post-header {
+  border-bottom: 1px solid $grey-color-light; // 使用颜色变量，统一边框颜色
+  margin-bottom: $spacing-unit * 0.7; // 使用 $spacing-unit 变量，使间距更一致
+}
+
+.post-title {
+  font-size: 2em; // 保持大小
+  margin: 0; // 保持外边距
+  color: $text-color; // 确保标题颜色为高亮白色
+}
+
+.post-date {
+  color: $grey-color; // 使用灰色变量
+  font-size: $small-font-size; // 使用小字体变量
+}
+
+.tags {
+  margin-top: $spacing-unit * 0.7; // 使用 $spacing-unit 变量
+  font-size: $small-font-size * 0.9; // 基于小字体变量调整，更精细控制
+  color: $grey-color; // 使用灰色变量
+}
+
+.tags span {
+  background: $grey-color-light; // 使用颜色变量
+  padding: 0.2em 0.5em; // 保持内边距
+  border-radius: 4px; // 保持圆角
+  margin-right: 0.5em; // 保持右边距
+  color: $text-color; // 确保标签文字颜色为高亮白色
+}
+
+.back-link {
+  display: block; // 保持块级显示
+  margin-top: $spacing-unit; // 使用 $spacing-unit 变量
+  font-size: $small-font-size; // 使用小字体变量
+  color: $brand-color; // 确保链接颜色与品牌色一致
+}
+
+// 确保内容区域的默认文本颜色正确
+.post-content {
+  color: $text-color;
+  // 考虑到内容中可能有多种HTML元素，Minima主题的_base.scss会处理大部分，
+  // 但这里显式设置确保基础文本颜色。
+}
+/* 美化 blockquote 引用样式 */
+blockquote {
+    background-color: #f8f8f8; /* 浅灰色背景 */
+    border-left: 5px solid #42b983; /* 左侧加一条绿色的边框，颜色可以自己换 */
+    margin: 1.5em 0; /* 上下留出间距 */
+    padding: 1em 1.5em; /* 内部留出空间 */
+    color: #555; /* 字体颜色 */
+    font-style: italic; /* 斜体 */
+}
+
+blockquote p:last-child {
+    margin-bottom: 0; /* 去掉引用里最后一段的下边距 */
+}
+
+// ============== 结束迁移样式 ==============
+
+
+// Import partials.
+@import
+  "minima/base",
+  "minima/layout",
+  "minima/syntax-highlighting"
+;
