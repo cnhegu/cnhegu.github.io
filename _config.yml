@@ -25,7 +25,7 @@ author: 何故
 email: comitist@gmail.com
 description: ©2025 hegu.me All rights reserved.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://www.hegu.me" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://cnhegu.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: NullCause
 github_username: cnhegu
 facebook_username: xchegu
