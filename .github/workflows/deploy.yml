@@ -27,13 +27,13 @@ jobs:
           extended: true
 
       - name: Build with Hugo
-        env:
-          HUGO_ENV: development # 強制使用和本地一樣的開發環境
-        run: hugo --gc --minify # 執行 hugo 指令建立網站
+        # 這是關鍵的修改：我們只執行最基礎的 hugo 命令，
+        # 去掉了所有可能導致問題的優化參數 (--gc --minify)。
+        run: hugo
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./public # 發布 public 資料夾
-          cname: www.hegu.me # 指定您的自訂網域，這是解決 404 問題的關鍵
+          publish_dir: ./public
+          cname: www.hegu.me
