@@ -877,7 +877,7 @@ uglyURLs = false
     ######################################
     # Post Share
 
-    enablePostShare = true
+    enablePostShare = false
 
     displayPostShare = true
 
