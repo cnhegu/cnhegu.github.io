@@ -4,7 +4,7 @@
 baseURL = "https://www.hegu.me/"
 title = "何故小站"
 languageCode = "en"
-hasCJKLanguage = false
+hasCJKLanguage = true
 # Copyright information (Markdown supported)
 copyright = "[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en)"
 
@@ -15,7 +15,7 @@ copyright = "[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0
 newContentEditor = ""
 
 # i18n
-defaultContentLanguage = "en"
+defaultContentLanguage = "zh-cn"
 defaultContentLanguageInSubdir = false
 
 # Title case style
