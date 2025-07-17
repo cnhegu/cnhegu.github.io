@@ -497,7 +497,7 @@ uglyURLs = false
 
     enableComments = true
     
-    autoLoadComments = false
+    autoLoadComments = true
 
     ## Disqus
     enableDisqus = false
