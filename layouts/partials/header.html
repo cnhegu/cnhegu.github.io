@@ -1,43 +1,50 @@
 {{/*
     這是一個自定義的頭部模板覆蓋文件。
-    V3 版本修正了無法訪問 .Site 變量的問題。
+    V4 版本在 V3 的基礎上，重新加入了移動端導航的“漢堡菜單”按鈕，
+    確保在所有設備上導航欄都能正常顯示。
 */}}
 <header class="header header-flex">
-    <div class="header-inner">
-        <div class="site-brand-container">
-            <a href="{{ .Site.Home.RelPermalink }}" class="brand">
-                {{ .Site.Title }}
-            </a>
-        </div>
-        <nav class="nav">
-            <ul class="menu" id="menu">
-                {{/* 遍歷您在 hugo.toml 中定義的所有主菜單項 */}}
-                {{- $currentPage := . -}}
-                {{- range .Site.Menus.main -}}
-                    {{- if eq .Identifier "search" -}}
-                        <!-- 強制渲染搜索圖標 -->
-                        <li class="menu-item">
-                           {{ partial "search.html" $currentPage }}
-                        </li>
-                    {{- else if eq .Identifier "theme-switcher" -}}
-                        {{- if $currentPage.Site.Params.enableDarkMode -}}
-                        <li class="menu-item">
-                            <a href="javascript:void(0);" class="theme-switch" title="切換主題">
-                                <i class="iconfont icon-dark"></i>
-                            </a>
-                        </li>
+    <div class="header-wrapper">
+        <div class="header-inner">
+            <div class="site-brand-container">
+                <a href="{{ .Site.Home.RelPermalink }}" class="brand">
+                    {{ .Site.Title }}
+                </a>
+            </div>
+            <nav class="nav">
+                <ul class="menu" id="menu">
+                    {{/* 遍歷您在 hugo.toml 中定義的所有主菜單項 */}}
+                    {{- $currentPage := . -}}
+                    {{- range .Site.Menus.main -}}
+                        {{- if eq .Identifier "search" -}}
+                            <!-- 強制渲染搜索圖標 -->
+                            <li class="menu-item">
+                               {{ partial "search.html" $currentPage }}
+                            </li>
+                        {{- else if eq .Identifier "theme-switcher" -}}
+                            {{- if $currentPage.Site.Params.enableDarkMode -}}
+                            <li class="menu-item">
+                                <a href="javascript:void(0);" class="theme-switch" title="切換主題">
+                                    <i class="iconfont icon-dark"></i>
+                                </a>
+                            </li>
+                            {{- end -}}
+                        {{- else -}}
+                            <!-- 正常渲染所有其他菜單項 -->
+                             <li class="menu-item">
+                                <a href="{{ .URL | relLangURL }}" class="menu-item-link" title="{{ .Name }}">
+                                    {{ with .Post }}<i class="iconfont icon-{{ . }}"></i>{{ end }}
+                                    <span class="menu-item-name">{{ .Name }}</span>
+                                </a>
+                            </li>
                         {{- end -}}
-                    {{- else -}}
-                        <!-- 正常渲染所有其他菜單項 -->
-                         <li class="menu-item">
-                            <a href="{{ .URL | relLangURL }}" class="menu-item-link" title="{{ .Name }}">
-                                {{ with .Post }}<i class="iconfont icon-{{ . }}"></i>{{ end }}
-                                <span class="menu-item-name">{{ .Name }}</span>
-                            </a>
-                        </li>
                     {{- end -}}
-                {{- end -}}
-            </ul>
-        </nav>
+                </ul>
+            </nav>
+        </div>
     </div>
+    {{/* 這是恢復移動端導航的關鍵代碼 */}}
+    {{- if .Site.Params.enableNavToggle -}}
+        {{ partial "components/nav-toggle.html" . }}
+    {{- end -}}
 </header>
