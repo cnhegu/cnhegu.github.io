@@ -1,7 +1,7 @@
 ##########################################
 # Site Settings
 
-baseURL = "https://cnhegu.github.io/"
+baseURL = "https://www.hegu.me/"
 title = "何故小站"
 languageCode = "en"
 hasCJKLanguage = false
