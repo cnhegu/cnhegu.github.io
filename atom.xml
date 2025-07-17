@@ -1,4 +1,116 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><title type="text">何故小站</title><subtitle type="html">MemE is a powerful and highly customizable GoHugo theme for personal blogs.</subtitle><updated>2025-07-17T10:51:23+00:00</updated><id>https://www.hegu.me/</id><link rel="alternate" type="text/html" href="https://www.hegu.me/"/><link rel="self" type="application/atom+xml" href="https://www.hegu.me/atom.xml"/><author><name>何故</name><uri>https://www.hegu.me/</uri><email>comitist@gmail.com</email></author><rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en)</rights><generator uri="https://gohugo.io/" version="0.148.1">Hugo</generator><entry><title type="text">My First Post</title><link rel="alternate" type="text/html" href="https://www.hegu.me/posts/my-first-post/"/><id>https://www.hegu.me/posts/my-first-post/</id><updated>2025-07-17T10:51:21+00:00</updated><published>2025-07-17T15:00:00+08:00</published><author><name>何故</name><uri>https://www.hegu.me</uri><email>comitist@gmail.com</email></author><rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en)</rights><summary type="html">
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><title type="text">何故小站</title><subtitle type="html">MemE is a powerful and highly customizable GoHugo theme for personal blogs.</subtitle><updated>2025-07-17T11:52:11+00:00</updated><id>https://www.hegu.me/</id><link rel="alternate" type="text/html" href="https://www.hegu.me/"/><link rel="self" type="application/atom+xml" href="https://www.hegu.me/atom.xml"/><author><name>何故</name><uri>https://www.hegu.me/</uri><email>comitist@gmail.com</email></author><rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en)</rights><generator uri="https://gohugo.io/" version="0.148.1">Hugo</generator><entry><title type="text">在Hugo中添加图片和视频的方式</title><link rel="alternate" type="text/html" href="https://www.hegu.me/posts/%E5%9C%A8hugo%E4%B8%AD%E6%B7%BB%E5%8A%A0%E5%9B%BE%E7%89%87%E5%92%8C%E8%A7%86%E9%A2%91%E7%9A%84%E6%96%B9%E5%BC%8F/"/><id>https://www.hegu.me/posts/%E5%9C%A8hugo%E4%B8%AD%E6%B7%BB%E5%8A%A0%E5%9B%BE%E7%89%87%E5%92%8C%E8%A7%86%E9%A2%91%E7%9A%84%E6%96%B9%E5%BC%8F/</id><updated>2025-07-17T11:52:09+00:00</updated><published>2025-07-17T19:35:00+08:00</published><author><name>何故</name><uri>https://www.hegu.me</uri><email>comitist@gmail.com</email></author><rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en)</rights><summary type="html">
+&lt;p>在 Hugo 中添加图片和视频，主要有两种方式：一种是简单直接的“静态资源”方法，另一种是更规范、更推荐的“页面捆绑”方式。对于视频，最好的方式是嵌入外部平台的播放器。&lt;/p>
+&lt;blockquote>
+&lt;p>Read original: &lt;a href="https://www.hegu.me/posts/%E5%9C%A8hugo%E4%B8%AD%E6%B7%BB%E5%8A%A0%E5%9B%BE%E7%89%87%E5%92%8C%E8%A7%86%E9%A2%91%E7%9A%84%E6%96%B9%E5%BC%8F/" target="_blank" rel="noopener">https://www.hegu.me/posts/%E5%9C%A8hugo%E4%B8%AD%E6%B7%BB%E5%8A%A0%E5%9B%BE%E7%89%87%E5%92%8C%E8%A7%86%E9%A2%91%E7%9A%84%E6%96%B9%E5%BC%8F/&lt;/a>&lt;br>
+Notice: This blog now offers email subscriptions—feel free to &lt;a href="https://username.substack.com" target="_blank" rel="noopener">subscribe via Substack&lt;/a> to support my work!&lt;/p>&lt;/blockquote></summary><content type="html">
+&lt;p style="text-indent:0">&lt;span class="drop-cap">在&lt;/span> Hugo 中添加图片和视频，主要有两种方式：一种是简单直接的“静态资源”方法，另一种是更规范、更推荐的“页面捆绑”方式。对于视频，最好的方式是嵌入外部平台的播放器。&lt;/p>
+&lt;hr>
+&lt;h2 id="一添加图片">&lt;a href="https://www.hegu.me/posts/%E5%9C%A8hugo%E4%B8%AD%E6%B7%BB%E5%8A%A0%E5%9B%BE%E7%89%87%E5%92%8C%E8%A7%86%E9%A2%91%E7%9A%84%E6%96%B9%E5%BC%8F/#一添加图片" class="anchor-link" aria-label="一添加图片">&lt;svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon">&lt;path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/>&lt;/svg>&lt;/a>一、添加图片&lt;/h2>
+&lt;h3 id="方法一放在-static-文件夹最简单">&lt;a href="https://www.hegu.me/posts/%E5%9C%A8hugo%E4%B8%AD%E6%B7%BB%E5%8A%A0%E5%9B%BE%E7%89%87%E5%92%8C%E8%A7%86%E9%A2%91%E7%9A%84%E6%96%B9%E5%BC%8F/#方法一放在-static-文件夹最简单" class="anchor-link" aria-label="方法一放在-static-文件夹最简单">&lt;svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon">&lt;path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/>&lt;/svg>&lt;/a>方法一：放在 static 文件夹（最简单）&lt;/h3>
+&lt;p>这是最直接的方法，适合存放一些全站通用的图片，比如你的头像、logo 等。&lt;/p>
+&lt;p>&lt;strong>存放图片步骤：&lt;/strong>&lt;/p>
+&lt;ol>
+&lt;li>在博客根目录下找到 &lt;code>static&lt;/code> 文件夹。&lt;/li>
+&lt;li>建议在其中创建一个名为 &lt;code>images&lt;/code> 的子文件夹。&lt;/li>
+&lt;li>将图片（例如 &lt;code>my-cat.jpg&lt;/code>）放入 &lt;code>static/images/&lt;/code> 文件夹中。&lt;/li>
+&lt;/ol>
+&lt;p>最终路径为：&lt;/p>
+&lt;pre tabindex="0">&lt;code>static/images/my-cat.jpg
+&lt;/code>&lt;/pre>&lt;p>&lt;strong>在文章中引用图片：&lt;/strong>&lt;/p>
+&lt;p>使用标准 Markdown 语法，并从根目录开始写路径：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;div class="table-container">&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-markdown" data-lang="markdown">&lt;span class="line">&lt;span class="cl">![&lt;span class="nt">我的猫&lt;/span>](&lt;span class="na">/images/my-cat.jpg&lt;/span>)
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>&lt;/div>
+&lt;/div>
+&lt;/div>&lt;p>说明：&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>[]&lt;/code> 中的是图片的替代文字（alt text），当图片无法显示时会显示这段文字，对 SEO 也有帮助。&lt;/li>
+&lt;li>路径从 &lt;code>/&lt;/code> 开头，代表网站根目录。&lt;/li>
+&lt;/ul>
+&lt;hr>
+&lt;h3 id="方法二使用页面捆绑page-bundles推荐">&lt;a href="https://www.hegu.me/posts/%E5%9C%A8hugo%E4%B8%AD%E6%B7%BB%E5%8A%A0%E5%9B%BE%E7%89%87%E5%92%8C%E8%A7%86%E9%A2%91%E7%9A%84%E6%96%B9%E5%BC%8F/#方法二使用页面捆绑page-bundles推荐" class="anchor-link" aria-label="方法二使用页面捆绑page-bundles推荐">&lt;svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon">&lt;path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/>&lt;/svg>&lt;/a>方法二：使用“页面捆绑”（Page Bundles）【推荐】&lt;/h3>
+&lt;p>此方法更整洁，特别适合存放只属于某篇文章的图片，能将文章与资源打包在一起，便于管理和迁移。&lt;/p>
+&lt;p>&lt;strong>文件结构示例：&lt;/strong>&lt;/p>
+&lt;p>假设你要写一篇名为 &lt;code>my-trip&lt;/code> 的文章：&lt;/p>
+&lt;pre tabindex="0">&lt;code>content/
+└── posts/
+└── my-trip/
+├── index.md （文章内容）
+└── trip-photo-1.jpg （相关图片）
+&lt;/code>&lt;/pre>&lt;p>步骤如下：&lt;/p>
+&lt;ol>
+&lt;li>在 &lt;code>content/posts/&lt;/code> 下创建一个名为 &lt;code>my-trip&lt;/code> 的文件夹。&lt;/li>
+&lt;li>把文章文件命名为 &lt;code>index.md&lt;/code> 并放入该文件夹。&lt;/li>
+&lt;li>把相关图片一同放入该文件夹。&lt;/li>
+&lt;/ol>
+&lt;p>&lt;strong>引用图片：&lt;/strong>&lt;/p>
+&lt;p>在 &lt;code>index.md&lt;/code> 文件中，直接写文件名即可：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;div class="table-container">&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-markdown" data-lang="markdown">&lt;span class="line">&lt;span class="cl">![&lt;span class="nt">旅途中的风景&lt;/span>](&lt;span class="na">trip-photo-1.jpg&lt;/span>)
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>&lt;/div>
+&lt;/div>
+&lt;/div>&lt;p>Hugo 会自动寻找当前文章目录下的资源。&lt;/p>
+&lt;hr>
+&lt;h3 id="小结选择哪种方式">&lt;a href="https://www.hegu.me/posts/%E5%9C%A8hugo%E4%B8%AD%E6%B7%BB%E5%8A%A0%E5%9B%BE%E7%89%87%E5%92%8C%E8%A7%86%E9%A2%91%E7%9A%84%E6%96%B9%E5%BC%8F/#小结选择哪种方式" class="anchor-link" aria-label="小结选择哪种方式">&lt;svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon">&lt;path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/>&lt;/svg>&lt;/a>小结：选择哪种方式？&lt;/h3>
+&lt;ul>
+&lt;li>&lt;strong>方法一（static）：&lt;/strong> 适合用于网站通用资源，如头像、Logo 等。&lt;/li>
+&lt;li>&lt;strong>方法二（页面捆绑）：&lt;/strong> 推荐用于特定文章所需的图片，让项目结构更有条理。&lt;/li>
+&lt;/ul>
+&lt;hr>
+&lt;h2 id="二添加视频">&lt;a href="https://www.hegu.me/posts/%E5%9C%A8hugo%E4%B8%AD%E6%B7%BB%E5%8A%A0%E5%9B%BE%E7%89%87%E5%92%8C%E8%A7%86%E9%A2%91%E7%9A%84%E6%96%B9%E5%BC%8F/#二添加视频" class="anchor-link" aria-label="二添加视频">&lt;svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon">&lt;path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/>&lt;/svg>&lt;/a>二、添加视频&lt;/h2>
+&lt;p>直接上传视频文件到仓库并不可取，因为体积大，不利于管理和加载。&lt;/p>
+&lt;h3 id="推荐方式使用外部平台嵌入播放器">&lt;a href="https://www.hegu.me/posts/%E5%9C%A8hugo%E4%B8%AD%E6%B7%BB%E5%8A%A0%E5%9B%BE%E7%89%87%E5%92%8C%E8%A7%86%E9%A2%91%E7%9A%84%E6%96%B9%E5%BC%8F/#推荐方式使用外部平台嵌入播放器" class="anchor-link" aria-label="推荐方式使用外部平台嵌入播放器">&lt;svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon">&lt;path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/>&lt;/svg>&lt;/a>推荐方式：使用外部平台嵌入播放器&lt;/h3>
+&lt;p>如 YouTube、Bilibili、Vimeo 等。&lt;/p>
+&lt;p>&lt;strong>获取嵌入代码（以 YouTube 为例）：&lt;/strong>&lt;/p>
+&lt;ol>
+&lt;li>打开视频页面，点击“分享”按钮。&lt;/li>
+&lt;li>选择“嵌入”，复制生成的 &lt;code>&amp;lt;iframe&amp;gt;&lt;/code> 代码。&lt;/li>
+&lt;/ol>
+&lt;p>&lt;strong>将 HTML 粘贴到 Markdown 中：&lt;/strong>&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;div class="table-container">&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">iframe&lt;/span> &lt;span class="na">width&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;560&amp;#34;&lt;/span> &lt;span class="na">height&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;315&amp;#34;&lt;/span> &lt;span class="na">src&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;https://www.youtube.com/embed/VIDEO_ID&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="na">title&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;YouTube video player&amp;#34;&lt;/span> &lt;span class="na">frameborder&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;0&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="na">allow&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="na">allowfullscreen&lt;/span>&lt;span class="p">&amp;gt;&amp;lt;/&lt;/span>&lt;span class="nt">iframe&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>&lt;/div>
+&lt;/div>
+&lt;/div>&lt;p>你可以修改 &lt;code>width&lt;/code> 和 &lt;code>height&lt;/code> 调整视频大小。&lt;/p>
+&lt;hr>
+&lt;h3 id="进阶技巧使用-hugo-shortcode简码">&lt;a href="https://www.hegu.me/posts/%E5%9C%A8hugo%E4%B8%AD%E6%B7%BB%E5%8A%A0%E5%9B%BE%E7%89%87%E5%92%8C%E8%A7%86%E9%A2%91%E7%9A%84%E6%96%B9%E5%BC%8F/#进阶技巧使用-hugo-shortcode简码" class="anchor-link" aria-label="进阶技巧使用-hugo-shortcode简码">&lt;svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon">&lt;path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/>&lt;/svg>&lt;/a>进阶技巧：使用 Hugo Shortcode（简码）&lt;/h3>
+&lt;p>很多主题（包括 &lt;code>hugo-theme-meme&lt;/code>）支持使用简码方式插入视频，更简洁、响应式更好。&lt;/p>
+&lt;p>&lt;strong>示例：&lt;/strong>&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;div class="table-container">&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-markdown" data-lang="markdown">&lt;span class="line">&lt;span class="cl">&lt;div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+&lt;iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/VIDEO_ID?autoplay=0&amp;amp;controls=1&amp;amp;end=0&amp;amp;loop=0&amp;amp;mute=0&amp;amp;start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video">&lt;/iframe>
+&lt;/div>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>&lt;/div>
+&lt;/div>
+&lt;/div>&lt;p>其中 &lt;code>VIDEO_ID&lt;/code> 是视频地址中那一串独特字符。&lt;/p>
+&lt;blockquote>
+&lt;p>如果主题不支持简码，也可以直接使用 &lt;code>&amp;lt;iframe&amp;gt;&lt;/code> 插入 HTML 视频代码。&lt;/p>&lt;/blockquote>
+&lt;p>&lt;em>欢迎来到我的数字小屋。&lt;/em>&lt;/p>
+&lt;blockquote>
+&lt;p>Read original: &lt;a href="https://www.hegu.me/posts/%E5%9C%A8hugo%E4%B8%AD%E6%B7%BB%E5%8A%A0%E5%9B%BE%E7%89%87%E5%92%8C%E8%A7%86%E9%A2%91%E7%9A%84%E6%96%B9%E5%BC%8F/" target="_blank" rel="noopener">https://www.hegu.me/posts/%E5%9C%A8hugo%E4%B8%AD%E6%B7%BB%E5%8A%A0%E5%9B%BE%E7%89%87%E5%92%8C%E8%A7%86%E9%A2%91%E7%9A%84%E6%96%B9%E5%BC%8F/&lt;/a>&lt;br>
+Notice: This blog now offers email subscriptions—feel free to &lt;a href="https://username.substack.com" target="_blank" rel="noopener">subscribe via Substack&lt;/a> to support my work!&lt;/p>&lt;/blockquote></content><category scheme="https://www.hegu.me/categories/hugotips/" term="HugoTips" label="HugoTips"/><category scheme="https://www.hegu.me/tags/hugo/" term="hugo" label="hugo"/><category scheme="https://www.hegu.me/tags/%E5%AA%92%E4%BD%93%E5%86%85%E5%AE%B9/" term="媒体内容" label="媒体内容"/><category scheme="https://www.hegu.me/tags/tips/" term="Tips" label="Tips"/></entry><entry><title type="text">My First Post</title><link rel="alternate" type="text/html" href="https://www.hegu.me/posts/my-first-post/"/><id>https://www.hegu.me/posts/my-first-post/</id><updated>2025-07-17T11:52:09+00:00</updated><published>2025-07-17T15:00:00+08:00</published><author><name>何故</name><uri>https://www.hegu.me</uri><email>comitist@gmail.com</email></author><rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en)</rights><summary type="html">
 &lt;p>写在一个微热的午后。&lt;/p>
 &lt;p>博客终于上线了，这意味着我终于把那些分散在笔记本、对话框、梦境和咖啡渍上的只言片语，有了一个归宿。这里没有繁复的装饰，没有虚张声势的排场，只有文字与我自己，偶尔还有屏幕前的你。&lt;/p>
 &lt;blockquote>
