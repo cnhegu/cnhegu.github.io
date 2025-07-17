@@ -126,9 +126,8 @@ allowfullscreen></iframe>
 
 另外还有git push的相关技巧及需要注意的地方：
 
-```markdown
 ![git.push.tips](/images/完整的推送流程.jpg)
-```
+
 
 
 
