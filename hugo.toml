@@ -162,37 +162,6 @@ uglyURLs = false
 ##########################################
 # Menu Settings
 
-# MemE supports the following four menus:
-# 1. main       Menu bar below the header
-#               (center layout) or inside
-#               the header (flex layout)
-# 2. home       Links at the bottom of the
-#               homepage (valid for the
-#               `poetry` and `footage`
-#               homepage layout)
-# 3. socials    Social bar (minimal footer
-#               in about page)
-# 4. links      Link bar (minimal footer
-#               in about page)
-
-# The configuration instructions in the
-# menu are as follows:
-# pageref/url   internal/external URL
-# name          Text (won’t display if it
-#               is left empty("") or does
-#               not exist)
-# weight        Position
-# pre           Type of link (internal or
-#               external)
-# post          Icon (won’t display if it
-#               is left empty("") or does
-#               not exist)
-# identifier    Icon’s class name
-#               (there are three special
-#               values for header layout
-#               flex: `theme-switcher`,
-#               `lang-switcher`, `search`)
-
 [menu]
     ## Menu bar
     # [[menu.main]]
@@ -310,13 +279,6 @@ uglyURLs = false
     ######################################
     # Homepage Layout
 
-    # For homepage layout, MemE has the
-    # following four different types:
-    # 1. poetry    A few lines of verse
-    # 2. footage   With fullscreen background videos
-    # 3. posts     List of post’s summary
-    # 4. page      Normal page/post
-
     homeLayout = "posts"
 
     ## Poetry
@@ -365,29 +327,6 @@ uglyURLs = false
 
     ######################################
     # Category By
-
-    # MemE supports category by:
-    # 1. sections
-    # 2. categories
-    # The sections is based on the site’s
-    # `content` directory structure; the
-    # categories is based on the post’s
-    # Front Matter. First of all, category
-    # means tree structure (nested, with
-    # sub-category). To achieve it, Hexo
-    # uses the second method, while Hugo
-    # uses the first method. Due to the
-    # different design philosophy, the
-    # difference between Hexo and Hugo has
-    # been made. Therefore, this option
-    # was designed here to be user friendly
-    # to those who come from Hexo. But note
-    # that the second method cannot be
-    # implemented perfectly in Hugo. I
-    # recommended you adapt to Hugo’s design
-    # philosophy if you want to keep the
-    # tree organization structure of your
-    # posts.
 
     categoryBy = "categories"
     # ATTENTION: If you set it to `sections`,
@@ -466,14 +405,6 @@ uglyURLs = false
     ######################################
     # Taxonomy List Page
 
-    # Note: for categories page, you can
-    #       set `enableTree` to false to
-    #       get a normal taxonomy list
-    #       page; for tags page, you can
-    #       set `enableTagCloud` to false
-    #       to get a normal taxonomy list
-    #       page.
-
     # Display count of posts in each
     # taxonomy term?
     displayTaxonomyTermCount = true
@@ -487,10 +418,6 @@ uglyURLs = false
     ######################################
     # Post Sections
 
-    # Note: the name of the section is the
-    #       name of the folder under the
-    #       site’s `content` directory.
-
     # mainSections = ["posts"]
 
 
@@ -499,27 +426,6 @@ uglyURLs = false
 
     # Include full content?
     includeContent = true
-    # Note: If false, only the summary of
-    #       the post will be included. The
-    #       summary, Hugo automatically
-    #       takes the first 70 words (you
-    #       can customize this via
-    #       `summaryLength`) of your content
-    #       as its summary by default.
-    #       Alternatively, you may use the
-    #       <!--more--> (with no whitespace)
-    #       summary divider to split summary
-    #       manually. Or use the `summary`
-    #       variable in post’s Front
-    #       Matter to assign it manually.
-    #       The priority of them: assign
-    #       manually > split manually >
-    #       split automatically. Additionally,
-    #       `description` in post’s Front
-    #       Matter has a higher priority
-    #       than assign manually in the
-    #       custom Atom & RSS template of
-    #       MemE.
 
     # Custom Footer (Supports Template and Markdown syntax)
     feedFooter = """> Read original: <{{ .Permalink }}>  
@@ -536,48 +442,12 @@ uglyURLs = false
 
     hideThemeToggle = false
     hideThemeToggleInHome = false
-    # Note: If dark mode is enabled and
-    #       theme toggle is hidden, your
-    #       readers may still read your
-    #       blog in dark mode if the
-    #       reader’s system is set to dark
-    #       mode. Similarly, if dark mode
-    #       is enabled and is set to the
-    #       default theme, your readers
-    #       may still read your blog in
-    #       light mode, even if you have
-    #       hidden the theme toggle.
-    #       Unless you enable the following
-    #       option.
 
     overrideSystemPreferences = false
 
 
     ######################################
     # Web App
-
-    # Note: go to https://realfavicongenerator.net/
-    #       to generate related icons and
-    #       files, unzip after downloading.
-    #       Then move these files to the
-    #       ~/blog/static/icons/ directory,
-    #       move favicon.ico, site.webmanifest
-    #       to the ~/blog/static/ directory,
-    #       and finally rename site.webmanifest
-    #       to manifest.json, and check
-    #       and modify related content
-    #       (the path of the icons).
-
-    # ATTENTION: To check your favicon, plese
-    #            go to https://realfavicongenerator.net/favicon-checker.
-    #            If any problems are detected,
-    #            check the filename differences
-    #            between the generated files
-    #            and the related files in the
-    #            ~/blog/themes/meme/static/ directory.
-    #            If there are any differences,
-    #            it means some files may be outdated.
-    #            Please create an issue if necessary.
 
     themeColor = "#fff"
     themeColorDark = "#16171d"
@@ -589,29 +459,12 @@ uglyURLs = false
     jsonLD = true
     openGraph = true
     twitterCards = true
-    # ATTENTION: If you set twitterCards
-    #            to `true`, be sure to
-    #            enable openGraph also.
-    #            Otherwise, the Twitter
-    #            Cards info will be
-    #            incomplete.
 
     autoDetectImages = true
-    # Note: It is recommended to enable it.
-    #       Otherwise, you must manually
-    #       specify `images` in post’s
-    #       Front Matter or links you
-    #       shared on social networks or
-    #       APPs will not be able to
-    #       display a summary view with a
-    #       large image.
 
 
     ######################################
     # Service Worker
-
-    # Note: render only in production
-    #       environment
 
     enableServiceWorker = false
 
@@ -620,18 +473,12 @@ uglyURLs = false
     # KaTeX (chemical equation supported)
 
     enableKaTeX = false
-    # Note: *global settings*
-    #       `katex` in post’s Front Matter
-    #       has a higher priority than here
 
 
     ######################################
     # MathJax (chemical equation supported)
 
     enableMathJax = false
-    # Note: *global settings*
-    #       `mathjax` in post’s Front Matter
-    #       has a higher priority than here
 
     disableMathJaxMenu = false
 
@@ -640,9 +487,6 @@ uglyURLs = false
     # Mermaid (https://github.com/mermaid-js/mermaid)
 
     enableMermaid = false
-    # Note: *global settings*
-    #       `mermaid` in post’s Front Matter
-    #       has a higher priority than here
 
     mermaidTheme = 'default'
     mermaidThemeDark = 'dark'
@@ -651,15 +495,8 @@ uglyURLs = false
     ######################################
     # Comments
 
-    # Note: render only in production
-    #       environment
-
-    enableComments = false
-    # Note: *global settings*
-    #       `comments` in post’s Front Matter
-    #       has a higher priority than here
-
-    # directly load the comments after pages loaded
+    enableComments = true
+    
     autoLoadComments = false
 
     ## Disqus
@@ -685,7 +522,6 @@ uglyURLs = false
     valineEmojiMaps = {}
     valineEnableQQ = false
     valineRequiredFields = []
-    # Note: https://valine.js.org/
 
     ## Utterances
     enableUtterances = false
@@ -694,7 +530,6 @@ uglyURLs = false
     utterancesTheme = "github-light"
     utterancesThemeDark = "photon-dark"
     utterancesLabel = ""
-    # Note: https://utteranc.es/
 
     ## Gitalk
     enableGitalk = false
@@ -703,29 +538,12 @@ uglyURLs = false
     gitalkRepo = "your_repository"
     gitalkOwner = "your_gitalk_owner"
     gitalkAdmin = ["your_gitalk_admin"]
-
-    # 1. default (`location.href`)
-    # 2. pathname (`location.pathname`)
-    # 3. hash (hash_filepath)
-    # 4. custom:your_gitalk_id ("your_gitalk_id")
     gitalkID = "pathname"
-
     gitalkNumber = -1
     gitalkLables = ["Gitalk"]
-
-    # 1. default (`document.title`)
-    # 2. custom:your_gitalk_title ("your_gitalk_title")
     gitalkTitle = "default"
-
-    # 1. default (`location.href` + header.meta[description])
-    # 2. href (`location.href`)
-    # 3. custom:your_gitalk_body ("your_gitalk_body")
     gitalkBody = "default"
-
-    # 1. default (`navigator.language || navigator.userLanguage`)
-    # 2. Support [en, zh-CN, zh-TW, es-ES, fr, ru, de, pl, ko, fa, ja]
     gitalkLanguage = "en"
-
     gitalkDistractionFreeMode = false
     gitalkPerPage = 10
     gitalkPagerDirection = "last"
@@ -736,23 +554,21 @@ uglyURLs = false
     gitalkEnterAnimation = "accordionVertical"
     gitalkLeaveAnimation = "accordionVertical"
     gitalkEnableHotKey = true
-    # Note: https://github.com/gitalk/gitalk
 
     ## Giscus
-    enableGiscus = false
-    giscusRepo = "[ENTER repo/you/want HERE]"
-    giscusRepoId = "[ENTER REPO ID HERE]"
-    giscusCategory = "[ENTER CATEGORY NAME HERE]"
-    giscusCategoryId = "[ENTER CATEGORY ID HERE]"
-    giscusMapping = "pathname"
+    enableGiscus = true
+    giscusRepo = "cnhegu/cnhegu.github.io"
+    giscusRepoId = "R_kgDOPOBCpg"
+    giscusCategory = "Announcements"
+    giscusCategoryId = "DIC_kwDOPOBCps4CtEv9"
+    giscusMapping = "title"
     giscusStrict = false
     giscusReactionsEnabled = true
     giscusEmitMetaData = false
-    giscusInputPosition = "top"
-    giscusTheme = "light"
+    giscusInputPosition = "bottom"
+    giscusTheme = "dark"
     giscusThemeDark = "dark"
-    giscusLang = "en"
-    # Note: https://giscus.app
+    giscusLang = "zh-CN"
 
     # Remark42
     enableRemark42 = false
@@ -769,19 +585,14 @@ uglyURLs = false
     remark42ShowRssSubscription = true
     remark42SimpleView = false
     remark42NoFooter = false
-    # Note: https://remark42.com/docs/configuration/frontend/
 
 
     ######################################
     # Google Analytics
 
-    # Note: render only in production
-    #       environment
-
     enableGoogleAnalytics = false
 
     trackingCodeType = "gtag"
-    # Note: gtag or analytics
 
     trackingID = ""
 
@@ -794,9 +605,6 @@ uglyURLs = false
 
     ######################################
     # Google AdSense
-
-    # Note: render only in production
-    #       environment
 
     googleAdClient = ""
 
@@ -812,10 +620,6 @@ uglyURLs = false
 
     ######################################
     # Yandex.Metrika
-    # https://metrika.yandex.ru/
-
-    # Note: render only in production
-    #       environment
 
     yandexMetrikaId = ""
 
@@ -823,31 +627,14 @@ uglyURLs = false
     ######################################
     # Post Settings
 
-    # The color change duration of the
-    # hyperlink (in seconds)
     duration = 0.5
 
-    # Primary color of light mode
     primaryColorLight = "220, 90%, 56%"
-    # Primary color of dark mode
     primaryColorDark = "201, 65%, 62%"
-    # ATTENTION: only HSL color values ​​are
-    #            supported
 
-    # The content width of the post
     postWidth = 36
-    # Note: you can leave it empty("") to
-    #       fallback to the default value: 42
-    #       Unit: em
 
-    # Is the post original?
     original = true
-    # Note: will affect the author and
-    #       copyright information of the
-    #       post
-    #       *global settings*
-    #       `original` in post’s Front Matter
-    #       has a higher priority than here
 
 
     ######################################
@@ -860,18 +647,10 @@ uglyURLs = false
     # Post Meta Info
 
     enablePostMeta = true
-    # Note: *global settings*
-    #       `meta` in post’s Front Matter
-    #       has a higher priority than here
 
     enablePostMetaInHome = true
-    # Note: valid for the `posts` and
-    #       `page` homepage layout only
 
     postMetaDateFormat = "2006.1.2"
-    # ATTENTION: be sure to follow the
-    #            specified format
-    #            https://gohugo.io/functions/format/
 
     displayPublishedDate = true
     publishedDateIcon = "calendar-alt"
@@ -894,16 +673,11 @@ uglyURLs = false
 
     displayBusuanziPagePV = false
     busuanziPagePVIcon = "eye"
-    # Note: render only in production
-    #       environment
-    #       Homepage is not supported yet
-    #       https://busuanzi.ibruce.info/
 
 
     ######################################
     # Markdown Related
 
-    # Open external links in a new tab?
     hrefTargetBlank = true
 
 
@@ -911,16 +685,10 @@ uglyURLs = false
     # Table of Contents
 
     enableTOC = false
-    # Note: *global settings*
-    #       `toc` in post’s Front Matter
-    #       has a higher priority than here
 
     displayTOCTitle = true
 
     displayTOCNum = true
-    # Note: *global settings*
-    #       `tocNum` in post’s Front Matter
-    #       has a higher priority than here
 
     linkHeadingsToTOC = true
 
@@ -929,24 +697,12 @@ uglyURLs = false
     # Headings Anchor
 
     enableHeadingsAnchor = true
-    # Note: *global settings*
-    #       `anchor` in post’s Front Matter
-    #       has a higher priority than here
 
-    # Level range of headings
     headingsOpt = "1-6"
-    # Note: regex format, default value
-    #       is 1-6, which is 1|2|3|4|5|6,
-    #       which is h1 to h6.
 
     anchorSymbol = "#"
-    # Note: the anchorIcon has a higher
-    #       priority than anchorSybol
-    #       Default: §
 
     anchorIcon = "link"
-    # Note: you can leave it empty("") to
-    #       fallback to the anchorSymbol
 
     enableAnchorLink = true
 
@@ -964,35 +720,15 @@ uglyURLs = false
     ######################################
     # Image Hosting
 
-    # Note: render only in production
-    #       environment
-    #
-    #       only support absolute URLs
-    #       relative to root, e.g.
-    #       /images/meme.jpg
-    #       (~/blog/static/images/meme.jpg)
-
     enableImageHost = false
 
     imageHostURL = "https://example.com/"
 
-    # Replace the image link in the HTML
-    # head meta also?
     headAlso = false
 
 
     ######################################
     # Video Hosting
-
-    # Note: render only in production
-    #       environment
-    #
-    #       only support absolute URLs
-    #       relative to root, e.g.
-    #       /videos/meme.mp4
-    #
-    #       and the HTML code you add must
-    #       start with `<video src="`
 
     enableVideoHost = false
 
@@ -1002,29 +738,11 @@ uglyURLs = false
     ######################################
     # Footnotes
 
-    # Use the square brackets to wrap
-    # the reference number?
     squareBrackets = true
 
-    # Replace the text in footnote return
-    # link with icon?
     footnoteReturnLinkIcon = "angle-up"
-    # Note: will replace
-    #       `footnoteReturnLinkContents`
-    #       with icon if it’s not
-    #       empty("")
 
-    # Insert horizontal rule by yourself?
     insertHrBySelf = true
-    # Note: If true, the automatically
-    #       generated horizontal rule
-    #       (<hr>) will be removed. In
-    #       fact, the horizontal rule you
-    #       added will be removed. This
-    #       option is very useful if you
-    #       prefer to add `---` to separate
-    #       the content from the footnote
-    #       in the Markdown file.
 
 
     ######################################
@@ -1038,47 +756,19 @@ uglyURLs = false
     ######################################
     ## Font Family
 
-    # Note: any option is empty(""),
-    #       fallback to `fontFamilyBody`
-    #       it will. Therefore, it is not
-    #       necessary to set all.
-    #       Additionally, you can leave
-    #       `fontFamilySiteBrand` empty("")
-    #       if you use SVG as your site
-    #       brand.
-
-    # Site brand
     fontFamilySiteBrand = ""
-    # Menu bar
     fontFamilyMenu = ""
-    # Post title, post subtitle, list title, year and month title of the list, related posts title, previous/next post title, header of table, term/name in a definition list
     fontFamilyTitle = "'Comfortaa', sans-serif"
-    # Headings, toc title
     fontFamilyHeadings = "'Comfortaa', sans-serif"
-    # Code, superscript, post meta info, post updated badge, post gitinfo, minimal footer, busuanzi site view counter
     fontFamilyCode = "'Source Code Pro', monospace"
-    # Blockquotes
     fontFamilyQuote = ""
-    # Table of contents
     fontFamilyTOC = ""
-    # Caption
     fontFamilyCaption = ""
-    # Footer
     fontFamilyFooter = ""
-    # Body
     fontFamilyBody = "'IBM Plex Serif', serif"
 
-    # Embed fonts link
     fontsLink = "https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,400;0,500;0,700;1,400;1,700&family=Source+Code+Pro:ital,wght@0,400;0,700;1,400;1,700&family=Comfortaa:wght@700&display=swap"
-    # Note: In order for the reader to
-    #       experience the fonts you set,
-    #       it is best to use web fonts.
-    #       MemE currently only supports
-    #       Google Fonts, please go to
-    #       https://fonts.google.com/ to
-    #       get the link. If this is left
-    #       empty(""), web fonts will not
-    #       be used.
+
 
     ######################################
     ## Font Size (unit: px)
@@ -1094,8 +784,7 @@ uglyURLs = false
     ## Line Height
 
     lineHeight = 1.618
-    # Note: apply to post paragraph & toc
-    #       only
+
 
     ######################################
     ## Paragraph Indents
@@ -1103,61 +792,34 @@ uglyURLs = false
     enableParagraphIndent = true
 
     indentFirstParagraph = false
-    # Note: *global settings*
-    #       `indentFirstParagraph` in post’s Front Matter
-    #       has a higher priority than here
 
     paragraphStyle = "margin"
-    # Note: margin or indent
-    #       *global settings*
-    #       `indent` in post’s Front Matter
-    #       has a higher priority than here
+
 
     ######################################
     ## Text Justification
 
     enableJustify = false
-    # Note: *global settings*
-    #       `align` in post’s Front Matter
-    #       has a higher priority than here
+
 
     ######################################
     ## Drop Cap
 
     enableDropCap = true
-    # Note: *global settings*
-    #       `dropCap` in post’s Front Matter
-    #       has a higher priority than here
 
-    # Enable drop cap after every
-    # horizontal rule tag?
     enableDropCapAfterHr = false
-    # Note: *global settings*
-    #       `dropCapAfterHr` in post’s Front Matter
-    #       has a higher priority than here
 
-    # Delete horizontal rule tag before
-    # drop cap?
     deleteHrBeforeDropCap = false
-    # Note: *global settings*
-    #       `deleteHrBeforeDropCap` in post’s Front Matter
-    #       has a higher priority than here
+
 
     ######################################
     ## Small Caps
 
     enableSmallCaps = true
-    # Note: apply to headings & post toc
-    #       title only
-    #       *global settings*
-    #       `smallCaps` in post’s Front Matter
-    #       has a higher priority than here
+
 
     ######################################
     ## Emphasis Point (Chinese)
-
-    # Note: new Markdown syntax created by MemE
-    #       `..文本..`
 
     enableEmphasisPoint = false
 
@@ -1173,9 +835,6 @@ uglyURLs = false
     enablePostCopyright = true
 
     displayPostCopyright = true
-    # Note: *global settings*
-    #       `displayCopyright` in post’s Front Matter
-    #       has a higher priority than here
 
 
     ######################################
@@ -1184,11 +843,7 @@ uglyURLs = false
     enablePostUpdatedBadge = true
 
     displayUpdatedBadge = true
-    # Note: *global settings*
-    #       `badge` in post’s Front Matter
-    #       has a higher priority than here
 
-    # Add `title` attribute?
     enableBadgeTitle = true
     badgeTitlePrefix = "Updated @ "
 
@@ -1199,9 +854,6 @@ uglyURLs = false
     enablePostGitInfo = false
 
     displayPostGitInfo = false
-    # Note: *global settings*
-    #       `gitinfo` in post’s Front Matter
-    #       has a higher priority than here
 
     repoURL = ""
     repoEditURL = ""
@@ -1228,22 +880,12 @@ uglyURLs = false
     enablePostShare = true
 
     displayPostShare = true
-    # Note: *global settings*
-    #       `share` in post’s Front Matter
-    #       has a higher priority than here
 
     displayShareOnText = false
 
     postShareItems = ["facebook", "mastodon", "fediverse", "x", "linkedin", "telegram", "weibo", "douban", "qq", "qzone", "pocket", "hackernews", "qrcode", "email"]
 
-    # Fetch fediverse instances list for
-    # input suggestions
     fetchFediverseInstances = false
-    # Note: Recommended when using mastodon
-    #       or fediverse share items. This will
-    #       cause a list of instances to be
-    #       downloaded at build time. There
-    #       might be build delays.
 
 
     ######################################
@@ -1252,9 +894,6 @@ uglyURLs = false
     enableRelatedPosts = true
 
     displayRelatedPosts = true
-    # Note: *global settings*
-    #       `related` in post’s Front Matter
-    #       has a higher priority than here
 
     relatedPostsNumber = 5
 
@@ -1272,20 +911,8 @@ uglyURLs = false
     ######################################
     # Previous/Next Post
 
-    # Note: In MemE, it is designed from a
-    #       spatial perspective rather
-    #       than a time perspective like
-    #       most other themes do.
-    #       Therefore, you will get a
-    #       newer post if you click prev
-    #       on the left; you will get an
-    #       older post if you click next
-    #       on the right.
-
     enablePostNav = true
 
-    # Apply to posts that below the same
-    # top level section only?
     postNavInSection = true
 
 
@@ -1294,12 +921,6 @@ uglyURLs = false
 
     enableMinimalFooter = false
     enableVerticalBarStructure = false
-    # Note: If you enable this, the
-    #       categories or sections that
-    #       displayed on the right will
-    #       include all top-level
-    #       categories or sections and are
-    #       separated by vertical bar(|).
 
     enableAboutPageMinimalFooter = false
 
@@ -1332,21 +953,16 @@ uglyURLs = false
 
     displaySiteCreatedYear = true
 
-    # Leave it empty("") if you don’t want
-    # the icon
     iconBetweenYearAndAuthor = "heart"
     iconColor = "#f06292"
-    # Enable heartbeat animation?
     iconAnimation = true
 
     displaySiteAuthorName = true
 
-    # Display links to Hugo and MemE?
     displayPoweredBy = true
 
     displaySiteCopyright = true
 
-    # Custom Footer (Markdown supported)
     customFooter = ""
 
     displayBusuanziSiteUVAndPV = false
@@ -1354,11 +970,6 @@ uglyURLs = false
     busuanziSiteUVIcon = "user"
     busuanziSitePVText = "Site PV"
     busuanziSitePVIcon = "eye"
-    # Note: render only in production
-    #       environment
-    #       Leave it empty("") if you
-    #       don’t need the text or icon
-    #       https://busuanzi.ibruce.info/
 
     # Socials
     enableSocials = true
@@ -1373,9 +984,6 @@ uglyURLs = false
     hideLangToggleInHome = false
 
     autoHideLangToggle = true
-    # Note: in other words, the toggle is
-    #       displayed only when the post
-    #       has a translated version
 
 
     ######################################
@@ -1394,34 +1002,15 @@ uglyURLs = false
     ######################################
     # Fingerprinting and SRI
 
-    # Note: valid for CSS and JS generated
-    #       by MemE only
-
     enableFingerprint = true
 
     enableSRI = false
-    # Note: subresource integrity will
-    #       block MemE CSS and JS on third
-    #       party websites like Google
-    #       Translate. To prevent this,
-    #       your server has to send the
-    #       following header for CSS and
-    #       JS requests:
-    #
-    #       Access-Control-Allow-Origin: *
 
 
     ######################################
     # Force HTTPS Redirection
 
-    # Note: render only in production
-    #       environment
-
     enableForceHTTPS = false
-    # Note: use JavaScript for redirection.
-    #       You can enable this if your
-    #       server does not support forced
-    #       HTTPS.
 
 
     ######################################
@@ -1434,42 +1023,28 @@ uglyURLs = false
     # Medium Zoom
 
     enableMediumZoom = true
-    # Note: https://github.com/francoischalifour/medium-zoom
 
 
     ######################################
     # Instant Page
 
     enableInstantPage = true
-    # Note: https://github.com/instantpage/instant.page
 
 
     ######################################
     # Lunr search
 
-    # Note: This requires SearchIndex
-    #       output to be enabled.
-
     enableLunrSearch = true
-    # Note: https://lunrjs.com/
 
 
     ######################################
     # Algolia search
-
-    # Note: This requires Algolia
-    #       output to be enabled.
-    #       And you need to upload the
-    #       generated algolia.json to
-    #       Algolia every time you rebuild
-    #       your site.
 
     enableAlgoliaSearch = false
 
     algoliaAppId = ""
     algoliaApiKey = ""
     algoliaIndexName = ""
-    # Note: https://www.algolia.com/
 
 
     ######################################
@@ -1479,8 +1054,6 @@ uglyURLs = false
 
     fofVideoWebm = ""
     fofVideoMp4 = ""
-    # Note: you can leave these two
-    #       options empty("")
 
 
     ######################################
@@ -1488,12 +1061,6 @@ uglyURLs = false
 
     [params.lib]
         host = "https://cdn.jsdelivr.net"
-        # Note: set it to root("/") and set
-        #       the path below if you want to host
-        #       the lib directly from “local”.
-        #       I.e. set path to "js/lib.min.js",
-        #       and put this file to your
-        #       /static/js/lib.min.js
     [params.lib.path]
         clipboard = "/npm/clipboard-polyfill@2.8.6/dist/clipboard-polyfill.min.js"
         instantsearch = "/npm/instantsearch.js@2/dist/instantsearch.min.js"
