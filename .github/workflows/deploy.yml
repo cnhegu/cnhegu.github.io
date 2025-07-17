@@ -27,6 +27,8 @@ jobs:
           extended: true
 
       - name: Build with Hugo
+        env:
+          HUGO_ENV: development # 強制使用和本地一樣的開發環境
         run: hugo --gc --minify # 執行 hugo 指令建立網站
 
       - name: Deploy to GitHub Pages
