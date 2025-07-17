@@ -126,8 +126,7 @@ allowfullscreen></iframe>
 
 另外还有git push的相关技巧及需要注意的地方：
 
-![git.push.tips](/images/完整的推送流程.jpg)
-
+![完整的推送流程](tips-photo-1.jpg)
 
 
 
