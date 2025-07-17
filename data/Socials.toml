@@ -21,6 +21,11 @@
   url = "https://twitter.com/NullCause"
 
 [[socials]]
+  name = "Facebook"
+  icon = "facebook"
+  url = "https://www.facebook.com/xchegu/"
+
+[[socials]]
   name = "Telegram"
   icon = "telegram"
   url = "https://t.me/ynfct"
