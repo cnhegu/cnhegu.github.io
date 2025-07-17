@@ -1034,7 +1034,7 @@ uglyURLs = false
     ######################################
     # Lunr search
 
-    enableLunrSearch = true
+    enableLunrSearch = false
 
 
     ######################################

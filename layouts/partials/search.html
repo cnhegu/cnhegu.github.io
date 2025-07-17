@@ -1,0 +1,8 @@
+<!-- 
+  這個文件會覆蓋主題原有的搜索框。
+  我們使用和主題一樣的 CSS class，讓它看起來一模一樣，
+  但它的搜索請求會被發送到我們新建的 Google 搜索結果頁。
+-->
+<form id="google-search-form" class="search-form" action="{{ "/search/" | relLangURL }}" method="get" role="search">
+    <input type="search" name="q" class="search-input" placeholder="输入并按回车搜索..." autocomplete="off">
+</form>
