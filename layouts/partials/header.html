@@ -1,26 +1,43 @@
-{{ if or (or (and .IsHome .Site.Params.displayHeaderInHome) (eq .Site.Params.headerLayout "flex")) (and (not .IsHome) .Site.Params.enableHeader) }}
-    <header class="header">
-        {{ if eq .Site.Params.headerLayout "flex" }}
-            <div class="header-wrapper">
-                <div class="header-inner {{ cond (or .IsHome (eq (len .Pages) 0)) "single" "list"}}">
-                    {{ template "site-brand" . }}
-                    {{ partial "menu.html" . }}
-                    {{ partial "custom/header.html" . }}
-                </div>
-            </div>
-            {{ partial "components/nav-toggle.html" . }}
-        {{ else }}
-            {{ template "site-brand" . }}
-        {{ end }}
-    </header>
-{{ end }}
-
-{{ define "site-brand" }}
-    <div class="site-brand">
-        {{ if .Site.Params.siteBrandSVG }}
-            <a href="{{ "" | relLangURL }}">{{ partial "utils/icon.html" (dict "$" . "name" "brand") }}</a>
-        {{ else }}
-            <a href="{{ "" | relLangURL }}" class="brand">{{ .Site.Title }}</a>
-        {{ end }}
+{{/*
+    這是一個自定義的頭部模板覆蓋文件。
+    它的作用是繞過主題的所有複雜邏輯，
+    強制顯示搜索圖標，並確保所有菜單項正常渲染。
+*/}}
+<header class="header header-flex">
+    <div class="header-inner">
+        <div class="site-brand-container">
+            <a href="{{ .Site.Home.RelPermalink }}" class="brand">
+                {{ .Site.Title }}
+            </a>
+        </div>
+        <nav class="nav">
+            <ul class="menu" id="menu">
+                {{/* 遍歷您在 hugo.toml 中定義的所有主菜單項 */}}
+                {{- range .Site.Menus.main -}}
+                    {{- if eq .Identifier "search" -}}
+                        <!-- 強制渲染搜索圖標，並使用我們自定義的搜索 partial -->
+                        <li class="menu-item">
+                           {{ partial "search.html" . }}
+                        </li>
+                    {{- else if eq .Identifier "theme-switcher" -}}
+                        {{- if .Site.Params.enableDarkMode -}}
+                        <li class="menu-item">
+                            <a href="javascript:void(0);" class="theme-switch" title="切換主題">
+                                <i class="iconfont icon-dark"></i>
+                            </a>
+                        </li>
+                        {{- end -}}
+                    {{- else -}}
+                        <!-- 正常渲染所有其他菜單項 -->
+                         <li class="menu-item">
+                            <a href="{{ .URL | relLangURL }}" class="menu-item-link" title="{{ .Name }}">
+                                {{ with .Post }}<i class="iconfont icon-{{ . }}"></i>{{ end }}
+                                <span class="menu-item-name">{{ .Name }}</span>
+                            </a>
+                        </li>
+                    {{- end -}}
+                {{- end -}}
+            </ul>
+        </nav>
     </div>
-{{ end }}
+</header>
