@@ -57,7 +57,7 @@
         "@context": "https://schema.org",
         "@type": "WebPage",
         "datePublished": "2025-07-17T19:35:00+08:00",
-        "dateModified": "2025-07-17T15:22:44+00:00",
+        "dateModified": "2025-07-17T21:40:53+00:00",
         "url": "https://www.hegu.me/posts/",
         "name": "posts",
         "description": "MemE is a powerful and highly customizable GoHugo theme for personal blogs.",
@@ -108,58 +108,65 @@
         <div class="container">
             
 <header class="header header-flex">
-    <div class="header-inner">
-        <div class="site-brand-container">
-            <a href="/" class="brand">
-                何故小站
-            </a>
-        </div>
-        <nav class="nav">
-            <ul class="menu" id="menu">
-                
-                         <li class="menu-item">
-                            <a href="/posts/" class="menu-item-link" title="Posts">
-                                <i class="iconfont icon-archive"></i>
-                                <span class="menu-item-name">Posts</span>
-                            </a>
-                        </li>
-                         <li class="menu-item">
-                            <a href="/categories/" class="menu-item-link" title="Categories">
-                                <i class="iconfont icon-th"></i>
-                                <span class="menu-item-name">Categories</span>
-                            </a>
-                        </li>
-                         <li class="menu-item">
-                            <a href="/tags/" class="menu-item-link" title="Tags">
-                                <i class="iconfont icon-tags"></i>
-                                <span class="menu-item-name">Tags</span>
-                            </a>
-                        </li>
-                         <li class="menu-item">
-                            <a href="/about/" class="menu-item-link" title="About">
-                                <i class="iconfont icon-user-circle"></i>
-                                <span class="menu-item-name">About</span>
-                            </a>
-                        </li><li class="menu-item">
-                            <a href="javascript:void(0);" class="theme-switch" title="切換主題">
-                                <i class="iconfont icon-dark"></i>
-                            </a>
-                        </li>
-                         <li class="menu-item">
-                            <a href="/" class="menu-item-link" title="">
-                                
-                                <span class="menu-item-name"></span>
-                            </a>
-                        </li>
-                        <li class="menu-item">
-                           
+    <div class="header-wrapper">
+        <div class="header-inner">
+            <div class="site-brand-container">
+                <a href="/" class="brand">
+                    何故小站
+                </a>
+            </div>
+            <nav class="nav">
+                <ul class="menu" id="menu">
+                    
+                             <li class="menu-item">
+                                <a href="/posts/" class="menu-item-link" title="Posts">
+                                    <i class="iconfont icon-archive"></i>
+                                    <span class="menu-item-name">Posts</span>
+                                </a>
+                            </li>
+                             <li class="menu-item">
+                                <a href="/categories/" class="menu-item-link" title="Categories">
+                                    <i class="iconfont icon-th"></i>
+                                    <span class="menu-item-name">Categories</span>
+                                </a>
+                            </li>
+                             <li class="menu-item">
+                                <a href="/tags/" class="menu-item-link" title="Tags">
+                                    <i class="iconfont icon-tags"></i>
+                                    <span class="menu-item-name">Tags</span>
+                                </a>
+                            </li>
+                             <li class="menu-item">
+                                <a href="/about/" class="menu-item-link" title="About">
+                                    <i class="iconfont icon-user-circle"></i>
+                                    <span class="menu-item-name">About</span>
+                                </a>
+                            </li><li class="menu-item">
+                                <a href="javascript:void(0);" class="theme-switch" title="切換主題">
+                                    <i class="iconfont icon-dark"></i>
+                                </a>
+                            </li>
+                             <li class="menu-item">
+                                <a href="/" class="menu-item-link" title="">
+                                    
+                                    <span class="menu-item-name"></span>
+                                </a>
+                            </li>
+                            <li class="menu-item">
+                               
 <form id="google-search-form" class="search-form" action="/search/" method="get" role="search">
     <input type="search" name="q" class="search-input" placeholder="输入并按回车搜索..." autocomplete="off">
 </form>
 
-                        </li></ul>
-        </nav>
+                            </li></ul>
+            </nav>
+        </div>
     </div>
+    
+    <input type="checkbox" id="nav-toggle" aria-hidden="true" />
+    <label for="nav-toggle" class="nav-toggle"></label>
+    <label for="nav-toggle" class="nav-curtain"></label>
+
 </header>
 
             
