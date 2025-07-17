@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+    <title type="text">何故小站</title>
+    <subtitle type="html">MemE is a powerful and highly customizable GoHugo theme for personal blogs.</subtitle>
+    <updated>2025-07-17T15:09:12&#43;08:00</updated>
+    <id>http://localhost:1313/</id>
+    <link rel="alternate" type="text/html" href="http://localhost:1313/" />
+    <link rel="self" type="application/atom&#43;xml" href="http://localhost:1313/atom.xml" />
+    <author>
+            <name>何故</name>
+            <uri>http://localhost:1313/</uri>
+            
+                <email>comitist@gmail.com</email>
+            </author>
+    <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en)</rights>
+    <generator uri="https://gohugo.io/" version="0.148.1">Hugo</generator>
+        <entry>
+            <title type="text">My First Post</title>
+            <link rel="alternate" type="text/html" href="http://localhost:1313/posts/my-first-post/" />
+            <id>http://localhost:1313/posts/my-first-post/</id>
+            <updated>2025-07-17T15:08:50&#43;08:00</updated>
+            <published>2025-07-17T15:00:00&#43;08:00</published>
+            <author>
+                    <name>何故</name>
+                    <uri>https://www.hegu.me</uri>
+                    <email>comitist@gmail.com</email>
+                    </author>
+            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en)</rights><summary type="html">
+                &lt;p&gt;写在一个微热的午后。&lt;/p&gt;
+&lt;p&gt;博客终于上线了，这意味着我终于把那些分散在笔记本、对话框、梦境和咖啡渍上的只言片语，有了一个归宿。这里没有繁复的装饰，没有虚张声势的排场，只有文字与我自己，偶尔还有屏幕前的你。&lt;/p&gt;
+&lt;p&gt;其实人生就像写博客，起初总是反复琢磨第一个标题，却往往在不经意间才落下真正的开篇。也许内容还未丰满，但每一步都算数，每一次发布，都是对混沌的整理，是一次“让思想落地”的尝试。&lt;/p&gt;
+&lt;p&gt;接下来的日子，我会写点生活、记录些技术，也许会偶尔抱怨几句，或者分享某个深夜里听到的乡村音乐。&lt;/p&gt;
+&lt;p&gt;如果你愿意，就一起来吧。&lt;br&gt;
+就像春天那样，不慌不忙，有序萌芽。&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;em&gt;欢迎来到我的数字小屋。&lt;/em&gt;&lt;/p&gt;
+                &lt;blockquote&gt;
+&lt;p&gt;Read original: &lt;a href=&#34;http://localhost:1313/posts/my-first-post/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;http://localhost:1313/posts/my-first-post/&lt;/a&gt;&lt;br&gt;
+Notice: This blog now offers email subscriptions—feel free to &lt;a href=&#34;https://username.substack.com&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;subscribe via Substack&lt;/a&gt; to support my work!&lt;/p&gt;&lt;/blockquote&gt;
+            </summary>
+            
+                <content type="html">
+                    &lt;p style=&#34;text-indent:0&#34;&gt;&lt;span class=&#34;drop-cap&#34;&gt;写&lt;/span&gt;在一个微热的午后。&lt;/p&gt;
+&lt;p&gt;博客终于上线了，这意味着我终于把那些分散在笔记本、对话框、梦境和咖啡渍上的只言片语，有了一个归宿。这里没有繁复的装饰，没有虚张声势的排场，只有文字与我自己，偶尔还有屏幕前的你。&lt;/p&gt;
+&lt;p&gt;其实人生就像写博客，起初总是反复琢磨第一个标题，却往往在不经意间才落下真正的开篇。也许内容还未丰满，但每一步都算数，每一次发布，都是对混沌的整理，是一次“让思想落地”的尝试。&lt;/p&gt;
+&lt;p&gt;接下来的日子，我会写点生活、记录些技术，也许会偶尔抱怨几句，或者分享某个深夜里听到的乡村音乐。&lt;/p&gt;
+&lt;p&gt;如果你愿意，就一起来吧。&lt;br&gt;
+就像春天那样，不慌不忙，有序萌芽。&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;em&gt;欢迎来到我的数字小屋。&lt;/em&gt;&lt;/p&gt;
+
+                    &lt;blockquote&gt;
+&lt;p&gt;Read original: &lt;a href=&#34;http://localhost:1313/posts/my-first-post/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;http://localhost:1313/posts/my-first-post/&lt;/a&gt;&lt;br&gt;
+Notice: This blog now offers email subscriptions—feel free to &lt;a href=&#34;https://username.substack.com&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;subscribe via Substack&lt;/a&gt; to support my work!&lt;/p&gt;&lt;/blockquote&gt;
+                </content>
+            
+            
+            
+            
+            
+                
+                    
+                        
+                            
+                            
+                            
+                                <category scheme="http://localhost:1313/categories/%E9%9A%8F%E7%AC%94/" term="随笔" label="随笔" />
+                            
+                        
+                    
+                
+                    
+                        
+                            
+                            
+                            
+                                <category scheme="http://localhost:1313/tags/life/" term="life" label="life" />
+                            
+                        
+                            
+                            
+                            
+                                <category scheme="http://localhost:1313/tags/first/" term="first" label="first" />
+                            
+                        
+                            
+                            
+                            
+                                <category scheme="http://localhost:1313/tags/blog/" term="blog" label="blog" />
+                            
+                        
+                    
+                
+            
+        </entry>
+    
+</feed>
