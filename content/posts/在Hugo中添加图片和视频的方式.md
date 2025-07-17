@@ -124,12 +124,6 @@ allowfullscreen></iframe>
 
 > 如果主题不支持简码，也可以直接使用 `<iframe>` 插入 HTML 视频代码。
 
-另外还有git push的相关技巧及需要注意的地方：
-
-![完整的推送流程](tips-photo-1.jpg)
-
-
-
 _欢迎来到我的数字小屋。_
 
 
