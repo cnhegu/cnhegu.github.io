@@ -1,6 +1,4 @@
-English |
 [简体中文](https://github.com/reuixiy/hugo-theme-meme/blob/master/README.zh-cn.md) |
-[繁體中文](https://github.com/reuixiy/hugo-theme-meme/blob/master/README.zh-tw.md)
 
 <div align="center"><img src="https://raw.githubusercontent.com/reuixiy/hugo-theme-meme/master/static/icons/apple-touch-icon.png" /></div>
 
@@ -190,3 +188,4 @@ We are grateful to the following sponsors for their support:
 [![Powered by DartNode](https://dartnode.com/branding/DN-Open-Source-sm.png)](https://dartnode.com?aff=QuirkyKoala717 "Powered by DartNode - Free VPS for Open Source")
 
 *: _Some of these links are affiliate links, which means that if you click on one of the product links, I’ll receive a small commission. This helps support me to spend more time developing MemE. Thank you for the support!_
+``，
