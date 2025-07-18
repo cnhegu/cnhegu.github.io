@@ -24,12 +24,10 @@
                     {{ end }}
                 {{ end }}
             {{ else if eq .Identifier "search" }}
-                {{ if and (eq $.Site.Params.headerLayout "flex") (or $.Site.Params.enableLunrSearch $.Site.Params.enableAlgoliaSearch) }}
-                    {{- $iconName := (string .Post) -}}
-                    <li class="menu-item search-item">
-                        {{ partial "components/search.html" (dict "$" $currentPage "iconName" $iconName) }}
-                    </li>
-                {{ end }}
+                <!-- 这是我们自定义的 Google 搜索框，替换了主题的原有逻辑 -->
+                <li class="menu-item search-item">
+                    {{ partial "search.html" $currentPage }}
+                </li>
             {{ else }}
                 <li class="menu-item{{ if or ($currentPage.IsMenuCurrent .Menu .) (and ($currentPage.HasMenuCurrent .Menu .) $.Site.Params.activeInSection) }} active{{ end }}">
                     {{- $linkType := (string .Pre) -}}
