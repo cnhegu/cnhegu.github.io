@@ -33,4 +33,4 @@
 [[socials]]
   name = "RSS"
   icon = "rss"
-  url = "/posts/index.xml"
+  url = "/rss.xml" 
