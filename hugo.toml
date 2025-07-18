@@ -562,12 +562,12 @@ uglyURLs = false
     giscusCategory = "Announcements"
     giscusCategoryId = "DIC_kwDOPOBCps4CtEv9"
     giscusMapping = "title"
-    giscusStrict = false
+    giscusStrict = 0
     giscusReactionsEnabled = true
     giscusEmitMetaData = false
     giscusInputPosition = "bottom"
-    giscusTheme = "dark"
-    giscusThemeDark = "dark"
+    giscusTheme = "dark_dimmed"
+    giscusThemeDark = "dark_dimmed"
     giscusLang = "zh-CN"
 
     # Remark42
