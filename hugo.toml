@@ -665,10 +665,10 @@ uglyURLs = false
     categoryIcon = "folder"
     categoryDelimiter = "/"
 
-    displayWordCount = true
+    displayWordCount = false
     wordCountIcon = "pencil-alt"
 
-    displayReadingTime = true
+    displayReadingTime = false
     readingTimeIcon = "clock"
 
     displayBusuanziPagePV = false
@@ -706,7 +706,7 @@ uglyURLs = false
 
     enableAnchorLink = true
 
-    enableAnchorAutoHide = true
+    enableAnchorAutoHide = false
 
 
     ######################################
