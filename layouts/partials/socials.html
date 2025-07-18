@@ -1,0 +1,14 @@
+{{- if .Site.Params.enableSocials -}}
+    <div class="socials">
+        <ul class="socials-list">
+            {{- range .Site.Data.Socials.socials -}}
+                <li class="socials-item">
+                    <a href="{{ .url }}" title="{{ .name }}" target="_blank" rel="external noopener"
+                       aria-label="{{ .name }}"> <!-- 关键改动：添加 aria-label -->
+                        <i class="iconfont icon-{{ .icon }}"></i>
+                    </a>
+                </li>
+            {{- end -}}
+        </ul>
+    </div>
+{{- end -}}

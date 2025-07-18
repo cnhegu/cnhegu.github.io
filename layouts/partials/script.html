@@ -59,7 +59,7 @@
     {{- $script = $script | resources.Fingerprint -}}
     <script src="{{ $script.RelPermalink }}"
     {{- if .Site.Params.enableSRI }} integrity="{{ $script.Data.Integrity }}" crossorigin="anonymous"{{- end -}}
-    ></script>
+    defer></script> <!-- 关键改动：添加 defer -->
 {{- else -}}
-    <script src="{{ $script.RelPermalink }}"></script>
+    <script src="{{ $script.RelPermalink }}" defer></script> <!-- 关键改动：添加 defer -->
 {{- end }}
