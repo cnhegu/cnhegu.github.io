@@ -1,0 +1,22 @@
+{{/*
+    这是一个恢复性的 header.html 文件。
+    它的唯一作用是作为桥梁，正确地调用 menu.html，
+    从而修复 "header.html not found" 的错误。
+*/}}
+<header class="header header-flex">
+    <div class="header-wrapper">
+        <div class="header-inner">
+            <div class="site-brand-container">
+                <a href="{{ .Site.Home.RelPermalink }}" class="brand">
+                    {{ .Site.Title }}
+                </a>
+            </div>
+            {{/* 正确地调用我们已经修改好的 menu.html */}}
+            {{ partial "menu.html" . }}
+        </div>
+    </div>
+    {{/* 移动端导航的“汉堡菜单”按钮 */}}
+    {{- if .Site.Params.enableNavToggle -}}
+        {{ partial "components/nav-toggle.html" . }}
+    {{- end -}}
+</header>
