@@ -16,6 +16,11 @@
   url = "https://github.com/cnhegu"
 
 [[socials]]
+  name = "Google Developer"
+  icon = "google"
+  url = "https://g.dev/hegu"
+
+[[socials]]
   name = "Twitter / X"
   icon = "x"
   url = "https://twitter.com/NullCause"
