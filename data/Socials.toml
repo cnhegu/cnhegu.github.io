@@ -17,7 +17,7 @@
 
 [[socials]]
   name = "Google Developer"
-  icon = "google"
+  icon = "globe" 
   url = "https://g.dev/hegu"
 
 [[socials]]
