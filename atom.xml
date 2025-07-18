@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
     <title type="text">何故小站</title>
     <subtitle type="html">MemE is a powerful and highly customizable GoHugo theme for personal blogs.</subtitle>
-    <updated>2025-07-18T01:25:06&#43;00:00</updated>
+    <updated>2025-07-18T01:40:56&#43;00:00</updated>
     <id>https://www.hegu.me/</id>
     <link rel="alternate" type="text/html" href="https://www.hegu.me/" />
     <link rel="self" type="application/atom&#43;xml" href="https://www.hegu.me/atom.xml" />
@@ -20,7 +20,7 @@
             <title type="text">他们说</title>
             <link rel="alternate" type="text/html" href="https://www.hegu.me/posts/them-say-post/" />
             <id>https://www.hegu.me/posts/them-say-post/</id>
-            <updated>2025-07-18T01:25:04&#43;00:00</updated>
+            <updated>2025-07-18T01:40:55&#43;00:00</updated>
             <published>2025-07-18T09:22:00&#43;08:00</published>
             <author>
                     <name>何故</name>
@@ -73,6 +73,20 @@ Notice: This blog now offers email subscriptions—feel free to &lt;a href=&#34;
                             
                             
                             
+                                <category scheme="https://www.hegu.me/tags/%E7%94%9F%E6%B4%BB/" term="生活" label="生活" />
+                            
+                        
+                            
+                            
+                            
+                                <category scheme="https://www.hegu.me/tags/%E9%A2%86%E6%82%9F/" term="领悟" label="领悟" />
+                            
+                        
+                            
+                            
+                            
+                                <category scheme="https://www.hegu.me/tags/%E9%97%B2%E8%A8%80%E7%A2%8E%E8%AF%AD/" term="闲言碎语" label="闲言碎语" />
+                            
                         
                     
                 
@@ -83,7 +97,7 @@ Notice: This blog now offers email subscriptions—feel free to &lt;a href=&#34;
             <title type="text">在Hugo中添加图片和视频的方式</title>
             <link rel="alternate" type="text/html" href="https://www.hegu.me/posts/add-medias-on-hugo-theme-post/" />
             <id>https://www.hegu.me/posts/add-medias-on-hugo-theme-post/</id>
-            <updated>2025-07-18T01:25:04&#43;00:00</updated>
+            <updated>2025-07-18T01:40:55&#43;00:00</updated>
             <published>2025-07-17T19:35:00&#43;08:00</published>
             <author>
                     <name>何故</name>
@@ -260,7 +274,7 @@ Notice: This blog now offers email subscriptions—feel free to &lt;a href=&#34;
             <title type="text">My First Post</title>
             <link rel="alternate" type="text/html" href="https://www.hegu.me/posts/my-first-post/" />
             <id>https://www.hegu.me/posts/my-first-post/</id>
-            <updated>2025-07-18T01:25:04&#43;00:00</updated>
+            <updated>2025-07-18T01:40:55&#43;00:00</updated>
             <published>2025-07-17T15:00:00&#43;08:00</published>
             <author>
                     <name>何故</name>
