@@ -959,7 +959,7 @@ uglyURLs = false
 
     displaySiteAuthorName = true
 
-    displayPoweredBy = true
+    displayPoweredBy = false
 
     displaySiteCopyright = true
 
