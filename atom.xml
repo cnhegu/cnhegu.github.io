@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
     <title type="text">何故小站</title>
     <subtitle type="html">MemE is a powerful and highly customizable GoHugo theme for personal blogs.</subtitle>
-    <updated>2025-07-18T05:09:57&#43;00:00</updated>
+    <updated>2025-07-18T05:20:39&#43;00:00</updated>
     <id>https://www.hegu.me/</id>
     <link rel="alternate" type="text/html" href="https://www.hegu.me/" />
     <link rel="self" type="application/atom&#43;xml" href="https://www.hegu.me/atom.xml" />
@@ -20,7 +20,7 @@
             <title type="text">他们说</title>
             <link rel="alternate" type="text/html" href="https://www.hegu.me/posts/them-say-post/" />
             <id>https://www.hegu.me/posts/them-say-post/</id>
-            <updated>2025-07-18T05:09:55&#43;00:00</updated>
+            <updated>2025-07-18T05:20:37&#43;00:00</updated>
             <published>2025-07-18T09:22:00&#43;08:00</published>
             <author>
                     <name>何故</name>
@@ -47,7 +47,6 @@ Notice: This blog now offers email subscriptions—feel free to &lt;a href=&#34;
 &lt;p&gt;累了，还是回到自己的安全小屋，专注的干点自己喜欢的事打发打发时间来的有意思，在自己最后的避风港走走停停停停走走，好了今天就到这里吧。&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;&lt;em&gt;欢迎来到我的数字小屋。&lt;/em&gt;&lt;/p&gt;
-
                     &lt;blockquote&gt;
 &lt;p&gt;Read original: &lt;a href=&#34;https://www.hegu.me/posts/them-say-post/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://www.hegu.me/posts/them-say-post/&lt;/a&gt;&lt;br&gt;
 Notice: This blog now offers email subscriptions—feel free to &lt;a href=&#34;https://username.substack.com&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;subscribe via Substack&lt;/a&gt; to support my work!&lt;/p&gt;&lt;/blockquote&gt;
@@ -97,7 +96,7 @@ Notice: This blog now offers email subscriptions—feel free to &lt;a href=&#34;
             <title type="text">在Hugo中添加图片和视频的方式</title>
             <link rel="alternate" type="text/html" href="https://www.hegu.me/posts/add-medias-on-hugo-theme-post/" />
             <id>https://www.hegu.me/posts/add-medias-on-hugo-theme-post/</id>
-            <updated>2025-07-18T05:09:55&#43;00:00</updated>
+            <updated>2025-07-18T05:20:37&#43;00:00</updated>
             <published>2025-07-17T19:35:00&#43;08:00</published>
             <author>
                     <name>何故</name>
@@ -224,7 +223,6 @@ Notice: This blog now offers email subscriptions—feel free to &lt;a href=&#34;
 &lt;/figure&gt;
 &lt;/p&gt;
 &lt;p&gt;&lt;em&gt;欢迎来到我的数字小屋。&lt;/em&gt;&lt;/p&gt;
-
                     &lt;blockquote&gt;
 &lt;p&gt;Read original: &lt;a href=&#34;https://www.hegu.me/posts/add-medias-on-hugo-theme-post/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://www.hegu.me/posts/add-medias-on-hugo-theme-post/&lt;/a&gt;&lt;br&gt;
 Notice: This blog now offers email subscriptions—feel free to &lt;a href=&#34;https://username.substack.com&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;subscribe via Substack&lt;/a&gt; to support my work!&lt;/p&gt;&lt;/blockquote&gt;
@@ -274,7 +272,7 @@ Notice: This blog now offers email subscriptions—feel free to &lt;a href=&#34;
             <title type="text">My First Post</title>
             <link rel="alternate" type="text/html" href="https://www.hegu.me/posts/my-first-post/" />
             <id>https://www.hegu.me/posts/my-first-post/</id>
-            <updated>2025-07-18T05:09:55&#43;00:00</updated>
+            <updated>2025-07-18T05:20:37&#43;00:00</updated>
             <published>2025-07-17T15:00:00&#43;08:00</published>
             <author>
                     <name>何故</name>
@@ -298,7 +296,6 @@ Notice: This blog now offers email subscriptions—feel free to &lt;a href=&#34;
 就像春天那样，不慌不忙，有序萌芽。&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;&lt;em&gt;欢迎来到我的数字小屋。&lt;/em&gt;&lt;/p&gt;
-
                     &lt;blockquote&gt;
 &lt;p&gt;Read original: &lt;a href=&#34;https://www.hegu.me/posts/my-first-post/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://www.hegu.me/posts/my-first-post/&lt;/a&gt;&lt;br&gt;
 Notice: This blog now offers email subscriptions—feel free to &lt;a href=&#34;https://username.substack.com&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;subscribe via Substack&lt;/a&gt; to support my work!&lt;/p&gt;&lt;/blockquote&gt;
