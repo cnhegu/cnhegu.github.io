@@ -23,7 +23,7 @@
         
             <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en)</copyright>
         
-        <lastBuildDate>Thu, 17 Jul 2025 23:34:52 &#43;0000</lastBuildDate>
+        <lastBuildDate>Fri, 18 Jul 2025 00:10:56 &#43;0000</lastBuildDate>
         
             <atom:link rel="self" type="application/rss&#43;xml" href="https://www.hegu.me/rss.xml" />
         
@@ -145,6 +145,12 @@
 &lt;/div&gt;&lt;p&gt;其中 &lt;code&gt;VIDEO_ID&lt;/code&gt; 是视频地址中那一串独特字符。&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;如果主题不支持简码，也可以直接使用 &lt;code&gt;&amp;lt;iframe&amp;gt;&lt;/code&gt; 插入 HTML 视频代码。&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;最后git push的完整流程及需要注意的地方：
+&lt;figure&gt;&lt;img src=&#34;https://www.hegu.me/images/git-tips.jpg&#34;&gt;&lt;figcaption&gt;
+      &lt;h4&gt;截屏&lt;/h4&gt;
+    &lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;欢迎来到我的数字小屋。&lt;/em&gt;&lt;/p&gt;
 
                         &lt;blockquote&gt;

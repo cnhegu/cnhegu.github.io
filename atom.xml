@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
     <title type="text">何故小站</title>
     <subtitle type="html">MemE is a powerful and highly customizable GoHugo theme for personal blogs.</subtitle>
-    <updated>2025-07-17T23:34:52&#43;00:00</updated>
+    <updated>2025-07-18T00:10:56&#43;00:00</updated>
     <id>https://www.hegu.me/</id>
     <link rel="alternate" type="text/html" href="https://www.hegu.me/" />
     <link rel="self" type="application/atom&#43;xml" href="https://www.hegu.me/atom.xml" />
@@ -20,7 +20,7 @@
             <title type="text">在Hugo中添加图片和视频的方式</title>
             <link rel="alternate" type="text/html" href="https://www.hegu.me/posts/add-medias-on-hugo-theme-post/" />
             <id>https://www.hegu.me/posts/add-medias-on-hugo-theme-post/</id>
-            <updated>2025-07-17T23:34:51&#43;00:00</updated>
+            <updated>2025-07-18T00:10:55&#43;00:00</updated>
             <published>2025-07-17T19:35:00&#43;08:00</published>
             <author>
                     <name>何故</name>
@@ -140,6 +140,12 @@ Notice: This blog now offers email subscriptions—feel free to &lt;a href=&#34;
 &lt;/div&gt;&lt;p&gt;其中 &lt;code&gt;VIDEO_ID&lt;/code&gt; 是视频地址中那一串独特字符。&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;如果主题不支持简码，也可以直接使用 &lt;code&gt;&amp;lt;iframe&amp;gt;&lt;/code&gt; 插入 HTML 视频代码。&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;最后git push的完整流程及需要注意的地方：
+&lt;figure&gt;&lt;img src=&#34;https://www.hegu.me/images/git-tips.jpg&#34;&gt;&lt;figcaption&gt;
+      &lt;h4&gt;截屏&lt;/h4&gt;
+    &lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;欢迎来到我的数字小屋。&lt;/em&gt;&lt;/p&gt;
 
                     &lt;blockquote&gt;
@@ -191,7 +197,7 @@ Notice: This blog now offers email subscriptions—feel free to &lt;a href=&#34;
             <title type="text">My First Post</title>
             <link rel="alternate" type="text/html" href="https://www.hegu.me/posts/my-first-post/" />
             <id>https://www.hegu.me/posts/my-first-post/</id>
-            <updated>2025-07-17T23:34:51&#43;00:00</updated>
+            <updated>2025-07-18T00:10:55&#43;00:00</updated>
             <published>2025-07-17T15:00:00&#43;08:00</published>
             <author>
                     <name>何故</name>
