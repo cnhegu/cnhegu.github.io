@@ -1,7 +1,8 @@
 {{/*
     这是一个自定义的头部模板覆盖文件。
-    V5 版本采用更稳健的逻辑，将普通菜单项和特殊功能按钮（如主题切换、搜索）分开渲染，
-    以确保所有功能按钮都能在设置开启时正确显示。
+    V6 最终调试版：此版本移除了所有条件判断，
+    无条件地、强制性地渲染主题切换按钮和搜索按钮，
+    用于最终排查此问题。
 */}}
 <header class="header header-flex">
     <div class="header-wrapper">
@@ -25,18 +26,16 @@
                         {{- end -}}
                     {{- end -}}
 
-                    {{/* 第二步：单独渲染“特殊”的功能按钮 */}}
+                    {{/* 第二步：无条件渲染“特殊”的功能按钮 */}}
                     
-                    {{/* 主题切换按钮 */}}
-                    {{- if .Site.Params.enableDarkMode -}}
+                    <!-- 主题切换按钮 (无条件渲染) -->
                     <li class="menu-item">
                         <a href="javascript:void(0);" class="theme-switch" title="切换主题">
                             <i class="iconfont icon-dark"></i>
                         </a>
                     </li>
-                    {{- end -}}
 
-                    {{/* 搜索按钮 */}}
+                    <!-- 搜索按钮 (无条件渲染) -->
                     <li class="menu-item">
                        {{ partial "search.html" . }}
                     </li>
