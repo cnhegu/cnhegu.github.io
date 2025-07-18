@@ -1,7 +1,7 @@
 {{/*
-    这是一个自定义的头部模板覆写文件。
-    V4 版本在 V3 的基础上，重新加入了移动端导航的“汉堡菜单”按钮，
-    确保在所有设备上导航栏都能正常显示。
+    这是一个自定义的头部模板覆盖文件。
+    V5 版本采用更稳健的逻辑，将普通菜单项和特殊功能按钮（如主题切换、搜索）分开渲染，
+    以确保所有功能按钮都能在设置开启时正确显示。
 */}}
 <header class="header header-flex">
     <div class="header-wrapper">
@@ -13,25 +13,10 @@
             </div>
             <nav class="nav">
                 <ul class="menu" id="menu">
-                    {{/* 遍歷您在 hugo.toml 中定義的所有主菜單項 */}}
-                    {{- $currentPage := . -}}
+                    {{/* 第一步：渲染所有“普通”的菜单项 */}}
                     {{- range .Site.Menus.main -}}
-                        {{- if eq .Identifier "search" -}}
-                            <!-- 強制渲染搜索圖標 -->
+                        {{- if and (ne .Identifier "search") (ne .Identifier "theme-switcher") (ne .Identifier "lang-switcher") -}}
                             <li class="menu-item">
-                               {{ partial "search.html" $currentPage }}
-                            </li>
-                        {{- else if eq .Identifier "theme-switcher" -}}
-                            {{- if $currentPage.Site.Params.enableDarkMode -}}
-                            <li class="menu-item">
-                                <a href="javascript:void(0);" class="theme-switch" title="切換主題">
-                                    <i class="iconfont icon-dark"></i>
-                                </a>
-                            </li>
-                            {{- end -}}
-                        {{- else -}}
-                            <!-- 正常渲染所有其他菜單項 -->
-                             <li class="menu-item">
                                 <a href="{{ .URL | relLangURL }}" class="menu-item-link" title="{{ .Name }}">
                                     {{ with .Post }}<i class="iconfont icon-{{ . }}"></i>{{ end }}
                                     <span class="menu-item-name">{{ .Name }}</span>
@@ -39,11 +24,28 @@
                             </li>
                         {{- end -}}
                     {{- end -}}
+
+                    {{/* 第二步：单独渲染“特殊”的功能按钮 */}}
+                    
+                    {{/* 主题切换按钮 */}}
+                    {{- if .Site.Params.enableDarkMode -}}
+                    <li class="menu-item">
+                        <a href="javascript:void(0);" class="theme-switch" title="切换主题">
+                            <i class="iconfont icon-dark"></i>
+                        </a>
+                    </li>
+                    {{- end -}}
+
+                    {{/* 搜索按钮 */}}
+                    <li class="menu-item">
+                       {{ partial "search.html" . }}
+                    </li>
+
                 </ul>
             </nav>
         </div>
     </div>
-    {{/* 這是恢復移動端導航的關鍵代碼 */}}
+    {{/* 移动端导航的“汉堡菜单”按钮 */}}
     {{- if .Site.Params.enableNavToggle -}}
         {{ partial "components/nav-toggle.html" . }}
     {{- end -}}
