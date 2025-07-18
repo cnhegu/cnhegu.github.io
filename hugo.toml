@@ -317,11 +317,11 @@ uglyURLs = false
     # Note: used for HTML head meta, JSON-LD,
     #       Open Graph, Atom, RSS
 
-    siteCreatedTime = "1969-07-20T20:17:43+00:00"
+    siteCreatedTime = "2007-09-20T20:17:43+00:00"
     # ATTENTION: keep this format, change
     #            the number
 
-    siteTwitter = "yixiuer"
+    siteTwitter = "NullCause"
     # Note: used for Twitter Cards
 
 
