@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
     <title type="text">何故小站</title>
     <subtitle type="html">MemE is a powerful and highly customizable GoHugo theme for personal blogs.</subtitle>
-    <updated>2025-07-19T14:06:32&#43;00:00</updated>
+    <updated>2025-07-19T14:14:50&#43;00:00</updated>
     <id>https://www.hegu.me/</id>
     <link rel="alternate" type="text/html" href="https://www.hegu.me/" />
     <link rel="self" type="application/atom&#43;xml" href="https://www.hegu.me/atom.xml" />
@@ -20,7 +20,7 @@
             <title type="text">老家的那棵树</title>
             <link rel="alternate" type="text/html" href="https://www.hegu.me/posts/memory-tree-post/" />
             <id>https://www.hegu.me/posts/memory-tree-post/</id>
-            <updated>2025-07-19T14:06:31&#43;00:00</updated>
+            <updated>2025-07-19T14:14:49&#43;00:00</updated>
             <published>2025-07-19T21:48:00&#43;08:00</published>
             <author>
                     <name>何故</name>
@@ -28,15 +28,16 @@
                     <email>comitist@gmail.com</email>
                     </author>
             <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en)</rights><summary type="html">
-                &lt;p&gt;总有一些画面，被定格在记忆深处，轻易不会想起，但一旦触碰，便会涌出万千思绪。这张几年前在老家拍摄的照片，便是这样一把钥匙。&lt;/p&gt;
+                &lt;p&gt;总有一些画面，被定格在记忆深处，轻易不会想起，但一旦触碰，便会涌出万千思绪。这张几年前在老家拍摄的照片，便是这样一把钥匙。
+&lt;img src=&#34;https://www.hegu.me/images/my-hometown.jpg&#34; alt=&#34;家乡古树&#34;&gt;&lt;/p&gt;
                 &lt;blockquote&gt;
 &lt;p&gt;Read original: &lt;a href=&#34;https://www.hegu.me/posts/memory-tree-post/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://www.hegu.me/posts/memory-tree-post/&lt;/a&gt;&lt;br&gt;
 Notice: This blog now offers email subscriptions—feel free to &lt;a href=&#34;https://username.substack.com&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;subscribe via Substack&lt;/a&gt; to support my work!&lt;/p&gt;&lt;/blockquote&gt;
             </summary>
             
                 <content type="html">
-                    &lt;p style=&#34;text-indent:0&#34;&gt;&lt;span class=&#34;drop-cap&#34;&gt;总&lt;/span&gt;有一些画面，被定格在记忆深处，轻易不会想起，但一旦触碰，便会涌出万千思绪。这张几年前在老家拍摄的照片，便是这样一把钥匙。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://www.hegu.me/images/my-hometown.jpg&#34; alt=&#34;家乡古树&#34;&gt;&lt;/p&gt;
+                    &lt;p style=&#34;text-indent:0&#34;&gt;&lt;span class=&#34;drop-cap&#34;&gt;总&lt;/span&gt;有一些画面，被定格在记忆深处，轻易不会想起，但一旦触碰，便会涌出万千思绪。这张几年前在老家拍摄的照片，便是这样一把钥匙。
+&lt;img src=&#34;https://www.hegu.me/images/my-hometown.jpg&#34; alt=&#34;家乡古树&#34;&gt;&lt;/p&gt;
 &lt;p&gt;照片的焦点，无疑是那棵苍劲古拙的老树。它在冬日萧瑟的风中伸展着光秃秃的枝丫，每一根树枝都像是在诉说着岁月的故事。繁复的枝干交错着，织成一张通往灰色天空的网，显得孤独而有力量。记不清它在这里站立了多少年，只知道从我记事起，它就是村口不变的风景，像一位沉默的守望者，看过一代代人的离去与归来。&lt;/p&gt;
 &lt;p&gt;树下的小屋与路
 树下依偎着一间低矮的小屋，灰瓦泥墙，看起来饱经风霜。墙上那抹不易察觉的红色，或许是某个节庆留下的印记，为这片灰黄的色调增添了一丝人间的烟火气。屋前那条蜿蜒的土路，是我童年时奔跑玩耍的“高速公路”，路的尽头，连接着外面的世界，也牵引着远方游子的目光。&lt;/p&gt;
@@ -86,7 +87,7 @@ Notice: This blog now offers email subscriptions—feel free to &lt;a href=&#34;
             <title type="text">他们说</title>
             <link rel="alternate" type="text/html" href="https://www.hegu.me/posts/them-say-post/" />
             <id>https://www.hegu.me/posts/them-say-post/</id>
-            <updated>2025-07-19T14:06:31&#43;00:00</updated>
+            <updated>2025-07-19T14:14:49&#43;00:00</updated>
             <published>2025-07-18T09:22:00&#43;08:00</published>
             <author>
                     <name>何故</name>
@@ -162,7 +163,7 @@ Notice: This blog now offers email subscriptions—feel free to &lt;a href=&#34;
             <title type="text">在Hugo中添加图片和视频的方式</title>
             <link rel="alternate" type="text/html" href="https://www.hegu.me/posts/add-medias-on-hugo-theme-post/" />
             <id>https://www.hegu.me/posts/add-medias-on-hugo-theme-post/</id>
-            <updated>2025-07-19T14:06:31&#43;00:00</updated>
+            <updated>2025-07-19T14:14:49&#43;00:00</updated>
             <published>2025-07-17T19:35:00&#43;08:00</published>
             <author>
                     <name>何故</name>
@@ -338,7 +339,7 @@ Notice: This blog now offers email subscriptions—feel free to &lt;a href=&#34;
             <title type="text">My First Post</title>
             <link rel="alternate" type="text/html" href="https://www.hegu.me/posts/my-first-post/" />
             <id>https://www.hegu.me/posts/my-first-post/</id>
-            <updated>2025-07-19T14:06:31&#43;00:00</updated>
+            <updated>2025-07-19T14:14:49&#43;00:00</updated>
             <published>2025-07-17T15:00:00&#43;08:00</published>
             <author>
                     <name>何故</name>
