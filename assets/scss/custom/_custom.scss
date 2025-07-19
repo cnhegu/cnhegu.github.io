@@ -23,4 +23,25 @@
     background-color: transparent !important;
     color: var(--color-primary) !important;
 }
+/* 将导航栏的搜索框变为圆角胶囊形状 */
+.header .nav .search-form .search-input {
+    /* 关键属性：设置一个较大的圆角值 */
+    border-radius: 20px;
+
+    /* 可选：微调边框和内边距，使其看起来更和谐 */
+    border: 1px solid var(--color-contrast-lower);
+    padding: 0.4em 1em;
+    height: auto;
+    line-height: normal;
+
+    /* 可选：添加一个平滑的过渡动画 */
+    transition: all 0.3s ease;
+
+    /* 可选：当用户点击输入框时，添加一个高亮效果 */
+    &:focus {
+        border-color: var(--color-primary);
+        box-shadow: 0 0 5px alpha(var(--color-primary), 0.5);
+    }
+}
+
 
