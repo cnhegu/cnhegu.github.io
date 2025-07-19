@@ -166,31 +166,31 @@ uglyURLs = false
     ## Menu bar
     # [[menu.main]]
     #     pageref = "/"
-    #     name = "Home"
+    #     name = "首页"
     #     weight = 1
     #     pre = "internal"
     #     post = "home"
     [[menu.main]]
         pageref = "/posts/"
-        name = "Posts"
+        name = "文章"
         weight = 2
         pre = "internal"
         post = "archive"
     [[menu.main]]
         pageref = "/categories/"
-        name = "Categories"
+        name = "分类"
         weight = 3
         pre = "internal"
         post = "th"
     [[menu.main]]
         pageref = "/tags/"
-        name = "Tags"
+        name = "标签"
         weight = 4
         pre = "internal"
         post = "tags"
     [[menu.main]]
         pageref = "/about/"
-        name = "About"
+        name = "关于"
         weight = 5
         pre = "internal"
         post = "user-circle"
