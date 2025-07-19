@@ -960,8 +960,8 @@ uglyURLs = false
 
     displayPoweredBy = false
 
-    displaySiteCopyright = false
-    customFooter = ""
+    displaySiteCopyright = true
+    customFooter = "© 2025 hegu.me. All Rights Reserved."
 
     displayBusuanziSiteUVAndPV = false
     busuanziSiteUVText = "Site UV"
