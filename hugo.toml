@@ -949,21 +949,20 @@ uglyURLs = false
     displayFooterInHome = true
 
     displayCopyleftSymbol = false
-    displayCopyrightSymbol = true
+    displayCopyrightSymbol = false
+    displaySiteCreatedYear = false
 
-    displaySiteCreatedYear = true
-
-    iconBetweenYearAndAuthor = "heart"
+    iconBetweenYearAndAuthor = ""
     iconColor = "#f06292"
     iconAnimation = true
 
-    displaySiteAuthorName = true
+    displaySiteAuthorName = false
 
     displayPoweredBy = false
 
     displaySiteCopyright = true
 
-    customFooter = ""
+    customFooter = "© 2025 hegu.me. All Rights Reserved."
 
     displayBusuanziSiteUVAndPV = false
     busuanziSiteUVText = "Site UV"
