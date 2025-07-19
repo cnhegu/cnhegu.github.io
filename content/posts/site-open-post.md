@@ -1,5 +1,5 @@
 ---
-title: "My First Post"
+title: "博客开张"
 date: 2025-07-17T15:00:00+08:00
 draft: false
 tags: ["life", "first", "blog"]
