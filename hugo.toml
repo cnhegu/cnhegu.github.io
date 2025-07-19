@@ -960,20 +960,9 @@ uglyURLs = false
 
     displayPoweredBy = false
 
-    displaySiteCopyright = false
+    displaySiteCopyright = true
 
-    customFooter = "<div style="text-align: center; font-size: 0.9em; color: #888;">
-    <span>© 2025 hegu.me. All Rights Reserved.</span>
-    <div style="margin-top: 0.5rem;">
-        <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" style="text-decoration: none;" target="_blank" rel="noopener noreferrer" title="署名-非商业性使用-相同方式共享 4.0 国际">
-            <img src="https://mirrors.creativecommons.org/presskit/icons/by.svg" style="height: 22px; filter: invert(0.6);" alt="Attribution">
-            <img src="https://mirrors.creativecommons.org/presskit/icons/nc.svg" style="height: 22px; filter: invert(0.6);" alt="Non-Commercial">
-            <img src="https://mirrors.creativecommons.org/presskit/icons/sa.svg" style="height: 22px; filter: invert(0.6);" alt="Share-Alike">
-        </a>
-    </div>
-</div>
-"""
-"
+    customFooter = "© 2025 hegu.me. All Rights Reserved."
 
     displayBusuanziSiteUVAndPV = false
     busuanziSiteUVText = "Site UV"
