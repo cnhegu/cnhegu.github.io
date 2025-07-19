@@ -1,5 +1,5 @@
 ---
-title: "关于"
+title: "About"
 date: 2025-07-17T15:10:00+08:00
 layout: "page"
 ---
