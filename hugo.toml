@@ -953,7 +953,7 @@ uglyURLs = false
 
     displayCopyleftSymbol = false
     displayCopyrightSymbol = true
-    displaySiteCreatedYear = true
+    displaySiteCreatedYear = false
 
     iconBetweenYearAndAuthor = "heart"
     iconColor = "#f06292"
