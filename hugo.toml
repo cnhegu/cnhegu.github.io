@@ -320,7 +320,7 @@ uglyURLs = false
     # Note: used for HTML head meta, JSON-LD,
     #       Open Graph, Atom, RSS
 
-    siteCreatedTime = "2007-09-20T20:17:43+00:00"
+    siteCreatedTime = "2025-09-20T20:17:43+00:00"
     # ATTENTION: keep this format, change
     #            the number
 
@@ -952,19 +952,19 @@ uglyURLs = false
     displayFooterInHome = true
 
     displayCopyleftSymbol = false
-    displayCopyrightSymbol = false
-    displaySiteCreatedYear = false
+    displayCopyrightSymbol = true
+    displaySiteCreatedYear = true
 
-    iconBetweenYearAndAuthor = ""
+    iconBetweenYearAndAuthor = "heart"
     iconColor = "#f06292"
     iconAnimation = true
 
-    displaySiteAuthorName = false
+    displaySiteAuthorName = true
 
     displayPoweredBy = false
 
     displaySiteCopyright = true
-    customFooter = "© 2025 hegu.me. All Rights Reserved."
+    customFooter = ""
 
     displayBusuanziSiteUVAndPV = true
     busuanziSiteUVText = "Site UV"
