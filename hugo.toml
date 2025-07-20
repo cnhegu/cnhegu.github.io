@@ -967,9 +967,9 @@ uglyURLs = false
     customFooter = ""
 
     displayBusuanziSiteUVAndPV = true
-    busuanziSiteUVText = "Site UV"
+    busuanziSiteUVText = "访客数"
     busuanziSiteUVIcon = "user"
-    busuanziSitePVText = "Site PV"
+    busuanziSitePVText = "访问量"
     busuanziSitePVIcon = "eye"
 
     # Socials
