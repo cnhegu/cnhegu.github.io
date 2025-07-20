@@ -671,7 +671,7 @@ uglyURLs = false
     displayWordCount = false
     wordCountIcon = "pencil-alt"
 
-    displayReadingTime = false
+    displayReadingTime = true
     readingTimeIcon = "clock"
 
     displayBusuanziPagePV = false
@@ -937,7 +937,7 @@ uglyURLs = false
 
     displayBackToTopInHome = true
 
-    displayBackToTopOnMobile = false
+    displayBackToTopOnMobile = true
 
     backToTopIcon = "arrow-up"
 
@@ -966,7 +966,7 @@ uglyURLs = false
     displaySiteCopyright = true
     customFooter = "© 2025 hegu.me. All Rights Reserved."
 
-    displayBusuanziSiteUVAndPV = false
+    displayBusuanziSiteUVAndPV = true
     busuanziSiteUVText = "Site UV"
     busuanziSiteUVIcon = "user"
     busuanziSitePVText = "Site PV"
