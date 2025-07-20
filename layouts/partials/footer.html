@@ -2,6 +2,7 @@
     这是一个自定义的页脚模板。
     它修复了作者名无法点击的问题，并完整地保留了
     主题默认的所有页脚功能（如版权、许可协议、社交图标等）。
+    V2 版本移除了对 busuanzi.html 的调用，以修复编译错误。
 */}}
 {{- if .Site.Params.enableFooter -}}
 <footer class="footer">
@@ -54,8 +55,13 @@
 
             {{- partial "socials.html" . -}}
 
+            {{/* 由于我们没有覆写 components/busuanzi.html 文件，
+                直接调用会导致 "not found" 错误。
+                根据 hugo.toml 中的设置，此功能也未开启，
+                因此直接移除此处的调用是安全的。
+            */}}
             {{- if .Site.Params.displayBusuanziSiteUVAndPV -}}
-                {{- partial "components/busuanzi.html" . -}}
+                <!-- {{- partial "components/busuanzi.html" . -}} -->
             {{- end -}}
         {{- end -}}
     </div>
