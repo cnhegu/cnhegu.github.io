@@ -320,7 +320,7 @@ uglyURLs = false
     # Note: used for HTML head meta, JSON-LD,
     #       Open Graph, Atom, RSS
 
-    siteCreatedTime = ""
+    siteCreatedTime = "2025-07-17T15:00:00+08:00"
     # ATTENTION: keep this format, change
     #            the number
 
