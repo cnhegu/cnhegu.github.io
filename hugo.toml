@@ -937,7 +937,7 @@ uglyURLs = false
 
     displayBackToTopInHome = true
 
-    displayBackToTopOnMobile = true
+    displayBackToTopOnMobile = false
 
     backToTopIcon = "arrow-up"
 
