@@ -668,7 +668,7 @@ uglyURLs = false
     categoryIcon = "folder"
     categoryDelimiter = "/"
 
-    displayWordCount = false
+    displayWordCount = true
     wordCountIcon = "pencil-alt"
 
     displayReadingTime = true
