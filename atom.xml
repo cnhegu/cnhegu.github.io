@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
     <title type="text">何故小站</title>
     <subtitle type="html">MemE is a powerful and highly customizable GoHugo theme for personal blogs.</subtitle>
-    <updated>2025-07-21T03:52:28&#43;00:00</updated>
+    <updated>2025-07-21T05:18:31&#43;00:00</updated>
     <id>https://www.hegu.me/</id>
     <link rel="alternate" type="text/html" href="https://www.hegu.me/" />
     <link rel="self" type="application/atom&#43;xml" href="https://www.hegu.me/atom.xml" />
@@ -17,10 +17,130 @@
     <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en)</rights>
     <generator uri="https://gohugo.io/" version="0.148.1">Hugo</generator>
         <entry>
+            <title type="text">使用GitHub仓库作为免费图床的详细指南</title>
+            <link rel="alternate" type="text/html" href="https://www.hegu.me/posts/image-host-on-github-post/" />
+            <id>https://www.hegu.me/posts/image-host-on-github-post/</id>
+            <updated>2025-07-21T05:18:30&#43;00:00</updated>
+            <published>2025-07-21T12:35:00&#43;08:00</published>
+            <author>
+                    <name>何故</name>
+                    <uri>https://www.hegu.me</uri>
+                    <email>comitist@gmail.com</email>
+                    </author>
+            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en)</rights><summary type="html">
+                &lt;h3 id=&#34;第一步创建一个新的公开的图床仓库&#34;&gt;&lt;strong&gt;第一步：创建一个新的、公开的图床仓库&lt;/strong&gt;&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;登录您的 GitHub 账号。&lt;/li&gt;
+&lt;li&gt;点击页面右上角的 + 号，选择 &lt;strong&gt;New repository&lt;/strong&gt;。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;仓库命名&lt;/strong&gt;：给这个新仓库起一个清晰的名字，例如 blog-assets 或者 my-images。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;设置为公开（关键）&lt;/strong&gt;：确保仓库的属性被设置为 &lt;strong&gt;Public&lt;/strong&gt;。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;初始化仓库&lt;/strong&gt;：建议勾选 &amp;ldquo;Add a README file&amp;rdquo;，这样创建出来的就是一个可以直接使用的仓库。&lt;/li&gt;
+&lt;li&gt;点击 &lt;strong&gt;Create repository&lt;/strong&gt;。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;现在，您就有了一个专门用来存放图片的云端空间了。&lt;/p&gt;
+                &lt;blockquote&gt;
+&lt;p&gt;Read original: &lt;a href=&#34;https://www.hegu.me/posts/image-host-on-github-post/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://www.hegu.me/posts/image-host-on-github-post/&lt;/a&gt;&lt;br&gt;
+Notice: This blog now offers email subscriptions—feel free to &lt;a href=&#34;https://username.substack.com&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;subscribe via Substack&lt;/a&gt; to support my work!&lt;/p&gt;&lt;/blockquote&gt;
+            </summary>
+            
+                <content type="html">
+                    &lt;h3 id=&#34;第一步创建一个新的公开的图床仓库&#34;&gt;&lt;a href=&#34;https://www.hegu.me/posts/image-host-on-github-post/#第一步创建一个新的公开的图床仓库&#34; class=&#34;anchor-link&#34; aria-label=&#34;第一步创建一个新的公开的图床仓库&#34;&gt;&lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 512 512&#34; class=&#34;icon anchor-icon&#34;&gt;&lt;path d=&#34;M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z&#34;/&gt;&lt;/svg&gt;&lt;/a&gt;&lt;strong&gt;第一步：创建一个新的、公开的图床仓库&lt;/strong&gt;&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;登录您的 GitHub 账号。&lt;/li&gt;
+&lt;li&gt;点击页面右上角的 + 号，选择 &lt;strong&gt;New repository&lt;/strong&gt;。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;仓库命名&lt;/strong&gt;：给这个新仓库起一个清晰的名字，例如 blog-assets 或者 my-images。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;设置为公开（关键）&lt;/strong&gt;：确保仓库的属性被设置为 &lt;strong&gt;Public&lt;/strong&gt;。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;初始化仓库&lt;/strong&gt;：建议勾选 &amp;ldquo;Add a README file&amp;rdquo;，这样创建出来的就是一个可以直接使用的仓库。&lt;/li&gt;
+&lt;li&gt;点击 &lt;strong&gt;Create repository&lt;/strong&gt;。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p style=&#34;text-indent:0&#34;&gt;&lt;span class=&#34;drop-cap&#34;&gt;现&lt;/span&gt;在，您就有了一个专门用来存放图片的云端空间了。&lt;/p&gt;
+&lt;h3 id=&#34;第二步上传图片到图床仓库&#34;&gt;&lt;a href=&#34;https://www.hegu.me/posts/image-host-on-github-post/#第二步上传图片到图床仓库&#34; class=&#34;anchor-link&#34; aria-label=&#34;第二步上传图片到图床仓库&#34;&gt;&lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 512 512&#34; class=&#34;icon anchor-icon&#34;&gt;&lt;path d=&#34;M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z&#34;/&gt;&lt;/svg&gt;&lt;/a&gt;&lt;strong&gt;第二步：上传图片到图床仓库&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;上传图片最简单的方式就是直接使用 GitHub 的网页界面。&lt;/p&gt;
+&lt;p&gt;![我的github图床截图] &lt;a href=&#34;https://cdn.jsdelivr.net/gh/cnhegu/my-images@main/posts/image-host-on-github-post/image-host-on-github-post.jpg&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://cdn.jsdelivr.net/gh/cnhegu/my-images@main/posts/image-host-on-github-post/image-host-on-github-post.jpg&lt;/a&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;进入您刚刚创建的 blog-assets 仓库。&lt;/li&gt;
+&lt;li&gt;您可以直接把图片文件拖拽到文件列表区域，也可以点击 &lt;strong&gt;Add file&lt;/strong&gt; -&amp;gt; &lt;strong&gt;Upload files&lt;/strong&gt;。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;（可选但推荐）组织文件夹&lt;/strong&gt;：为了方便管理，建议您在仓库里也创建文件夹。例如，您可以创建一个 posts 文件夹，然后在里面再为每篇文章创建对应的文件夹来存放图片。&lt;/li&gt;
+&lt;li&gt;上传完成后，点击 &lt;strong&gt;Commit changes&lt;/strong&gt; 保存。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;第三步获取图片的公开链接最关键的一步&#34;&gt;&lt;a href=&#34;https://www.hegu.me/posts/image-host-on-github-post/#第三步获取图片的公开链接最关键的一步&#34; class=&#34;anchor-link&#34; aria-label=&#34;第三步获取图片的公开链接最关键的一步&#34;&gt;&lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 512 512&#34; class=&#34;icon anchor-icon&#34;&gt;&lt;path d=&#34;M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z&#34;/&gt;&lt;/svg&gt;&lt;/a&gt;&lt;strong&gt;第三步：获取图片的公开链接（最关键的一步）&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;直接复制 GitHub 仓库里图片的地址是无法在博客中正常显示的。我们需要使用一个免费的 CDN 加速服务（例如 &lt;strong&gt;jsDelivr&lt;/strong&gt;）来生成稳定、高速的图片链接。&lt;/p&gt;
+&lt;p&gt;链接格式非常固定：&lt;br&gt;
+&lt;a href=&#34;https://cdn.jsdelivr.net/gh/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://cdn.jsdelivr.net/gh/&lt;/a&gt;您的用户名/您的图床仓库名@分支名/图片的路径&lt;br&gt;
+&lt;strong&gt;操作流程&lt;/strong&gt;：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;您的用户名&lt;/strong&gt;：cnhegu&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;您的图床仓库名&lt;/strong&gt;：假设是 my-images&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;分支名&lt;/strong&gt;：通常是 main&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;图片的路徑&lt;/strong&gt;：就是您在仓库中存放图片的完整路径，例如 posts/my-first-post/cat.jpg&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;将以上信息拼接起来，您得到的最终图片链接就是：&lt;br&gt;
+&lt;a href=&#34;https://cdn.jsdelivr.net/gh/cnhegu/my-images@main/posts/my-first-post/cat.jpg&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://cdn.jsdelivr.net/gh/cnhegu/my-images@main/posts/my-first-post/cat.jpg&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;第四步在博客文章中引用图片&#34;&gt;&lt;a href=&#34;https://www.hegu.me/posts/image-host-on-github-post/#第四步在博客文章中引用图片&#34; class=&#34;anchor-link&#34; aria-label=&#34;第四步在博客文章中引用图片&#34;&gt;&lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 512 512&#34; class=&#34;icon anchor-icon&#34;&gt;&lt;path d=&#34;M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z&#34;/&gt;&lt;/svg&gt;&lt;/a&gt;&lt;strong&gt;第四步：在博客文章中引用图片&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;现在，您可以在您的 .md 文章文件中，使用标准的 Markdown 语法，插入您刚刚得到的 jsDelivr 链接。&lt;/p&gt;
+&lt;p&gt;![我的猫](&lt;a href=&#34;https://cdn.jsdelivr.net/gh/cnhegu/my-images@main/posts/my-first-post/cat.jpg&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://cdn.jsdelivr.net/gh/cnhegu/my-images@main/posts/my-first-post/cat.jpg&lt;/a&gt;)&lt;/p&gt;
+&lt;h3 id=&#34;优点与注意事项&#34;&gt;&lt;a href=&#34;https://www.hegu.me/posts/image-host-on-github-post/#优点与注意事项&#34; class=&#34;anchor-link&#34; aria-label=&#34;优点与注意事项&#34;&gt;&lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 512 512&#34; class=&#34;icon anchor-icon&#34;&gt;&lt;path d=&#34;M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z&#34;/&gt;&lt;/svg&gt;&lt;/a&gt;&lt;strong&gt;优点与注意事项&lt;/strong&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;优点&lt;/strong&gt;：完全免费、无限容量、所有图片都享受版本控制、全球 CDN 加速。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;注意事项&lt;/strong&gt;：
+&lt;ul&gt;
+&lt;li&gt;图床仓库&lt;strong&gt;必须&lt;/strong&gt;是公开的。&lt;/li&gt;
+&lt;li&gt;强烈推荐使用 &lt;strong&gt;jsDelivr&lt;/strong&gt; 生成的链接，它比直接使用 GitHub 的 raw 链接更稳定、速度更快。&lt;/li&gt;
+&lt;li&gt;上传到图床的图片，建议先在本地压缩一下，可以提升加载速度。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;完成以上步骤后，您就拥有了一个强大、免费且完全在您自己掌控之下的博客图床了。&lt;/p&gt;
+                    &lt;blockquote&gt;
+&lt;p&gt;Read original: &lt;a href=&#34;https://www.hegu.me/posts/image-host-on-github-post/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://www.hegu.me/posts/image-host-on-github-post/&lt;/a&gt;&lt;br&gt;
+Notice: This blog now offers email subscriptions—feel free to &lt;a href=&#34;https://username.substack.com&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;subscribe via Substack&lt;/a&gt; to support my work!&lt;/p&gt;&lt;/blockquote&gt;
+                </content>
+            
+            
+            
+            
+            
+                
+                    
+                        
+                            
+                            
+                            
+                                <category scheme="https://www.hegu.me/categories/hugotips/" term="HugoTips" label="HugoTips" />
+                            
+                        
+                    
+                
+                    
+                        
+                            
+                            
+                            
+                                <category scheme="https://www.hegu.me/tags/%E5%9B%BE%E5%BA%8A/" term="图床" label="图床" />
+                            
+                        
+                            
+                            
+                            
+                                <category scheme="https://www.hegu.me/tags/github/" term="github" label="github" />
+                            
+                        
+                            
+                            
+                            
+                                <category scheme="https://www.hegu.me/tags/cdn%E5%8A%A0%E9%80%9F/" term="CDN加速" label="CDN加速" />
+                            
+                        
+                    
+                
+            
+        </entry>
+    
+        <entry>
             <title type="text">他们说</title>
             <link rel="alternate" type="text/html" href="https://www.hegu.me/posts/them-say-post/" />
             <id>https://www.hegu.me/posts/them-say-post/</id>
-            <updated>2025-07-21T03:52:26&#43;00:00</updated>
+            <updated>2025-07-21T05:18:30&#43;00:00</updated>
             <published>2025-07-18T09:22:00&#43;08:00</published>
             <author>
                     <name>何故</name>
@@ -96,7 +216,7 @@ Notice: This blog now offers email subscriptions—feel free to &lt;a href=&#34;
             <title type="text">在Hugo中添加图片和视频的方式</title>
             <link rel="alternate" type="text/html" href="https://www.hegu.me/posts/add-medias-on-hugo-theme-post/" />
             <id>https://www.hegu.me/posts/add-medias-on-hugo-theme-post/</id>
-            <updated>2025-07-21T03:52:26&#43;00:00</updated>
+            <updated>2025-07-21T05:18:30&#43;00:00</updated>
             <published>2025-07-17T19:35:00&#43;08:00</published>
             <author>
                     <name>何故</name>
@@ -272,7 +392,7 @@ Notice: This blog now offers email subscriptions—feel free to &lt;a href=&#34;
             <title type="text">博客开张</title>
             <link rel="alternate" type="text/html" href="https://www.hegu.me/posts/site-open-post/" />
             <id>https://www.hegu.me/posts/site-open-post/</id>
-            <updated>2025-07-21T03:52:26&#43;00:00</updated>
+            <updated>2025-07-21T05:18:30&#43;00:00</updated>
             <published>2025-07-17T15:00:00&#43;08:00</published>
             <author>
                     <name>何故</name>
