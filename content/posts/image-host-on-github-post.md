@@ -23,7 +23,7 @@ categories: ["HugoTips"]
 
 上传图片最简单的方式就是直接使用 GitHub 的网页界面。
 
-![我的github图床截图] https://cdn.jsdelivr.net/gh/cnhegu/my-images@main/posts/image-host-on-github-post/image-host-on-github-post.jpg
+![我的github图床截图]https://cdn.jsdelivr.net/gh/cnhegu/my-images@main/posts/image-host-on-github-post/image-host-on-github-post.jpg
 
 1. 进入您刚刚创建的 blog-assets 仓库。  
 2. 您可以直接把图片文件拖拽到文件列表区域，也可以点击 **Add file** \-\> **Upload files**。  
