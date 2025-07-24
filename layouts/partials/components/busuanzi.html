@@ -1,0 +1,19 @@
+<div class="busuanzi-uv-pv">
+    {{- with .Site.Params.busuanziSiteUVText -}}
+        <span class="busuanzi-site-uv">
+            <i class="iconfont icon-{{ $.Site.Params.busuanziSiteUVIcon }}"></i>
+            <span>{{ . }} </span>
+            <span id="busuanzi_value_site_uv"></span>
+        </span>
+    {{- end -}}
+    {{- if and .Site.Params.busuanziSiteUVText .Site.Params.busuanziSitePVText -}}
+        <span class="division">|</span>
+    {{- end -}}
+    {{- with .Site.Params.busuanziSitePVText -}}
+        <span class="busuanzi-site-pv">
+            <i class="iconfont icon-{{ $.Site.Params.busuanziSitePVIcon }}"></i>
+            <span>{{ . }} </span>
+            <span id="busuanzi_value_site_pv"></span>
+        </span>
+    {{- end -}}
+</div>
