@@ -1,70 +1,82 @@
-{{/*
-    这是一个自定义的页脚模板。
-    它的唯一目的是在保留主题所有默认功能的基础上，
-    确保作者名可以被正确地链接到首页。
-    V2 版本移除了对 busuanzi.html 的调用，以修复编译错误。
-*/}}
-{{- if .Site.Params.enableFooter -}}
-<footer class="footer">
-    <div class="footer-inner">
-        {{- if .Site.Params.displayFooter -}}
-            {{- if or .Site.Params.displayCopyrightSymbol .Site.Params.displaySiteCreatedYear .Site.Params.displaySiteAuthorName -}}
-                <div class="copyright">
-                    {{- if .Site.Params.displayCopyrightSymbol -}}
-                        <span>© </span>
-                    {{- end -}}
+{{ if or (and .IsHome .Site.Params.displayFooterInHome) (and (not .IsHome) (.Site.Params.displayFooter | default .Site.Params.enableFooter)) }}
+    <footer id="footer" class="footer">
+        <div class="footer-inner">
+            <div class="site-info">
+              {{- if .Site.Params.displayCopyleftSymbol -}}
+                  <span class="copyleft-symbol">🄯</span>&nbsp;
+              {{- end -}}
+              {{- if .Site.Params.displayCopyrightSymbol -}}
+                  ©&nbsp;
+              {{- end -}}
 
-                    {{- if .Site.Params.displaySiteCreatedYear -}}
-                        {{- with .Site.Params.siteCreatedTime -}}
-                            <span>{{- . | time.Format "2006" }} - </span>
+              {{- if .Site.Params.displaySiteCreatedYear -}}
+                  {{- dateFormat "2006" (time .Site.Params.siteCreatedTime) -}}–
+              {{- end -}}
+              {{- now.Format "2006" -}}
+
+              {{- with .Site.Params.iconBetweenYearAndAuthor -}}
+                  &nbsp;{{- partial "utils/icon.html" (dict "$" $ "name" . "class" "footer-icon") -}}
+              {{- end -}}
+
+              {{- if .Site.Params.displaySiteAuthorName -}}
+                  &nbsp;{{- .Site.Params.author.name -}}
+              {{- end -}}
+            </div>
+
+            {{- if .Site.Params.displayPoweredBy }}
+                {{- $raw := `Powered by [Hugo](https://github.com/gohugoio/hugo) | Theme is [MemE](https://github.com/reuixiy/hugo-theme-meme)` -}}
+                <div class="powered-by">{{ partial "utils/markdownify.html" (dict "$" $ "raw" $raw "isContent" false) }}</div>
+            {{- end }}
+
+            {{- if .Site.Params.displaySiteCopyright }}
+                {{- $raw := .Site.Copyright -}}
+                <div class="site-copyright">{{ partial "utils/markdownify.html" (dict "$" $ "raw" $raw "isContent" false) }}</div>
+            {{- end }}
+
+            {{- with .Site.Params.customFooter }}
+                {{- $raw := . -}}
+                <div class="custom-footer">{{ partial "utils/markdownify.html" (dict "$" $ "raw" $raw "isContent" false) }}</div>
+            {{- end }}
+
+            {{- if and .Site.Params.displayBusuanziSiteUVAndPV (eq hugo.Environment "production") }}
+                <div class="busuanzi-site-uv-and-pv">
+                    <span id="busuanzi_container_site_uv">
+                        {{- with .Site.Params.busuanziSiteUVText -}}
+                            {{- . -}}
+                            &nbsp;
                         {{- end -}}
-                    {{- end -}}
 
-                    <span>{{- now.Format "2006" -}}</span>
-
-                    {{- if .Site.Params.displaySiteAuthorName -}}
-                        <span class="division">|</span>
-                        {{/* 这是修复作者名链接的关键代码 */}}
-                        {{- with .Site.Params.author.website -}}
-                            <a href="{{ . | relLangURL }}" target="_blank" rel="noopener">{{ $.Site.Params.author.name }}</a>
-                        {{- else -}}
-                            <span>{{ $.Site.Params.author.name }}</span>
+                        {{- with .Site.Params.busuanziSiteUVIcon -}}
+                            {{- partial "utils/icon.html" (dict "$" $ "name" $.Site.Params.busuanziSiteUVIcon "class" "busuanzi-site-uv") -}}
+                            &nbsp;
                         {{- end -}}
-                    {{- end -}}
+
+                        <!-- Avoid extra spaces -->
+                        {{- print `<span id="busuanzi_value_site_uv"></span>` | safeHTML -}}
+                    </span>
+
+                    {{- print "&nbsp;|&nbsp;" | safeHTML -}}
+
+                    <span id="busuanzi_container_site_pv">
+                        {{- with .Site.Params.busuanziSitePVText -}}
+                            {{- . -}}
+                            &nbsp;
+                        {{- end -}}
+
+                        {{- with .Site.Params.busuanziSitePVIcon -}}
+                            {{- partial "utils/icon.html" (dict "$" $ "name" $.Site.Params.busuanziSitePVIcon "class" "busuanzi-site-pv") -}}
+                            &nbsp;
+                        {{- end -}}
+
+                        <!-- Avoid extra spaces -->
+                        {{- print `<span id="busuanzi_value_site_pv"></span>` | safeHTML -}}
+                    </span>
                 </div>
-            {{- end -}}
+            {{- end }}
 
-            {{- if .Site.Params.displaySiteCopyright -}}
-                <div class="copyright">
-                    {{- .Site.Copyright | markdownify -}}
-                </div>
-            {{- end -}}
+            {{ partial "components/socials.html" . }}
 
-            {{- if .Site.Params.customFooter -}}
-                <div class="custom-footer">
-                    {{- .Site.Params.customFooter | markdownify -}}
-                </div>
-            {{- end -}}
-
-            {{- if .Site.Params.displayPoweredBy -}}
-                <div class="powered-by">
-                    <span>{{ T "powered_by" }} <a href="https://gohugo.io/" target="_blank" rel="external noopener">Hugo</a></span>
-                    <span class="division">|</span>
-                    <span>{{ T "theme" }} <a href="https://github.com/reuixiy/hugo-theme-meme" target="_blank" rel="external noopener">MemE</a></span>
-                </div>
-            {{- end -}}
-
-            {{- partial "socials.html" . -}}
-
-            {{/* 由于我们没有覆写 components/busuanzi.html 文件，
-                直接调用会导致 "not found" 错误。
-                根据 hugo.toml 中的设置，此功能也可能未开启，
-                因此暂时移除此处的调用是最安全的做法。
-            */}}
-            {{- if .Site.Params.displayBusuanziSiteUVAndPV -}}
-                <!-- {{- partial "components/busuanzi.html" . -}} -->
-            {{- end -}}
-        {{- end -}}
-    </div>
-</footer>
-{{- end -}}
+            {{ partial "custom/footer.html" . }}
+        </div>
+    </footer>
+{{ end }}
