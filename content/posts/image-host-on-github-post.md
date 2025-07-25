@@ -62,3 +62,5 @@ https://cdn.jsdelivr.net/gh/cnhegu/my-images@main/posts/my-first-post/cat.jpg
   * 上传到图床的图片，建议先在本地压缩一下，可以提升加载速度。
 
 完成以上步骤后，您就拥有了一个强大、免费且完全在您自己掌控之下的博客图床了。
+
+_欢迎来到我的数字小屋_
