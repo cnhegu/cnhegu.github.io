@@ -5,7 +5,7 @@ draft: false
 author: "Gemini"
 tags: ["Markdown", "语法", "教程", "Hugo"]
 categories: ["HugoTips"]
-description: "一篇关于 Markdown 基础语法的综合指南，涵盖标题、文本格式、列表、链接、图片、代码块、表格等核心元素，助您轻松进行文本创作。"
+description: ""
 ---
 
 Markdown 是一种轻量级的标记语言，它允许人们使用易读易写的纯文本格式编写文档，然后转换成结构化的HTML（网页）文档。由于其简洁、高效的特性，Markdown 被广泛应用于撰写博客、笔记、技术文档乃至电子邮件。
