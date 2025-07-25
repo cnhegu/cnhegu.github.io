@@ -1,18 +1,18 @@
 {{ define "main" }}
-    <!-- Layout Poetry -->
-    {{ if eq .Site.Params.homeLayout "poetry" }}
-        {{ partial "pages/home-poetry.html" . }}
-    {{ end }}
-    <!-- Layout Footage -->
-    {{ if eq .Site.Params.homeLayout "footage" }}
-        {{ partial "pages/home-footage.html" . }}
-    {{ end }}
-    <!-- Layout Posts -->
-    {{ if eq .Site.Params.homeLayout "posts" }}
-        {{ partial "pages/home-posts.html" . }}
-    {{ end }}
-    <!-- Layout Page -->
-    {{ if eq .Site.Params.homeLayout "page" }}
-        {{ partial "pages/post.html" . }}
-    {{ end }}
+<main class="main">
+    <div class="main-inner">
+        {{/* 这是一个用于包裹所有卡片的网格容器 */}}
+        <div class="card-grid">
+            {{/* 获取文章列表并进行分页 */}}
+            {{ $paginator := .Paginate .Site.RegularPages.ByDate.Reverse }}
+            {{ range $paginator.Pages }}
+                {{/* 为每一篇文章，调用“文章卡片”组件来显示 */}}
+                {{ partial "article-card.html" . }}
+            {{ end }}
+        </div>
+
+        {{/* 在页面底部显示分页导航 */}}
+        {{ partial "components/pagination.html" . }}
+    </div>
+</main>
 {{ end }}
