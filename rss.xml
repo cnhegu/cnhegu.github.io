@@ -23,7 +23,7 @@
         
             <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en)</copyright>
         
-        <lastBuildDate>Fri, 25 Jul 2025 09:44:29 &#43;0000</lastBuildDate>
+        <lastBuildDate>Fri, 25 Jul 2025 09:50:18 &#43;0000</lastBuildDate>
         
             <atom:link rel="self" type="application/rss&#43;xml" href="https://www.hegu.me/rss.xml" />
         
@@ -268,7 +268,7 @@ Notice: This blog now offers email subscriptions—feel free to &lt;a href=&#34;
                                 
                                 
                                 
-                                    <category domain="https://www.hegu.me/tags/markdown/">Markdown</category>
+                                    <category domain="https://www.hegu.me/tags/markdown/">markdown</category>
                                 
                             
                                 
@@ -286,7 +286,7 @@ Notice: This blog now offers email subscriptions—feel free to &lt;a href=&#34;
                                 
                                 
                                 
-                                    <category domain="https://www.hegu.me/tags/hugo/">Hugo</category>
+                                    <category domain="https://www.hegu.me/tags/hugo/">hugo</category>
                                 
                             
                         
@@ -618,7 +618,7 @@ Notice: This blog now offers email subscriptions—feel free to &lt;a href=&#34;
                                 
                                 
                                 
-                                    <category domain="https://www.hegu.me/tags/hugo/">Hugo</category>
+                                    <category domain="https://www.hegu.me/tags/hugo/">hugo</category>
                                 
                             
                                 
@@ -684,12 +684,6 @@ Notice: This blog now offers email subscriptions—feel free to &lt;a href=&#34;
                                 
                                 
                                     <category domain="https://www.hegu.me/tags/life/">life</category>
-                                
-                            
-                                
-                                
-                                
-                                    <category domain="https://www.hegu.me/tags/first/">first</category>
                                 
                             
                                 
