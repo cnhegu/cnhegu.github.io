@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
     <title type="text">何故小站</title>
     <subtitle type="html">MemE is a powerful and highly customizable GoHugo theme for personal blogs.</subtitle>
-    <updated>2025-07-25T09:33:55&#43;00:00</updated>
+    <updated>2025-07-25T09:39:44&#43;00:00</updated>
     <id>https://www.hegu.me/</id>
     <link rel="alternate" type="text/html" href="https://www.hegu.me/" />
     <link rel="self" type="application/atom&#43;xml" href="https://www.hegu.me/atom.xml" />
@@ -20,7 +20,7 @@
             <title type="text">Markdown:基础语法精粹</title>
             <link rel="alternate" type="text/html" href="https://www.hegu.me/posts/base-grammar-for-markdown-post/" />
             <id>https://www.hegu.me/posts/base-grammar-for-markdown-post/</id>
-            <updated>2025-07-25T09:33:54&#43;00:00</updated>
+            <updated>2025-07-25T09:39:42&#43;00:00</updated>
             <published>2025-07-25T16:56:03&#43;08:00</published>
             <author>
                     <name>何故</name>
@@ -293,7 +293,7 @@ Notice: This blog now offers email subscriptions—feel free to &lt;a href=&#34;
             <title type="text">使用GitHub仓库作为免费图床的详细指南</title>
             <link rel="alternate" type="text/html" href="https://www.hegu.me/posts/image-host-on-github-post/" />
             <id>https://www.hegu.me/posts/image-host-on-github-post/</id>
-            <updated>2025-07-25T09:33:54&#43;00:00</updated>
+            <updated>2025-07-25T09:39:42&#43;00:00</updated>
             <published>2025-07-21T12:35:00&#43;08:00</published>
             <author>
                     <name>何故</name>
@@ -365,6 +365,7 @@ Notice: This blog now offers email subscriptions—feel free to &lt;a href=&#34;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;完成以上步骤后，您就拥有了一个强大、免费且完全在您自己掌控之下的博客图床了。&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;欢迎来到我的数字小屋&lt;/em&gt;&lt;/p&gt;
                     &lt;blockquote&gt;
 &lt;p&gt;Read original: &lt;a href=&#34;https://www.hegu.me/posts/image-host-on-github-post/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://www.hegu.me/posts/image-host-on-github-post/&lt;/a&gt;&lt;br&gt;
 Notice: This blog now offers email subscriptions—feel free to &lt;a href=&#34;https://username.substack.com&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;subscribe via Substack&lt;/a&gt; to support my work!&lt;/p&gt;&lt;/blockquote&gt;
@@ -414,7 +415,7 @@ Notice: This blog now offers email subscriptions—feel free to &lt;a href=&#34;
             <title type="text">他们说</title>
             <link rel="alternate" type="text/html" href="https://www.hegu.me/posts/them-say-post/" />
             <id>https://www.hegu.me/posts/them-say-post/</id>
-            <updated>2025-07-25T09:33:54&#43;00:00</updated>
+            <updated>2025-07-25T09:39:42&#43;00:00</updated>
             <published>2025-07-18T09:22:00&#43;08:00</published>
             <author>
                     <name>何故</name>
@@ -490,7 +491,7 @@ Notice: This blog now offers email subscriptions—feel free to &lt;a href=&#34;
             <title type="text">在Hugo中添加图片和视频的方式</title>
             <link rel="alternate" type="text/html" href="https://www.hegu.me/posts/add-medias-on-hugo-theme-post/" />
             <id>https://www.hegu.me/posts/add-medias-on-hugo-theme-post/</id>
-            <updated>2025-07-25T09:33:54&#43;00:00</updated>
+            <updated>2025-07-25T09:39:42&#43;00:00</updated>
             <published>2025-07-17T19:35:00&#43;08:00</published>
             <author>
                     <name>何故</name>
@@ -666,7 +667,7 @@ Notice: This blog now offers email subscriptions—feel free to &lt;a href=&#34;
             <title type="text">博客开张</title>
             <link rel="alternate" type="text/html" href="https://www.hegu.me/posts/site-open-post/" />
             <id>https://www.hegu.me/posts/site-open-post/</id>
-            <updated>2025-07-25T09:33:54&#43;00:00</updated>
+            <updated>2025-07-25T09:39:42&#43;00:00</updated>
             <published>2025-07-17T15:00:00&#43;08:00</published>
             <author>
                     <name>何故</name>
