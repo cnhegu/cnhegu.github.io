@@ -1,15 +1,16 @@
 {{/*
-    这是一个恢复性的 header.html 文件。
-    它的唯一作用是作为桥梁，正确地调用 menu.html，
-    从而修复 "header.html not found" 的错误。
+    这是一个自定义的头部模板。
+    这个版本将网站标题从一个可点击的链接，
+    改为一个不可点击的纯文本。
 */}}
 <header class="header header-flex">
     <div class="header-wrapper">
         <div class="header-inner">
             <div class="site-brand-container">
-                <a href="{{ .Site.Home.RelPermalink }}" class="brand">
+                {{/* 关键改动：将 a 标签换成了 span 标签 */}}
+                <span class="brand">
                     {{ .Site.Title }}
-                </a>
+                </span>
             </div>
             {{/* 正确地调用我们已经修改好的 menu.html */}}
             {{ partial "menu.html" . }}
