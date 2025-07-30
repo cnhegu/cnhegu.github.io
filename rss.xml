@@ -23,13 +23,14 @@
         
             <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en)</copyright>
         
-        <lastBuildDate>Wed, 30 Jul 2025 13:55:54 &#43;0000</lastBuildDate>
+        <lastBuildDate>Wed, 30 Jul 2025 14:25:07 &#43;0000</lastBuildDate>
         
             <atom:link rel="self" type="application/rss&#43;xml" href="https://www.hegu.me/rss.xml" />
         
         
             <item>
-                <title>Markdown:基础语法精粹</title>
+                <title>
+Markdown:基础语法精粹</title>
                 <link>https://www.hegu.me/posts/base-grammar-for-markdown-post/</link>
                 <guid isPermaLink="true">https://www.hegu.me/posts/base-grammar-for-markdown-post/</guid>
                 <pubDate>Fri, 25 Jul 2025 16:56:03 &#43;0800</pubDate>
@@ -40,7 +41,8 @@
                 
                 
                 <description>
-                        &lt;p style=&#34;text-indent:0&#34;&gt;&lt;span class=&#34;drop-cap&#34;&gt;M&lt;/span&gt;arkdown 是一种轻量级的标记语言，它允许人们使用易读易写的纯文本格式编写文档，然后转换成结构化的HTML（网页）文档。由于其简洁、高效的特性，Markdown 被广泛应用于撰写博客、笔记、技术文档乃至电子邮件。&lt;/p&gt;
+                        
+&lt;p style=&#34;text-indent:0&#34;&gt;&lt;span class=&#34;drop-cap&#34;&gt;M&lt;/span&gt;arkdown 是一种轻量级的标记语言，它允许人们使用易读易写的纯文本格式编写文档，然后转换成结构化的HTML（网页）文档。由于其简洁、高效的特性，Markdown 被广泛应用于撰写博客、笔记、技术文档乃至电子邮件。&lt;/p&gt;
 &lt;p&gt;掌握 Markdown 的基本语法，将使您的文本创作过程更加流畅，排版更加清晰美观。以下是 Markdown 中最常用的一些基础语法：&lt;/p&gt;
 &lt;h3 id=&#34;标题&#34;&gt;&lt;a href=&#34;https://www.hegu.me/posts/base-grammar-for-markdown-post/#标题&#34; class=&#34;anchor-link&#34; aria-label=&#34;标题&#34;&gt;&lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 512 512&#34; class=&#34;icon anchor-icon&#34;&gt;&lt;path d=&#34;M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z&#34;/&gt;&lt;/svg&gt;&lt;/a&gt;标题&lt;/h3&gt;
 &lt;p&gt;要创建标题，只需在文本前添加井号 &lt;code&gt;#&lt;/code&gt; 即可。井号的数量对应标题的级别，Markdown 共支持六级标题。&lt;/p&gt;
@@ -243,7 +245,8 @@
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;通过掌握以上这些基础语法，您已经可以应对绝大部分的日常写作需求，并创作出格式清晰、易于阅读的文档。&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;欢迎来到我的数字小屋。&lt;/em&gt;&lt;/p&gt;
-                        &lt;blockquote&gt;
+                        
+&lt;blockquote&gt;
 &lt;p&gt;Read original: &lt;a href=&#34;https://www.hegu.me/posts/base-grammar-for-markdown-post/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://www.hegu.me/posts/base-grammar-for-markdown-post/&lt;/a&gt;&lt;br&gt;
 Notice: This blog now offers email subscriptions—feel free to &lt;a href=&#34;https://username.substack.com&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;subscribe via Substack&lt;/a&gt; to support my work!&lt;/p&gt;&lt;/blockquote&gt;
                     </description>
@@ -295,7 +298,8 @@ Notice: This blog now offers email subscriptions—feel free to &lt;a href=&#34;
             </item>
         
             <item>
-                <title>使用GitHub仓库作为免费图床的详细指南</title>
+                <title>
+使用GitHub仓库作为免费图床的详细指南</title>
                 <link>https://www.hegu.me/posts/image-host-on-github-post/</link>
                 <guid isPermaLink="true">https://www.hegu.me/posts/image-host-on-github-post/</guid>
                 <pubDate>Mon, 21 Jul 2025 12:35:00 &#43;0800</pubDate>
@@ -306,7 +310,8 @@ Notice: This blog now offers email subscriptions—feel free to &lt;a href=&#34;
                 
                 
                 <description>
-                        &lt;h3 id=&#34;第一步创建一个新的公开的图床仓库&#34;&gt;&lt;a href=&#34;https://www.hegu.me/posts/image-host-on-github-post/#第一步创建一个新的公开的图床仓库&#34; class=&#34;anchor-link&#34; aria-label=&#34;第一步创建一个新的公开的图床仓库&#34;&gt;&lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 512 512&#34; class=&#34;icon anchor-icon&#34;&gt;&lt;path d=&#34;M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z&#34;/&gt;&lt;/svg&gt;&lt;/a&gt;&lt;strong&gt;第一步：创建一个新的、公开的图床仓库&lt;/strong&gt;&lt;/h3&gt;
+                        
+&lt;h3 id=&#34;第一步创建一个新的公开的图床仓库&#34;&gt;&lt;a href=&#34;https://www.hegu.me/posts/image-host-on-github-post/#第一步创建一个新的公开的图床仓库&#34; class=&#34;anchor-link&#34; aria-label=&#34;第一步创建一个新的公开的图床仓库&#34;&gt;&lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 512 512&#34; class=&#34;icon anchor-icon&#34;&gt;&lt;path d=&#34;M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z&#34;/&gt;&lt;/svg&gt;&lt;/a&gt;&lt;strong&gt;第一步：创建一个新的、公开的图床仓库&lt;/strong&gt;&lt;/h3&gt;
 &lt;ol&gt;
 &lt;li&gt;登录您的 GitHub 账号。&lt;/li&gt;
 &lt;li&gt;点击页面右上角的 + 号，选择 &lt;strong&gt;New repository&lt;/strong&gt;。&lt;/li&gt;
@@ -355,7 +360,8 @@ Notice: This blog now offers email subscriptions—feel free to &lt;a href=&#34;
 &lt;/ul&gt;
 &lt;p&gt;完成以上步骤后，您就拥有了一个强大、免费且完全在您自己掌控之下的博客图床了。&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;欢迎来到我的数字小屋&lt;/em&gt;&lt;/p&gt;
-                        &lt;blockquote&gt;
+                        
+&lt;blockquote&gt;
 &lt;p&gt;Read original: &lt;a href=&#34;https://www.hegu.me/posts/image-host-on-github-post/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://www.hegu.me/posts/image-host-on-github-post/&lt;/a&gt;&lt;br&gt;
 Notice: This blog now offers email subscriptions—feel free to &lt;a href=&#34;https://username.substack.com&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;subscribe via Substack&lt;/a&gt; to support my work!&lt;/p&gt;&lt;/blockquote&gt;
                     </description>
@@ -401,7 +407,8 @@ Notice: This blog now offers email subscriptions—feel free to &lt;a href=&#34;
             </item>
         
             <item>
-                <title>他们说</title>
+                <title>
+他们说</title>
                 <link>https://www.hegu.me/posts/them-say-post/</link>
                 <guid isPermaLink="true">https://www.hegu.me/posts/them-say-post/</guid>
                 <pubDate>Fri, 18 Jul 2025 09:22:00 &#43;0800</pubDate>
@@ -412,7 +419,8 @@ Notice: This blog now offers email subscriptions—feel free to &lt;a href=&#34;
                 
                 
                 <description>
-                        &lt;p style=&#34;text-indent:0&#34;&gt;&lt;span class=&#34;drop-cap&#34;&gt;不&lt;/span&gt;知不觉中已经折腾了差不多半个月的时间，经历了各种修修补补和不断的换博客主题，现在终于完成了一个我相对还算比较满意的主题博客。由于白天要工作，这一系列的博客部署工作我都是在我工作之外休息的时间内完成的，所以这段时间人真的是特别累，但对我来说也是值得的。&lt;/p&gt;
+                        
+&lt;p style=&#34;text-indent:0&#34;&gt;&lt;span class=&#34;drop-cap&#34;&gt;不&lt;/span&gt;知不觉中已经折腾了差不多半个月的时间，经历了各种修修补补和不断的换博客主题，现在终于完成了一个我相对还算比较满意的主题博客。由于白天要工作，这一系列的博客部署工作我都是在我工作之外休息的时间内完成的，所以这段时间人真的是特别累，但对我来说也是值得的。&lt;/p&gt;
 &lt;p&gt;身边不止一个人跟我讲，你整天搞这些事情是能从里面搞到半毛钱？？？我说不能，至少我在搞这些事情之前根本就没有想过能从中搞钱的问题。他们不知道的是，对于我来说一个人生活中如果不能有哪怕一丁点的小兴趣和私人空间的话，我感觉这就像整个地球上已经完全没有了氧气一样让人窒息和难受。其实本质上这和他们年老了去跳跳广场舞或者下下棋养养鱼鸟花草&amp;hellip;是没有区别的。&lt;/p&gt;
 &lt;p&gt;只不过问题是现实社会是不会给一任何一个poorman发言权的，所以说还是要老老实实搞钱啊，这在当下普遍的观念中被认为是最听话也最可靠的入世法门。就比如说，经常挂在人们嘴中的一句话“上有老，下有小”&amp;hellip;这一大家子都等着你养活呢！当听到类似这句，我就瞬间陷入了沉思，啊，也确实啊，不知不觉中孩子也慢慢长大了，我自己是否也应该长大了？是否已经长大了？其实我自己有时候也搞不懂，但不管任何时候我都坚持一个原则道理永远是互通的，我是明白的。
 &lt;figure&gt;&lt;img src=&#34;https://www.hegu.me/images/myboy.jpg&#34;&gt;&lt;figcaption&gt;
@@ -424,7 +432,8 @@ Notice: This blog now offers email subscriptions—feel free to &lt;a href=&#34;
 &lt;p&gt;累了，还是回到自己的安全小屋，专注的干点自己喜欢的事打发打发时间来的有意思，在自己最后的避风港走走停停停停走走，好了今天就到这里吧。&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;&lt;em&gt;欢迎来到我的数字小屋。&lt;/em&gt;&lt;/p&gt;
-                        &lt;blockquote&gt;
+                        
+&lt;blockquote&gt;
 &lt;p&gt;Read original: &lt;a href=&#34;https://www.hegu.me/posts/them-say-post/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://www.hegu.me/posts/them-say-post/&lt;/a&gt;&lt;br&gt;
 Notice: This blog now offers email subscriptions—feel free to &lt;a href=&#34;https://username.substack.com&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;subscribe via Substack&lt;/a&gt; to support my work!&lt;/p&gt;&lt;/blockquote&gt;
                     </description>
@@ -470,7 +479,8 @@ Notice: This blog now offers email subscriptions—feel free to &lt;a href=&#34;
             </item>
         
             <item>
-                <title>在Hugo中添加图片和视频的方式</title>
+                <title>
+在Hugo中添加图片和视频的方式</title>
                 <link>https://www.hegu.me/posts/add-medias-on-hugo-theme-post/</link>
                 <guid isPermaLink="true">https://www.hegu.me/posts/add-medias-on-hugo-theme-post/</guid>
                 <pubDate>Thu, 17 Jul 2025 19:35:00 &#43;0800</pubDate>
@@ -481,7 +491,8 @@ Notice: This blog now offers email subscriptions—feel free to &lt;a href=&#34;
                 
                 
                 <description>
-                        &lt;p style=&#34;text-indent:0&#34;&gt;&lt;span class=&#34;drop-cap&#34;&gt;在&lt;/span&gt; Hugo 中添加图片和视频，主要有两种方式：一种是简单直接的“静态资源”方法，另一种是更规范、更推荐的“页面捆绑”方式。对于视频，最好的方式是嵌入外部平台的播放器。&lt;/p&gt;
+                        
+&lt;p style=&#34;text-indent:0&#34;&gt;&lt;span class=&#34;drop-cap&#34;&gt;在&lt;/span&gt; Hugo 中添加图片和视频，主要有两种方式：一种是简单直接的“静态资源”方法，另一种是更规范、更推荐的“页面捆绑”方式。对于视频，最好的方式是嵌入外部平台的播放器。&lt;/p&gt;
 &lt;hr&gt;
 &lt;h2 id=&#34;一添加图片&#34;&gt;&lt;a href=&#34;https://www.hegu.me/posts/add-medias-on-hugo-theme-post/#一添加图片&#34; class=&#34;anchor-link&#34; aria-label=&#34;一添加图片&#34;&gt;&lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 512 512&#34; class=&#34;icon anchor-icon&#34;&gt;&lt;path d=&#34;M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z&#34;/&gt;&lt;/svg&gt;&lt;/a&gt;一、添加图片&lt;/h2&gt;
 &lt;h3 id=&#34;方法一放在-static-文件夹最简单&#34;&gt;&lt;a href=&#34;https://www.hegu.me/posts/add-medias-on-hugo-theme-post/#方法一放在-static-文件夹最简单&#34; class=&#34;anchor-link&#34; aria-label=&#34;方法一放在-static-文件夹最简单&#34;&gt;&lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 512 512&#34; class=&#34;icon anchor-icon&#34;&gt;&lt;path d=&#34;M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z&#34;/&gt;&lt;/svg&gt;&lt;/a&gt;方法一：放在 static 文件夹（最简单）&lt;/h3&gt;
@@ -593,7 +604,8 @@ Notice: This blog now offers email subscriptions—feel free to &lt;a href=&#34;
 &lt;/figure&gt;
 &lt;/p&gt;
 &lt;p&gt;&lt;em&gt;欢迎来到我的数字小屋。&lt;/em&gt;&lt;/p&gt;
-                        &lt;blockquote&gt;
+                        
+&lt;blockquote&gt;
 &lt;p&gt;Read original: &lt;a href=&#34;https://www.hegu.me/posts/add-medias-on-hugo-theme-post/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://www.hegu.me/posts/add-medias-on-hugo-theme-post/&lt;/a&gt;&lt;br&gt;
 Notice: This blog now offers email subscriptions—feel free to &lt;a href=&#34;https://username.substack.com&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;subscribe via Substack&lt;/a&gt; to support my work!&lt;/p&gt;&lt;/blockquote&gt;
                     </description>
@@ -639,7 +651,8 @@ Notice: This blog now offers email subscriptions—feel free to &lt;a href=&#34;
             </item>
         
             <item>
-                <title>博客开张</title>
+                <title>
+博客开张</title>
                 <link>https://www.hegu.me/posts/site-open-post/</link>
                 <guid isPermaLink="true">https://www.hegu.me/posts/site-open-post/</guid>
                 <pubDate>Thu, 17 Jul 2025 15:00:00 &#43;0800</pubDate>
@@ -650,7 +663,8 @@ Notice: This blog now offers email subscriptions—feel free to &lt;a href=&#34;
                 
                 
                 <description>
-                        &lt;p style=&#34;text-indent:0&#34;&gt;&lt;span class=&#34;drop-cap&#34;&gt;写&lt;/span&gt;在一个微热的午后。&lt;/p&gt;
+                        
+&lt;p style=&#34;text-indent:0&#34;&gt;&lt;span class=&#34;drop-cap&#34;&gt;写&lt;/span&gt;在一个微热的午后。&lt;/p&gt;
 &lt;p&gt;博客终于上线了，这意味着我终于把那些分散在笔记本、对话框、梦境和咖啡渍上的只言片语，有了一个归宿。这里没有繁复的装饰，没有虚张声势的排场，只有文字与我自己，偶尔还有屏幕前的你。&lt;/p&gt;
 &lt;p&gt;其实人生就像写博客，起初总是反复琢磨第一个标题，却往往在不经意间才落下真正的开篇。也许内容还未丰满，但每一步都算数，每一次发布，都是对混沌的整理，是一次“让思想落地”的尝试。&lt;/p&gt;
 &lt;p&gt;接下来的日子，我会写点生活、记录些技术，也许会偶尔抱怨几句，或者分享某个深夜里听到的乡村音乐。&lt;/p&gt;
@@ -658,7 +672,8 @@ Notice: This blog now offers email subscriptions—feel free to &lt;a href=&#34;
 就像春天那样，不慌不忙，有序萌芽。&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;&lt;em&gt;欢迎来到我的数字小屋。&lt;/em&gt;&lt;/p&gt;
-                        &lt;blockquote&gt;
+                        
+&lt;blockquote&gt;
 &lt;p&gt;Read original: &lt;a href=&#34;https://www.hegu.me/posts/site-open-post/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://www.hegu.me/posts/site-open-post/&lt;/a&gt;&lt;br&gt;
 Notice: This blog now offers email subscriptions—feel free to &lt;a href=&#34;https://username.substack.com&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;subscribe via Substack&lt;/a&gt; to support my work!&lt;/p&gt;&lt;/blockquote&gt;
                     </description>
