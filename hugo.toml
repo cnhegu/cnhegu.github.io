@@ -962,12 +962,12 @@ uglyURLs = false
 
     displaySiteAuthorName = true
 
-    displayPoweredBy = false
+    displayPoweredBy = true
 
     displaySiteCopyright = true
     customFooter = ""
 
-    displayBusuanziSiteUVAndPV = true
+    displayBusuanziSiteUVAndPV = false
     busuanziSiteUVText = "访客数"
     busuanziSiteUVIcon = "user"
     busuanziSitePVText = "访问量"
