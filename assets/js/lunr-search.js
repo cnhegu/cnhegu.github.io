@@ -1,201 +1,155 @@
-window.addEventListener("DOMContentLoaded", event => {
-    let index = null;
-    let lookup = null;
-    let queuedTerm = null;
-    let queuedDoNotAddState = false;
-    let origContent = null;
+window.addEventListener("DOMContentLoaded", e => {
+    // Find the search form first.
+    // If it doesn't exist, this page doesn't have the search feature, so do nothing.
+    const a = document.getElementById("search");
+    if (!a) {
+        return;
+    }
 
-    const form = document.getElementById("search");
-    const input = document.getElementById("search-input");
+    // --- All code below will only run if the search form exists ---
 
-    form.addEventListener("submit", function(event) {
-        event.preventDefault();
+    let o = null,
+        i = null,
+        t = null,
+        s = !1,
+        n = null;
 
-        let term = input.value.trim();
-        if (!term) {
+    const r = document.getElementById("search-input");
+
+    a.addEventListener("submit", function(e) {
+        e.preventDefault();
+        let t = r.value.trim();
+        if (!t)
             return;
-        }
-        startSearch(term, false);
-    }, false);
+        c(t, !1)
+    }, !1),
 
-    if (history.state && history.state.type == "search") {
-        startSearch(history.state.term, true);
+    history.state && history.state.type == "search" && c(history.state.term, !0),
+
+    window.addEventListener("popstate", function(e) {
+        if (e.state && e.state.type == "search")
+            c(e.state.term, !0);
+        else if (!e.state && n) {
+            let e = document.querySelector(".main-inner");
+            for (; e.firstChild;)
+                e.removeChild(e.firstChild);
+            for (let t of n)
+                e.appendChild(t);
+            n = null
+        }
+    }, !1);
+
+    function c(e, n) {
+        r.value = e,
+            a.setAttribute("data-running", "true"),
+            o ? d(e, n) : t ? (t = e,
+                s = n) : (t = e,
+                s = n,
+                u())
     }
 
-    window.addEventListener("popstate", function(event) {
-        if (event.state && event.state.type == "search") {
-            startSearch(event.state.term, true);
-        }
-        else if (!event.state && origContent) {
-            let target = document.querySelector(".main-inner");
-            while (target.firstChild) {
-                target.removeChild(target.firstChild);
-            }
-
-            for (let node of origContent) {
-                target.appendChild(node);
-            }
-            origContent = null;
-        }
-    }, false);
-
-    function startSearch(term, doNotAddState) {
-        input.value = term;
-        form.setAttribute("data-running", "true");
-        if (index) {
-            search(term, doNotAddState);
-        }
-        else if (queuedTerm) {
-            queuedTerm = term;
-            queuedDoNotAddState = doNotAddState;
-        }
-        else {
-            queuedTerm = term;
-            queuedDoNotAddState = doNotAddState;
-            initIndex();
-        }
+    function l() {
+        a.removeAttribute("data-running");
+        const e = document.querySelector(".header");
+        e && e.classList.contains("fade") && r.blur(),
+            t = null,
+            s = !1
     }
 
-    function searchDone() {
-        form.removeAttribute("data-running");
-
-        // A magic trick to make search field loses focus on mobile,
-        // which prevents the virtual keyboard from popping up.
-        const header = document.querySelector('.header');
-        if (header && header.classList.contains('fade')) {
-            input.blur();
-        }
-
-        queuedTerm = null;
-        queuedDoNotAddState = false;
-    }
-
-    function initIndex() {
-        let request = new XMLHttpRequest();
-        request.open("GET", "{{ partial "utils/relative-url.html" (dict "$" . "filename" (((.Site.GetPage "").OutputFormats.Get "SearchIndex").RelPermalink | strings.TrimPrefix "/")) }}");
-        request.responseType = "json";
-        request.addEventListener("load", function(event) {
-            let documents = request.response;
-            if (!documents)
-            {
-                console.error("Search index could not be downloaded, was it generated?");
-                searchDone();
-                return;
-            }
-
-            lookup = {};
-            index = lunr(function() {
-                const language = "{{ .Site.Language.Lang }}";
-                if (language != "en" && lunr.hasOwnProperty(language)) {
-                    this.use(lunr[language]);
+    function u() {
+        let e = new XMLHttpRequest;
+        e.open("GET", "/search.json"), // It's better to use an absolute path for the index
+            e.responseType = "json",
+            e.addEventListener("load", function() {
+                let a = e.response;
+                if (!a) {
+                    console.error("Search index could not be downloaded, was it generated?"),
+                        l();
+                    return
                 }
-
-                this.ref("uri");
-                this.field("title");
-                this.field("subtitle");
-                this.field("content");
-                this.field("description");
-                this.field("categories");
-                this.field("tags");
-
-                for (let document of documents) {
-                    this.add(document);
-                    lookup[document.uri] = document;
-                }
-            });
-
-            search(queuedTerm, queuedDoNotAddState);
-        }, false);
-        request.addEventListener("error", searchDone, false);
-        request.send(null);
+                i = {},
+                    o = lunr(function() {
+                        // Use a variable for language to avoid hardcoding
+                        const lang = this.closest('[lang]')?.lang || 'en';
+                        if (lang !== 'en' && lunr.hasOwnProperty(lang)) {
+                            this.use(lunr[lang]);
+                        }
+                        this.ref("uri"),
+                            this.field("title"),
+                            this.field("subtitle"),
+                            this.field("content"),
+                            this.field("description"),
+                            this.field("categories"),
+                            this.field("tags");
+                        for (let e of a)
+                            this.add(e),
+                            i[e.uri] = e
+                    }),
+                    d(t, s)
+            }, !1),
+            e.addEventListener("error", l, !1),
+            e.send(null)
     }
 
-    function search(term, doNotAddState) {
+    function d(e, t) {
         try {
-            let results = index.search(term);
+            let r = o.search(e),
+                a = document.querySelector(".main-inner") || document.querySelector("main.home"),
+                l = [];
+            for (; a.firstChild;)
+                l.push(a.firstChild),
+                a.removeChild(a.firstChild);
+            n || (n = l);
+            let s = document.createElement("h1");
+            s.id = "search-results",
+                s.className = "list-title",
+                r.length == 0 ? s.textContent = "没有找到关于「{}」的结果".replace("{}", e) : r.length == 1 ? s.textContent = "找到 1 条关于「{}」的结果".replace("{}", e) : s.textContent = "找到 {} 条关于「{}」的结果".replace("{}", r.length).replace("{}", e),
+                a.appendChild(s),
+                document.title = s.textContent;
+            let d = document.getElementById("search-result");
+            // Add a check for the search result template
+            if (d) {
+                for (let n of r) {
+                    let t = i[n.ref],
+                        e = d.content.cloneNode(!0);
+                    e.querySelector(".summary-title-link").href = e.querySelector(".read-more-link").href = t.uri,
+                        e.querySelector(".summary-title-link").textContent = t.title,
+                        e.querySelector(".summary").textContent = h(t.content, 70),
+                        a.appendChild(e)
+                }
+            }
+            s.scrollIntoView(!0),
+                t || history.pushState({
+                    type: "search",
+                    term: e
+                }, s.textContent, "#search=" + encodeURIComponent(e));
+            let c = document.querySelector(".nav-toggle");
+            c && c.classList.contains("open") && document.getElementById(c.getAttribute("for")).click()
+        } finally {
+            l()
+        }
+    }
 
-            let target = document.querySelector(".main-inner") || document.querySelector("main.home");
-            let replaced = [];
-            while (target.firstChild) {
-                replaced.push(target.firstChild);
-                target.removeChild(target.firstChild);
-            }
-            if (!origContent) {
-                origContent = replaced;
-            }
-
-            let title = document.createElement("h1");
-            title.id = "search-results";
-            title.className = "list-title";
-
-            // This is an overly simple pluralization scheme, it will only work
-            // for some languages.
-            if (results.length == 0) {
-                title.textContent = "{{ i18n "searchResultsNone" (dict "Term" "{}") }}".replace("{}", term);
-            }
-            else if (results.length == 1) {
-                title.textContent = "{{ i18n "searchResultsTitle" (dict "Count" 1 "Term" "{}") }}".replace("{}", term);
-            }
+    function h(e, t) {
+        let n, s = "",
+            o = 0,
+            i = /(\S+)(\s*)/g;
+        for (; n = i.exec(e);)
+            if (o++,
+                o <= t)
+                s += n[0];
             else {
-                title.textContent = "{{ i18n "searchResultsTitle" (dict "Count" 13579 "Term" "{}") }}".replace("{}", term).replace("13579", results.length);
-            }
-            target.appendChild(title);
-            document.title = title.textContent;
-
-            let template = document.getElementById("search-result");
-            for (let result of results) {
-                let doc = lookup[result.ref];
-
-                let element = template.content.cloneNode(true);
-                element.querySelector(".summary-title-link").href = element.querySelector(".read-more-link").href = doc.uri;
-                element.querySelector(".summary-title-link").textContent = doc.title;
-                element.querySelector(".summary").textContent = truncateToEndOfSentence(doc.content, 70);
-                target.appendChild(element);
-            }
-            title.scrollIntoView(true);
-
-            if (!doNotAddState) {
-                history.pushState({type: "search", term: term}, title.textContent, "#search=" + encodeURIComponent(term));
-            }
-
-            {{ if .Site.Params.enableNavToggle }}
-                let navToggleLabel = document.querySelector('.nav-toggle');
-                if (navToggleLabel && navToggleLabel.classList.contains("open")) {
-                    document.getElementById(navToggleLabel.getAttribute("for")).click();
+                let e = n[1][n[1].length - 1],
+                    t = n[2][0];
+                if (/[.?!"]/.test(e) || t == `
+`) {
+                    s += n[1];
+                    break
                 }
-            {{ end }}
-        }
-        finally {
-            searchDone();
-        }
+                s += n[0]
+            }
+        return s
     }
-
-    // This matches Hugo's own summary logic:
-    // https://github.com/gohugoio/hugo/blob/b5f39d23b86f9cb83c51da9fe4abb4c19c01c3b7/helpers/content.go#L543
-    function truncateToEndOfSentence(text, minWords)
-    {
-        let match;
-        let result = "";
-        let wordCount = 0;
-        let regexp = /(\S+)(\s*)/g;
-        while (match = regexp.exec(text)) {
-            wordCount++;
-            if (wordCount <= minWords) {
-                result += match[0];
-            }
-            else
-            {
-                let char1 = match[1][match[1].length - 1];
-                let char2 = match[2][0];
-                if (/[.?!"]/.test(char1) || char2 == "\n") {
-                    result += match[1];
-                    break;
-                }
-                else {
-                    result += match[0];
-                }
-            }
-        }
-        return result;
-    }
-}, {once: true});
+}, {
+    once: !0
+});
