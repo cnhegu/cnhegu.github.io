@@ -5,12 +5,6 @@
 {{- $host := $.Site.Params.lib.host | default "https://cdn.jsdelivr.net" -}}
 {{- $path := "" -}}
 
-<!--
-
-  Common libraries
-
---->
-
 {{- if eq $type "clipboard" -}}
     {{- $defalut := "/npm/clipboard-polyfill@2.8.6/dist/clipboard-polyfill.min.js" -}}
     {{- $path = $.Site.Params.lib.path.clipboard | default $defalut -}}
@@ -94,15 +88,9 @@
     {{- $path = $.Site.Params.lib.path.valine | default $defalut -}}
 {{- end -}}
 
-<!--
-
-  Third-party services
-
---->
-
 {{- if eq $type "busuanzi" -}}
-    {{- $defalut := "https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" -}}
-    {{- $host = $.Site.Params.lib.path.busuanzi | default $defalut -}}
+    {{- $default := "/npm/busuanzi@2.3.0/bsz.pure.mini.js" -}}
+    {{- $path = $.Site.Params.lib.path.busuanzi | default $default -}}
 {{- end -}}
 
 {{- if eq $type "utterances" -}}
@@ -114,17 +102,5 @@
     {{- $defalut := "https://giscus.app/client.js" -}}
     {{- $host = $.Site.Params.lib.path.giscus | default $defalut -}}
 {{- end -}}
-
-<!--
-
-  Third-party libraries/services/resources which not included in this file:
-
-    1. Disqus
-    2. Google Analytics
-    3. Google Adsense
-    4. Yandex Metrika
-    5. Other hosts customized in config.toml
-
---->
 
 {{- return printf `%s%s` $host $path -}}
