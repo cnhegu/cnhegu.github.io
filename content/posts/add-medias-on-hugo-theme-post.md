@@ -127,7 +127,7 @@ allowfullscreen></iframe>
 > 如果主题不支持简码，也可以直接使用 `<iframe>` 插入 HTML 视频代码。
 
 最后git push的完整流程及需要注意的地方：
-{{< figure src="/images/git-tips.jpg" title="截屏" width="1503" height="845">}}
+{{< figure src="/images/git-tips.jpg" title="截屏">}}
 
 _欢迎来到我的数字小屋。_
 
