@@ -967,7 +967,7 @@ uglyURLs = false
     displaySiteCopyright = true
     customFooter = ""
 
-    displayBusuanziSiteUVAndPV = false
+    displayBusuanziSiteUVAndPV = true
     busuanziSiteUVText = "访客数"
     busuanziSiteUVIcon = "user"
     busuanziSitePVText = "访问量"
