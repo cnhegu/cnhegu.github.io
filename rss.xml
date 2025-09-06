@@ -10,7 +10,7 @@
         <title>何故小站</title>
         <link>https://www.hegu.me/</link>
         <description>MemE is a powerful and highly customizable GoHugo theme for personal blogs.</description>
-        <generator>Hugo 0.149.0 https://gohugo.io/</generator>
+        <generator>Hugo 0.149.1 https://gohugo.io/</generator>
         
             <language>en</language>
         
@@ -23,7 +23,7 @@
         
             <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en)</copyright>
         
-        <lastBuildDate>Sat, 30 Aug 2025 13:13:49 &#43;0000</lastBuildDate>
+        <lastBuildDate>Sat, 06 Sep 2025 01:27:53 &#43;0000</lastBuildDate>
         
             <atom:link rel="self" type="application/rss&#43;xml" href="https://www.hegu.me/rss.xml" />
         
