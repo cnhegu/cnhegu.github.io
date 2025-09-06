@@ -3,1103 +3,131 @@
 
 baseURL = "https://www.hegu.me/"
 title = "何故小站"
-languageCode = "en"
+languageCode = "zh-cn" # 建议将主语言代码改为中文
 hasCJKLanguage = true
-# Copyright information (Markdown supported)
 copyright = "[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en)"
-
-# Name of theme
-# theme = "meme"
-
-# ✅ 添加这一行来启用 Google Analytics
-googleAnalytics = 'G-4BMXNHL73E' 
-
-# `hugo new` automatically opened text editor
-newContentEditor = ""
-
-# i18n
+googleAnalytics = 'G-4BMXNHL73E'
 defaultContentLanguage = "zh-cn"
-defaultContentLanguageInSubdir = false
-
-# Title case style
-# https://gohugo.io/getting-started/configuration/#configure-title-case
-titleCaseStyle = "none"
-
-# Pluralize list titles
-pluralizeListTitles = false
-
-# The length of text in words to show in summary
-summaryLength = 42
-
-# Enable Emoji emoticons support?
-enableEmoji = false
-
-# Text to display for footnote return links
-footnoteReturnLinkContents = "↩"
-
-# Enable `.GitInfo` object for each page?
-enableGitInfo = false
-
-# Enable generation of `robots.txt` file?
 enableRobotsTXT = true
 
-# URL related
-disablePathToLower = false
-relativeURLs = false
-uglyURLs = false
-
-# URL structure
-[permalinks]
-    categories = "/categories/:slug/"
-    tags = "/tags/:slug/"
-
-# Taxonomies
-[taxonomies]
-    category = "categories"
-    tag = "tags"
-
-# Modified date
 [frontmatter]
-    lastmod = ["lastmod", ":git", ":fileModTime", ":default"]
+  lastmod = ["lastmod", ":git", ":fileModTime", ":default"]
 
-[pagination]
-    disableAliases = false
-    # Number of items per page in paginated
-    # lists (valid for the `posts` homepage
-    # layout in MemE)
-    pagerSize = 5
-    path = 'page'
-
-# Markdown renderer
-[markup]
-    defaultMarkdownHandler = "goldmark"
-    [markup.goldmark]
-        [markup.goldmark.extensions]
-            definitionList = true
-            footnote = true
-            linkify = true
-            strikethrough = true
-            table = true
-            taskList = true
-            typographer = true
-        [markup.goldmark.parser]
-            attribute = true
-            autoHeadingID = true
-            autoHeadingIDType = "github"
-        [markup.goldmark.renderer]
-            hardWraps = false
-            unsafe = true
-            xHTML = false
-    [markup.highlight]
-        codeFences = true
-        guessSyntax = false
-        lineNos = true
-        lineNumbersInTable = true
-        noClasses = false
-    [markup.tableOfContents]
-        startLevel = 2
-        endLevel = 6
-        ordered = true
-
-# HTML minify
-[minify.tdewolff.html]
-    keepWhitespace = false
-
-# Related content
-[related]
-    threshold = 80
-    includeNewer = true
-    toLower = true
-    [[related.indices]]
-        name = "categories"
-        weight = 100
-    [[related.indices]]
-        name = "tags"
-        weight = 95
-    [[related.indices]]
-        name = "date"
-        weight = 10
-        pattern = "2006"
-
-# MIME type of Atom
-[mediaTypes."application/atom+xml"]
-    suffixes = ["xml"]
-
-# Custom Atom template of MemE
-[outputFormats.SectionsAtom]
-    mediaType = "application/atom+xml"
-    baseName = "atom"
-
-# Custom RSS template of MemE
-[outputFormats.SectionsRSS]
-    mediaType = "application/rss+xml"
-    baseName = "rss"
-
-# Search index for lunr.js
-[outputFormats.SearchIndex]
-    mediaType = "application/json"
-    baseName = "search"
-
-# Search index for Algolia
-[outputFormats.Algolia]
-    mediaType = "application/json"
-    baseName = "algolia"
-    isPlainText = true
-    notAlternative = true
-
-# Hugo’s output control
-[outputs]
-    page = ["HTML"]
-    # home = ["HTML", "SectionsAtom", "SectionsRSS", "SearchIndex", "Algolia"]
-    home = ["HTML", "SectionsAtom", "SectionsRSS", "SearchIndex"]
-    section = ["HTML"]
-    taxonomy = ["HTML"]
-    term = ["HTML"]
-
-# Maximum number of items in the Atom & RSS feed
-[services.rss]
-    limit = -1
-
-
+[taxonomies]
+  category = "categories"
+  tag = "tags"
 
 ##########################################
 # Menu Settings
 
 [menu]
-    ## Menu bar
-    [[menu.main]]
-        pageref = "/"
-        name = "首页"
-        weight = 1
-        pre = "internal"
-        post = "home"
-    [[menu.main]]
-        pageref = "/posts/"
-        name = "文章"
-        weight = 2
-        pre = "internal"
-        post = "archive"
-    [[menu.main]]
-        pageref = "/categories/"
-        name = "分类"
-        weight = 3
-        pre = "internal"
-        post = "th"
-    [[menu.main]]
-        pageref = "/tags/"
-        name = "标签"
-        weight = 4
-        pre = "internal"
-        post = "tags"
-    [[menu.main]]
-        pageref = "/about/"
-        name = "关于"
-        weight = 5
-        pre = "internal"
-        post = "user-circle"
-    [[menu.main]]
-        weight = 6
-        identifier = "theme-switcher"
-    [[menu.main]]
-        weight = 7
-        identifier = "lang-switcher"
-    [[menu.main]]
-        weight = 8
-        identifier = "search"
-        post = "search"
-
-
-
+  [[menu.main]]
+    pageref = "/"
+    name = "首页"
+    weight = 1
+    post = "home"
+  [[menu.main]]
+    pageref = "/posts/"
+    name = "文章"
+    weight = 2
+    post = "archive"
+  [[menu.main]]
+    pageref = "/categories/"
+    name = "分类"
+    weight = 3
+    post = "th"
+  [[menu.main]]
+    pageref = "/tags/"
+    name = "标签"
+    weight = 4
+    post = "tags"
+  [[menu.main]]
+    pageref = "/about/"
+    name = "关于"
+    weight = 5
+    post = "user-circle"
+  [[menu.main]]
+    weight = 6
+    identifier = "theme-switcher"
+  [[menu.main]]
+    weight = 8
+    identifier = "search"
+    post = "search"
 
 ##########################################
-# Theme Settings
+# Theme Settings (params)
 
 [params]
-    ######################################
-    # Header
-
-    enableHeader = true
-
-    enableHeaderAutoHide = false
-    # Note: works for header layout flex only
-
-    displayHeaderInHome = true
-    # Note: invalid for header layout flex
-
-    headerBackground = "linear-gradient(90deg, #f795331a 0, #f370551a 15%, #ef4e7b1a 30%, #a166ab1a 44%, #5073b81a 58%, #1098ad1a 72%, #07b39b1a 86%, #6dba821a 100%)"
-    # Note: https://developer.mozilla.org/en-US/docs/Web/CSS/background
-
-    headerLayout = "flex"
-    # Note: center or flex
-
-    # Hide menu bar and display a toggle
-    # on narrow screen?
-    enableNavToggle = true
-
-    navHeight = "10em"
-    # Note: menu bar height when it’s
-    #       toggled
-
-
-    ######################################
-    # Brand Bar (inside header)
-
-    # Use SVG?
-    siteBrandSVG = false
-    # If true, put your SVG in the `SVG.toml`
-    # file and configure the following options.
-    # Unit: px
-    siteBrandSVGWidth = 250
-    siteBrandSVGHeight = 100
-    siteBrandSVGFill = "#fff"
-    # If false, your site title will be
-    # used as the default and displayed as
-    # text. The font size and font color
-    # can be configured below. The font
-    # family can be configured in typography
-    # section at the bottom of this file.
-    # Unit: em
-    siteBrandFontSize = 1
-    siteBrandFontColor = "var(--color-contrast-high)"
-
-
-    ######################################
-    # Menu Bar
-
-    enableMenu = true
-    # Note: invalid for header layout flex
-
-    displayMenuInHome = true
-    # Note: invalid for header layout flex
-
-    # Highlight current menu item by section?
-    activeInSection = false
-    # Note: if true, the menu item in the
-    #       post page will be highlighted
-    #       also if that post’s section is
-    #       the `url` of that menu item
-
-
-    ######################################
-    # Homepage Layout
-
-    homeLayout = "posts"
-
-    ## Poetry
-    # Verse (Markdown supported)
-    homePoetry = []
-    # Padding of links at the bottom
-    # Unit: em
-    homeLinksPadding = 1
-
-    ## Footage
-    homePoster = ""
-    homeVideoWebm = ""
-    homeVideoMp4 = ""
-    homeLogo = ""
-    homeLogoLink = ""
-    homeTitle = ""
-    homeMotto = ""
-    homeDescription = ""
-    homeKeywords = ""
-    homeLinksDelimiter = ""
-
-    ## Posts
-    enableHideInHomepage = false
-    # Note: enable `hideInHomepage` front
-    #       matter support (disabled by
-    #       default for performance concern)
-
-
-    ######################################
-    # Site Info
-
-    siteLogo = "/icons/hegu-icon.png"
-    # Note: used for JSON-LD, Open Graph
-
-    siteDescription = "MemE is a powerful and highly customizable GoHugo theme for personal blogs."
-    # Note: used for HTML head meta, JSON-LD,
-    #       Open Graph, Atom, RSS
-
-    siteCreatedTime = "2025-07-17T15:00:00+08:00"
-    # ATTENTION: keep this format, change
-    #            the number
-
-    siteTwitter = "gulogx"
-    # Note: used for Twitter Cards
-
-
-    ######################################
-    # Category By
-
-    categoryBy = "categories"
-    # ATTENTION: If you set it to `sections`,
-    #            be sure to delete `categories`
-    #            in `taxonomies` at the top
-    #            of this file. Otherwise,
-    #            the categories page will
-    #            be invalid. Also, you need
-    #            to create a new
-    #            `content/categories/_index.md`
-    #            file by yourself.
-
-
-    ######################################
-    # Categories Page
-
-    # Enable tree structure layout?
-    enableTree = true
-    # ATTENTION: This option cannot be
-    #            disabled if you set
-    #            `categoryBy` to `sections`
-
-    # Display title of posts?
-    displayPosts = true
-
-    # Display count of posts under each
-    # category?
-    displayPostsCount = true
-
-    # Set to a non-negative number to limit
-    # the number of posts displayed per
-    # category/section.
-    limitPostsLimit = -1
-
-
-    ######################################
-    # Tags Page
-
-    enableTagCloud = true
-
-    fontUnit = "em"
-    largestFontSize = 2.5
-    smallestFontSize = 1
-
-
-    ######################################
-    # List Page
-
-    listWidth = 36
-    # Note: you can leave it empty("") to
-    #       fallback to the default value: 42
-    #       Unit: em
-
-    displayListTitle = true
-
-    listDateFormat = "January 2"
-    # ATTENTION: be sure to follow the
-    #            specified format
-    #            https://gohugo.io/functions/format/
-
-    listDatePosition = "right"
-    # Note: left or right
-
-    # Separate the list by month?
-    groupByMonth = true
-
-    # Enable Chinese zodiac?
-    chineseZodiac = true
-
-    # Translate the year? (valid for title)
-    i18nYear = false
-    # Translate the month? (valid for title)
-    i18nMonth = false
-
-
-    ######################################
-    # Taxonomy List Page
-
-    # Display count of posts in each
-    # taxonomy term?
-    displayTaxonomyTermCount = true
-
-    # Set to a non-negative number to limit
-    # the number of posts displayed per
-    # taxonomy term.
-    limitEntriesLimit = -1
-
-
-    ######################################
-    # Post Sections
-
-    # mainSections = ["posts"]
-
-
-    ######################################
-    # Atom & RSS
-
-    # Include full content?
-    includeContent = true
-
-    # Custom Footer (Supports Template and Markdown syntax)
-    feedFooter = """> Read original: <{{ .Permalink }}>  
-> Notice: This blog now offers email subscriptions—feel free to [subscribe via Substack](https://username.substack.com) to support my work!"""
-
-
-    ######################################
-    # Dark Mode
-
-    enableDarkMode = true
-
-    defaultTheme = "dark"
-    # Note: light or dark
-
-    hideThemeToggle = false
-    hideThemeToggleInHome = false
-
-    overrideSystemPreferences = false
-
-
-    ######################################
-    # Web App
-
-    themeColor = "#fff"
-    themeColorDark = "#16171d"
-
-
-    ######################################
-    # HTML Head Meta, SEO & Social Discovery
-
-    jsonLD = true
-    openGraph = true
-    twitterCards = true
-
-    autoDetectImages = true
-
-
-    ######################################
-    # Service Worker
-
-    enableServiceWorker = false
-
-
-    ######################################
-    # KaTeX (chemical equation supported)
-
-    enableKaTeX = false
-
-
-    ######################################
-    # MathJax (chemical equation supported)
-
-    enableMathJax = false
-
-    disableMathJaxMenu = false
-
-
-    ######################################
-    # Mermaid (https://github.com/mermaid-js/mermaid)
-
-    enableMermaid = false
-
-    mermaidTheme = 'default'
-    mermaidThemeDark = 'dark'
-
-
-    ######################################
-    # Comments
-
-    enableComments = true
-    
-    autoLoadComments = true
-
-    ## Disqus
-    enableDisqus = false
-    disqusShortname = ""
-
-    ## Valine
-    enableValine = false
-    valineAppId = ""
-    valineAppKey = ""
-    valinePlaceholder = "Just go go"
-    valinePath = ""
-    valineAvatar = "mm"
-    valineMeta = ["nick", "mail", "link"]
-    valinePageSize = 10
-    valineLang = "en"
-    valineVisitor = false
-    valineHighlight = true
-    valineAvatarForce = false
-    valineRecordIP = false
-    valineServerURLs = ""
-    valineEmojiCDN = ""
-    valineEmojiMaps = {}
-    valineEnableQQ = false
-    valineRequiredFields = []
-
-    ## Utterances
-    enableUtterances = false
-    utterancesRepo = ""
-    utterancesIssueTerm = "pathname"
-    utterancesTheme = "github-light"
-    utterancesThemeDark = "photon-dark"
-    utterancesLabel = ""
-
-    ## Gitalk
-    enableGitalk = false
-    gitalkClientID = "your_client_id"
-    gitalkClientSecret = "your_client_secret"
-    gitalkRepo = "your_repository"
-    gitalkOwner = "your_gitalk_owner"
-    gitalkAdmin = ["your_gitalk_admin"]
-    gitalkID = "pathname"
-    gitalkNumber = -1
-    gitalkLables = ["Gitalk"]
-    gitalkTitle = "default"
-    gitalkBody = "default"
-    gitalkLanguage = "en"
-    gitalkDistractionFreeMode = false
-    gitalkPerPage = 10
-    gitalkPagerDirection = "last"
-    gitalkCreateIssueManually = false
-    gitalkProxy = "https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token"
-    gitalkStaggerDelayBy = 150
-    gitalkAppearAnimation = "accordionVertical"
-    gitalkEnterAnimation = "accordionVertical"
-    gitalkLeaveAnimation = "accordionVertical"
-    gitalkEnableHotKey = true
-
-    ## Giscus
+  # --- 网站信息 ---
+  siteLogo = "/icons/hegu-icon.png" # 用于 SEO 和社交分享
+  siteDescription = "何故小站 - 记录，所见，所思，所想..."
+  siteCreatedTime = "2025-07-17T15:00:00+08:00"
+  siteTwitter = "gulogx" # 用于 Twitter Cards, 已更新
+
+  # --- 首页布局 ---
+  homeLayout = "posts"
+  
+  # --- 评论系统 ---
+  enableComments = true
+  [params.giscus]
     enableGiscus = true
     giscusRepo = "cnhegu/cnhegu.github.io"
     giscusRepoId = "R_kgDOPOBCpg"
     giscusCategory = "Announcements"
     giscusCategoryId = "DIC_kwDOPOBCps4CtEv9"
     giscusMapping = "title"
-    giscusStrict = 0
-    giscusReactionsEnabled = true
-    giscusEmitMetaData = false
-    giscusInputPosition = "bottom"
     giscusTheme = "dark_dimmed"
-    giscusThemeDark = "dark_dimmed"
     giscusLang = "zh-CN"
 
-    # Remark42
-    enableRemark42 = false
-    remark42Host = ""
-    remark42SiteId = "remark"
-    remark42Url = ""
-    remark42Components = ["embed"]
-    remark42MaxShownComments = 15
-    remark42MaxLastComments = 15
-    remark42Theme = "light"
-    remark42PageTitle = ""
-    remark42Locale = "en"
-    remark42ShowEmailSubscription = true
-    remark42ShowRssSubscription = true
-    remark42SimpleView = false
-    remark42NoFooter = false
-
-
-    ######################################
-    # Google Analytics
-
-    enableGoogleAnalytics = false
-
-    trackingCodeType = "gtag"
-
-    trackingID = ""
-
-
-    ######################################
-    # Google Site Verification
-
-    googleSiteVerification = ""
-
-
-    ######################################
-    # Google AdSense
-
-    googleAdClient = ""
-
-    ## Auto Ads
-    enableGoogleAutoAds = false
-
-    ## Ad Units
-    enableGoogleAdUnits = false
-    googleAdSlot = ""
-    googleAdSlotInArticle = ""
-    googleAdSlotAutoRelaxed = ""
-
-
-    ######################################
-    # Yandex.Metrika
-
-    yandexMetrikaId = ""
-
-
-    ######################################
-    # Post Settings
-
-    duration = 0.5
-
-    primaryColorLight = "220, 90%, 56%"
-    primaryColorDark = "201, 65%, 62%"
-
-    postWidth = 36
-
-    original = true
-
-
-    ######################################
-    # Post Description
-
-    displayPostDescription = true
-
-
-    ######################################
-    # Post Meta Info
-
-    enablePostMeta = true
-
-    enablePostMetaInHome = true
-
-    postMetaDateFormat = "2006.1.2"
-
-    displayPublishedDate = true
-    publishedDateIcon = "calendar-alt"
-
-    displayModifiedDate = false
-    modifiedDateIcon = "calendar-check"
-
-    displayExpiredDate = true
-    expiredDateIcon = "calendar-times"
-
-    displayCategory = true
-    categoryIcon = "folder"
-    categoryDelimiter = "/"
-
-    displayWordCount = true
-    wordCountIcon = "pencil-alt"
-
-    displayReadingTime = true
-    readingTimeIcon = "clock"
-
-    displayBusuanziPagePV = false
-    busuanziPagePVIcon = "eye"
-
-
-    ######################################
-    # Markdown Related
-
-    hrefTargetBlank = true
-
-
-    ######################################
-    # Table of Contents
-
-    enableTOC = false
-
-    displayTOCTitle = true
-
-    displayTOCNum = true
-
-    linkHeadingsToTOC = true
-
-
-    ######################################
-    # Headings Anchor
-
-    enableHeadingsAnchor = true
-
-    headingsOpt = "1-6"
-
-    anchorSymbol = "#"
-
-    anchorIcon = "link"
-
-    enableAnchorLink = true
-
-    enableAnchorAutoHide = false
-
-
-    ######################################
-    # Caption
-
-    enableCaption = true
-
-    captionPrefix = "※ "
-
-
-    ######################################
-    # Image Hosting
-
-    enableImageHost = false
-
-    imageHostURL = "https://example.com/"
-
-    headAlso = false
-
-
-    ######################################
-    # Video Hosting
-
-    enableVideoHost = false
-
-    videoHostURL = "https://example.com/"
-
-
-    ######################################
-    # Footnotes
-
-    squareBrackets = true
-
-    footnoteReturnLinkIcon = "angle-up"
-
-    insertHrBySelf = true
-
-
-    ######################################
-    # Scrollbar
-    customizeScrollbar = true
-
-
-    ######################################
-    # Typography
-
-    ######################################
-    ## Font Family
-
-    fontFamilySiteBrand = ""
-    fontFamilyMenu = ""
-    fontFamilyTitle = "'Comfortaa', sans-serif"
-    fontFamilyHeadings = "'Comfortaa', sans-serif"
-    fontFamilyCode = "'Source Code Pro', monospace"
-    fontFamilyQuote = ""
-    fontFamilyTOC = ""
-    fontFamilyCaption = ""
-    fontFamilyFooter = ""
-    fontFamilyBody = "'IBM Plex Serif', serif"
-
-    fontsLink = "https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,400;0,500;0,700;1,400;1,700&family=Source+Code+Pro:ital,wght@0,400;0,700;1,400;1,700&family=Comfortaa:wght@700&display=swap"
-
-
-    ######################################
-    ## Font Size (unit: px)
-
-    fontSize = 18
-
-    ######################################
-    ## Tab Size
-
-    tabSize = 4
-
-    ######################################
-    ## Line Height
-
-    lineHeight = 1.618
-
-
-    ######################################
-    ## Paragraph Indents
-
-    enableParagraphIndent = true
-
-    indentFirstParagraph = false
-
-    paragraphStyle = "margin"
-
-
-    ######################################
-    ## Text Justification
-
-    enableJustify = false
-
-
-    ######################################
-    ## Drop Cap
-
-    enableDropCap = true
-
-    enableDropCapAfterHr = false
-
-    deleteHrBeforeDropCap = false
-
-
-    ######################################
-    ## Small Caps
-
-    enableSmallCaps = true
-
-
-    ######################################
-    ## Emphasis Point (Chinese)
-
-    enableEmphasisPoint = false
-
-    ######################################
-    ## Chinese Punctuation Glyph Correction
-
-    enableChinesePunctuationGlyphCorrection = false
-
-
-    ######################################
-    # Post Copyright
-
-    enablePostCopyright = true
-
-    displayPostCopyright = true
-
-
-    ######################################
-    # Post Updated Badge
-
-    enablePostUpdatedBadge = true
-
-    displayUpdatedBadge = true
-
-    enableBadgeTitle = true
-    badgeTitlePrefix = "Updated @ "
-
-
-    ######################################
-    # Post Gitinfo
-
-    enablePostGitInfo = false
-
-    displayPostGitInfo = false
-
-    repoURL = ""
-    repoEditURL = ""
-    repoEditURLSuffix = ""
-
-    gitIcon = "code-branch"
-    displayCommitHash = true
-
-    displayCommitMessage = true
-    msgIcon = "info"
-
-    displayFeedback = true
-    feedbackIcon = "question"
-    feedbackText = "Feedback"
-
-    displayEditLink = true
-    editIcon = "edit"
-    editText = "Edit Me?"
-
-
-    ######################################
-    # Post Share
-
-    enablePostShare = false
-
-    displayPostShare = true
-
-    displayShareOnText = false
-
-    postShareItems = ["facebook", "mastodon", "fediverse", "x", "linkedin", "telegram", "weibo", "douban", "qq", "qzone", "pocket", "hackernews", "qrcode", "email"]
-
-    fetchFediverseInstances = false
-
-
-    ######################################
-    # Related Posts
-
-    enableRelatedPosts = true
-
-    displayRelatedPosts = true
-
-    relatedPostsNumber = 5
-
-    relatedPostsIcon = "plus-circle"
-
-
-    ######################################
-    # Post Tags
-
-    enablePostTags = true
-
-    postTagsIcon = "tag"
-
-
-    ######################################
-    # Previous/Next Post
-
-    enablePostNav = true
-
-    postNavInSection = true
-
-
-    ######################################
-    # Minimal Footer
-
-    enableMinimalFooter = false
-    enableVerticalBarStructure = false
-
-    enableAboutPageMinimalFooter = false
-
-
-    ######################################
-    # Back to Top
-
-    enableBackToTop = true
-
-    enableBackToTopAutoHide = true
-
-    displayBackToTopInHome = true
-
-    displayBackToTopOnMobile = false
-
-    backToTopIcon = "arrow-up"
-
-
-    ######################################
-    # Footer
-
-    enableFooter = true
-
-    displayFooter = true
-
-    displayFooterInHome = true
-
-    displayCopyleftSymbol = false
-    displayCopyrightSymbol = true
-    displaySiteCreatedYear = false
-
-    iconBetweenYearAndAuthor = "heart"
-    iconColor = "#f06292"
-    iconAnimation = true
-
-    displaySiteAuthorName = true
-
-    displayPoweredBy = true
-
-    displaySiteCopyright = true
-    customFooter = ""
-
-    displayBusuanziSiteUVAndPV = true
-    busuanziSiteUVText = "访客数"
-    busuanziSiteUVIcon = "user"
-    busuanziSitePVText = "访问量"
-    busuanziSitePVIcon = "eye"
-
-    # Socials
-    enableSocials = true
-    # Note: see data/Socials.toml
-
-
-    ######################################
-    # Multilingual
-
-    enableLangToggle = false
-
-    hideLangToggleInHome = false
-
-    autoHideLangToggle = true
-
-
-    ######################################
-    # Code Blocks
-
-    enableHighlight = true
-
-    enableOverflowY = true
-    maxHeight = 20
-    # Unit: em
-
-    enableCopy = true
-    enableCopyAutoHide = true
-
-
-    ######################################
-    # Fingerprinting and SRI
-
-    enableFingerprint = true
-
-    enableSRI = false
-
-
-    ######################################
-    # Force HTTPS Redirection
-
-    enableForceHTTPS = false
-
-
-    ######################################
-    # Smooth Scroll
-
-    enableSmoothScroll = true
-
-
-    ######################################
-    # Medium Zoom
-
-    enableMediumZoom = true
-
-
-    ######################################
-    # Instant Page
-
-    enableInstantPage = true
-
-
-    ######################################
-    # Lunr search
-
-    enableLunrSearch = true
-
-
-    ######################################
-    # Algolia search
-
-    enableAlgoliaSearch = false
-
-    algoliaAppId = ""
-    algoliaApiKey = ""
-    algoliaIndexName = ""
-
-
-    ######################################
-    # 404 Page
-
-    fofPoster = ""
-
-    fofVideoWebm = ""
-    fofVideoMp4 = ""
-
-
-    ######################################
-    # Customize host for third-party libraries
-
-    [params.lib]
-        host = "https://cdn.jsdelivr.net"
-    [params.lib.path]
-        clipboard = "/npm/clipboard-polyfill@2.8.6/dist/clipboard-polyfill.min.js"
-        instantsearch = "/npm/instantsearch.js@2/dist/instantsearch.min.js"
-        gitalk = "/npm/gitalk@1/dist/gitalk.min.js"
-        gitalk_css = "/npm/gitalk@1/dist/gitalk.css"
-        instantpage = "/npm/instant.page@5.1.0/instantpage.min.js"
-        katex = "/npm/katex@0.13.0/dist/katex.min.js"
-        katex_css = "/npm/katex@0.13.0/dist/katex.min.css"
-        katex_mhchem = "/npm/katex@0.13.0/dist/contrib/mhchem.min.js"
-        katex_auto_render = "/npm/katex@0.13.0/dist/contrib/auto-render.min.js"
-        lunr = "/npm/lunr@2.3.9/lunr.min.js"
-        lunr_tinyseg = "/npm/lunr-languages@1.4.0/tinyseg.js"
-        lunr_stemmer = "/npm/lunr-languages@1.4.0/min/lunr.stemmer.support.min.js"
-        lunr_lang = "/npm/lunr-languages@1.4.0/min/lunr.de.min.js"
-        mathjax = "/npm/mathjax@3.1.2/es5/tex-mml-chtml.js"
-        medium_zoom = "/npm/medium-zoom@latest/dist/medium-zoom.min.js"
-        mermaid = "/npm/mermaid@8.8.3/dist/mermaid.min.js"
-        qrcode = "/npm/qrcode-generator@1.4.4/qrcode.min.js"
-        valine = "/npm/valine@1.4.14/dist/Valine.min.js"
-        busuanzi = "https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"
-        utterances = "https://utteranc.es/client.js"
-
-
-    ######################################
-    # Author’s information
-    [params.author]
-        # Name
-        name = "何故"
-        # Email
-        email = "comitist@gmail.com"
-        # Motto or introduction
-        motto = "Viva La Vida"
-        # Avatar
-        avatar = "/icons/my-avatar.png"
-        # Personal website, default: baseURL
-        website = "https://www.hegu.me"
-        # Twitter
-        twitter = "gulogx"
-        # Fediverse
-        fediverse = "@gulogx@mastodon.social"
+  # --- 作者信息 (用于文章页等) ---
+  [params.author]
+    name = "何故"
+    email = "comitist@gmail.com"
+    motto = "Viva La Vida"
+    avatar = "/icons/my-avatar.png"
+    website = "https://www.hegu.me"
+    twitter = "gulogx" # 作者的 Twitter ID, 已更新
+
+  # --- 页脚社交链接 ---
+  # 这个选项只负责开启或关闭页脚的社交链接区域
+  # 具体链接内容由 data/Socials.toml 文件控制
+  enableSocials = true
+
+  # --- 其他主题功能 ---
+  enableDarkMode = true
+  defaultTheme = "dark"
+  enableBackToTop = true
+  enablePostCopyright = true
+  enableRelatedPosts = true
+  enablePostTags = true
+  enablePostNav = true
+  displayPoweredBy = true
+  displayBusuanziSiteUVAndPV = true
+  busuanziSiteUVText = "访客数"
+  busuanziSitePVText = "访问量"
+  enableLunrSearch = true
+  enableMediumZoom = true
+  enableInstantPage = true
+
+# 以下为高级配置，保持默认即可
+[outputs]
+  home = ["HTML", "SectionsAtom", "SectionsRSS", "SearchIndex"]
+  page = ["HTML"]
+  section = ["HTML"]
+  taxonomy = ["HTML"]
+  term = ["HTML"]
+[services.rss]
+  limit = -1
+[markup]
+  defaultMarkdownHandler = "goldmark"
+  [markup.goldmark.renderer]
+    unsafe = true
+```
+
+### **最后一步**
+
+1.  请完成上面**两个步骤**：创建/修改 `data/Socials.toml` 文件，并用新代码替换 `hugo.toml` 文件。
+2.  在命令行运行 `hugo server`，在本地预览一下页脚的社交链接是否已经正确更新。
+3.  确认无误后，将您的修改推送到 GitHub。
+
+这次我们根据主题的正确用法，修改了专门的 `data/Socials.toml` 文件，问题一定能得到
