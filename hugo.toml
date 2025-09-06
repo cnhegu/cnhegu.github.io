@@ -325,7 +325,7 @@ uglyURLs = false
     # ATTENTION: keep this format, change
     #            the number
 
-    siteTwitter = "NullCause"
+    siteTwitter = "gulogx"
     # Note: used for Twitter Cards
 
 
@@ -1100,6 +1100,6 @@ uglyURLs = false
         # Personal website, default: baseURL
         website = "https://www.hegu.me"
         # Twitter
-        twitter = "NullCause"
+        twitter = "gulogx"
         # Fediverse
-        fediverse = "@NullCause@mastodon.social"
+        fediverse = "@gulogx@mastodon.social"
