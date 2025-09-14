@@ -26,6 +26,11 @@
   url = "https://www.facebook.com/xchegu/"
 
 [[socials]]
+  name = "Youtube"
+  icon = "youtube"
+  url = "https://www.youtube.com/@xchegu"
+
+[[socials]]
   name = "Telegram"
   icon = "telegram"
   url = "https://t.me/atxcat"
