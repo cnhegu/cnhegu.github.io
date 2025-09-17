@@ -296,7 +296,7 @@ uglyURLs = false
     homePoster = ""
     homeVideoWebm = ""
     homeVideoMp4 = ""
-    homeLogo = "/icons/logo.svg"
+    homeLogo = "/icons/logo.png"
     homeLogoLink = ""
     homeTitle = ""
     homeMotto = ""
@@ -314,7 +314,7 @@ uglyURLs = false
     ######################################
     # Site Info
 
-    siteLogo = "/icons/logo.svg"
+    siteLogo = "/icons/logo.png"
     # Note: used for JSON-LD, Open Graph
 
     siteDescription = "何故的小站，记录生活、思考与写作"
