@@ -2,38 +2,54 @@
 name: Deploy GitHub Pages
 
 on:
+  # 当代码被推送到 main 分支时，自动执行此工作流程
   push:
     branches:
-      - main  # 當 main 分支有更新時觸發
-  workflow_dispatch: # 允許手動觸發
+      - main
+      
+  # 允许你在 GitHub Actions 页面手动点击按钮来触发
+  workflow_dispatch:
 
 jobs:
   build-and-deploy:
+    # 任务运行在最新版的 Ubuntu 虚拟机上
     runs-on: ubuntu-latest
+    
+    # 并发设置：确保同一时间只有一个部署任务在运行，新的任务会取消旧的
     concurrency:
       group: "pages"
       cancel-in-progress: true
+      
     steps:
+      # 第 1 步：检出（下载）你的仓库代码
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
-          submodules: true  # 拉取主題模組 (好習慣)
+          # ✅ 关键修改：确保这一行存在，它会拉取你的主题（子模块）
+          submodules: true
+          # 拉取完整的 Git 历史记录，这对于 Hugo 获取文章的最后修改时间等功能很有用
           fetch-depth: 0
 
+      # 第 2 步：安装 Hugo 环境
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2
         with:
+          # 使用最新版本的 Hugo
           hugo-version: 'latest'
+          # 使用 extended 版本，以支持 SASS/SCSS 等高级功能
           extended: true
 
+      # 第 3 步：运行 hugo 命令，生成静态网站文件（默认输出到 public 目录）
       - name: Build with Hugo
-        # 這是關鍵的修改：我們只執行最基礎的 hugo 命令，
-        # 去掉了所有可能導致問題的優化參數 (--gc --minify)。
         run: hugo
 
+      # 第 4 步：将生成的 public 文件夹部署到 GitHub Pages
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
+          # 使用 GitHub 自动提供的令牌进行授权
           github_token: ${{ secrets.GITHUB_TOKEN }}
+          # 指定要部署的文件夹
           publish_dir: ./public
+          # 指定你的自定义域名
           cname: www.hegu.me
