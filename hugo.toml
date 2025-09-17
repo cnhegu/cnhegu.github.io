@@ -325,7 +325,7 @@ uglyURLs = false
     # ATTENTION: keep this format, change
     #            the number
 
-    siteTwitter = "gulogx"
+    siteTwitter = "1txcat"
     # Note: used for Twitter Cards
 
 
@@ -594,7 +594,7 @@ uglyURLs = false
     ######################################
     # Google Analytics
 
-    enableGoogleAnalytics = false
+    enableGoogleAnalytics = true
 
     trackingCodeType = "gtag"
 
