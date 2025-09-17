@@ -9,7 +9,7 @@ hasCJKLanguage = true
 copyright = "[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en)"
 
 # Name of theme
-# theme = "meme"
+theme = "meme"
 
 # ✅ 添加这一行来启用 Google Analytics
 googleAnalytics = 'G-4BMXNHL73E' 
@@ -245,7 +245,7 @@ uglyURLs = false
     # Brand Bar (inside header)
 
     # Use SVG?
-    siteBrandSVG = true
+    siteBrandSVG = false
     # If true, put your SVG in the `SVG.toml`
     # file and configure the following options.
     # Unit: px
@@ -296,7 +296,7 @@ uglyURLs = false
     homePoster = ""
     homeVideoWebm = ""
     homeVideoMp4 = ""
-    homeLogo = "/static/icons/logo.svg"
+    homeLogo = "/icons/logo.svg"
     homeLogoLink = ""
     homeTitle = ""
     homeMotto = ""
@@ -314,7 +314,7 @@ uglyURLs = false
     ######################################
     # Site Info
 
-    siteLogo = "/static/icons/logo.svg"
+    siteLogo = "/icons/logo.svg"
     # Note: used for JSON-LD, Open Graph
 
     siteDescription = "何故的小站，记录生活、思考与写作"
@@ -1096,7 +1096,7 @@ uglyURLs = false
         # Motto or introduction
         motto = "Viva La Vida"
         # Avatar
-        avatar = "/icons/my-avatar.png"
+        avatar = "/icons/logo.png"
         # Personal website, default: baseURL
         website = "https://www.hegu.me"
         # Twitter
