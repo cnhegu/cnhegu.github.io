@@ -158,7 +158,7 @@ uglyURLs = false
 
 # Maximum number of items in the Atom & RSS feed
 [services.rss]
-    limit = -1
+    limit = 20
 
 
 
@@ -245,7 +245,7 @@ uglyURLs = false
     # Brand Bar (inside header)
 
     # Use SVG?
-    siteBrandSVG = false
+    siteBrandSVG = true
     # If true, put your SVG in the `SVG.toml`
     # file and configure the following options.
     # Unit: px
@@ -296,7 +296,7 @@ uglyURLs = false
     homePoster = ""
     homeVideoWebm = ""
     homeVideoMp4 = ""
-    homeLogo = ""
+    homeLogo = "/images/logo.svg"
     homeLogoLink = ""
     homeTitle = ""
     homeMotto = ""
@@ -314,10 +314,10 @@ uglyURLs = false
     ######################################
     # Site Info
 
-    siteLogo = "/icons/hegu-icon.png"
+    siteLogo = "/images/logo.svg"
     # Note: used for JSON-LD, Open Graph
 
-    siteDescription = "MemE is a powerful and highly customizable GoHugo theme for personal blogs."
+    siteDescription = "何故的小站，记录生活、思考与写作"
     # Note: used for HTML head meta, JSON-LD,
     #       Open Graph, Atom, RSS
 
@@ -604,7 +604,7 @@ uglyURLs = false
     ######################################
     # Google Site Verification
 
-    googleSiteVerification = ""
+    googleSiteVerification = "GCW3EwP2jAhK22WZTH5ZVTOCCZU4FtdrzKNTks-AzNw"
 
 
     ######################################
