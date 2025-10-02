@@ -245,7 +245,7 @@ uglyURLs = false
     # Brand Bar (inside header)
 
     # Use SVG?
-    siteBrandSVG = false # ⬅️ 将这里改为 false，禁用默认的 “M” 形 SVG Logo
+    siteBrandSVG = true
     # If true, put your SVG in the `SVG.toml`
     # file and configure the following options.
     # Unit: px
