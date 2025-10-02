@@ -259,7 +259,7 @@ uglyURLs = false
     # family can be configured in typography
     # section at the bottom of this file.
     # Unit: em
-    siteBrandFontSize = 1
+    siteBrandFontSize = 1.5
     siteBrandFontColor = "var(--color-contrast-high)"
 
 
@@ -1096,10 +1096,10 @@ uglyURLs = false
         # Motto or introduction
         motto = "Viva La Vida"
         # Avatar
-        avatar = "/icons/logo.png"
+        avatar = "/icons/mylogo.png"
         # Personal website, default: baseURL
         website = "https://www.hegu.me"
         # Twitter
-        twitter = "gulogx"
+        twitter = "1txcat"
         # Fediverse
         fediverse = "@1txcat@mastodon.social"

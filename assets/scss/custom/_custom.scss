@@ -68,3 +68,21 @@
     font-weight: bold !important;
     color: var(--color-contrast-high) !important; /* 确保颜色对比度高 */
 }
+
+/* -------------------------------------------
+   强制插入 Logo 图片（针对非 SVG 模式）
+   ------------------------------------------- */
+
+/* 找到品牌链接，在其文字前添加您的图片 */
+.site-brand a {
+    /* 如果您的 Logo 是图片，请移除这行 CSS，因为它只适用于文本标题 */
+    text-indent: -9999px; /* 隐藏文本标题，只显示图片 */
+    display: block; /* 允许它占据空间 */
+    
+    /* 调整高度以适应 Logo 大小 */
+    height: 2.2em; 
+    
+    /* 引用您的 Logo 图片 */
+    background: url("/icons/logo.png") no-repeat center left / contain; 
+}
+/* 如果您仍想显示标题文字，请注释掉上面的 text-indent: -9999px; */
