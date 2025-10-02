@@ -27,4 +27,44 @@
     /* ... 省略里面的具体样式 ... */
 }
 
+/* -------------------------------------------
+   自定义 Logo/品牌样式覆盖 (解决 M 形 Logo 和主题名称问题)
+   ------------------------------------------- */
 
+/* 1. 隐藏默认的 "Hugo Theme MemE" 文字 */
+.site-brand span {
+    display: none !important;
+}
+
+/* 2. 隐藏默认的蓝色 M 形 SVG 图标 */
+.site-brand svg {
+    display: none !important;
+}
+
+/* 3. 替换为您的自定义 Logo 图片 */
+/* 我们使用 ::before 伪元素来插入您的 /icons/logo.png 图片 */
+.site-brand a::before {
+    content: ""; /* 伪元素需要 content 才能显示 */
+    display: inline-block;
+    vertical-align: middle; /* 垂直居中 */
+    margin-right: 0.5em; /* 在 Logo 和文字之间添加一些间距 */
+    
+    /* 引用您的 Logo 图片。请确保您的 Logo 在 /static/icons/logo.png */
+    background-image: url("/icons/logo.png"); 
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    
+    /* 调整 Logo 的大小，您可以根据需要修改 width 和 height */
+    width: 2.2em;
+    height: 2.2em;
+    
+    /* 可选：如果您的 Logo 是圆形，可以添加 border-radius: 50%; */
+}
+
+/* 4. 调整品牌标题的样式，确保您的博客名称 "何故小站" 字体醒目 */
+.site-brand {
+    font-size: 1.5em !important; /* 确保字体大小足够 */
+    font-weight: bold !important;
+    color: var(--color-contrast-high) !important; /* 确保颜色对比度高 */
+}
