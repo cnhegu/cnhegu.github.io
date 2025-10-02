@@ -2,7 +2,7 @@
 # Site Settings
 
 baseURL = "https://www.hegu.me/"
-title = "何故小站"
+title = ""
 languageCode = "en"
 hasCJKLanguage = true
 # Copyright information (Markdown supported)
