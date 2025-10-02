@@ -317,6 +317,8 @@ uglyURLs = false
     siteLogo = "/icons/mylogo.png"
     # Note: used for JSON-LD, Open Graph
 
+    favicon = "/favicon.ico" 
+
     siteDescription = "何故的小站，记录生活、思考与写作"
     # Note: used for HTML head meta, JSON-LD,
     #       Open Graph, Atom, RSS
