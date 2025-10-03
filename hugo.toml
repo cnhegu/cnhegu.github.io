@@ -12,7 +12,7 @@ copyright = "[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0
 theme = "meme"
 
 # ✅ 添加这一行来启用 Google Analytics
-googleAnalytics = 'G-4BMXNHL73E' 
+googleAnalytics = 'G-HS7L12NVNJ' 
 
 # `hugo new` automatically opened text editor
 newContentEditor = ""
