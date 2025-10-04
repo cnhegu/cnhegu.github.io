@@ -245,7 +245,7 @@ uglyURLs = false
     # Brand Bar (inside header)
 
     # Use SVG?
-    siteBrandSVG = false
+    siteBrandSVG = true
     # If true, put your SVG in the `SVG.toml`
     # file and configure the following options.
     # Unit: px

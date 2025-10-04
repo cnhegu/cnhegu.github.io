@@ -3,7 +3,6 @@
     # (此方法可能受主题版本影响，但值得一试)
 
     # 或者，如果您有自己的 SVG 代码，请放在此处：
-    # body = '<svg>...</svg>'
+    # brand = '<svg xmlns="http://www.w3.org/2000/svg" class="brand" xml:space="preserve" viewBox="0 0 870 873">'
 
     # 最简单的替代方案是直接使用您的 Logo 图片路径：
-    body = '<img src="/icons/mylogo.png" alt="何故小站 Logo" style="height: 100%; width: auto;"/>'
