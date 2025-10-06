@@ -22,24 +22,29 @@ jobs:
       
     steps:
       # 第 1 步：检出（下载）你的仓库代码
-      - name: Checkout repository
+      - name: Checkout repository and submodules
         uses: actions/checkout@v4
         with:
-          # ✅ 关键修改：确保这一行存在，它会拉取你的主题（子模块）
+          # ✅ 启用子模块拉取
           submodules: true
-          # 拉取完整的 Git 历史记录，这对于 Hugo 获取文章的最后修改时间等功能很有用
+          # ✅ 拉取完整的 Git 历史记录
           fetch-depth: 0
+          
+          # 【新添加的关键配置】
+          # 强制使用 SSH 密钥进行认证，解决子模块拉取失败问题。
+          # 你必须在 GitHub Secrets 中设置一个名为 ACTIONS_SSH_KEY 的 Secret。
+          ssh-key: ${{ secrets.ACTIONS_SSH_KEY }}
+          # 禁用严格主机密钥检查，以避免不必要的连接错误。
+          ssh-strict: false
 
       # 第 2 步：安装 Hugo 环境
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2
         with:
-          # 使用最新版本的 Hugo
           hugo-version: 'latest'
-          # 使用 extended 版本，以支持 SASS/SCSS 等高级功能
           extended: true
 
-      # 第 3 步：运行 hugo 命令，生成静态网站文件（默认输出到 public 目录）
+      # 第 3 步：运行 hugo 命令，生成静态网站文件
       - name: Build with Hugo
         run: hugo
 
@@ -47,9 +52,6 @@ jobs:
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
-          # 使用 GitHub 自动提供的令牌进行授权
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          # 指定要部署的文件夹
           publish_dir: ./public
-          # 指定你的自定义域名
           cname: www.hegu.me
