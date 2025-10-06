@@ -9,28 +9,34 @@
   name = "Email"
   icon = "envelope"
   url = "mailto:comitist@gmail.com"
+  weight = 1
 
 [[socials]]
   name = "GitHub"
   icon = "github"
   url = "https://github.com/cnhegu"
+  weight = 2
 
 [[socials]]
   name = "Twitter / X"
   icon = "x"
   url = "https://twitter.com/1txcat"
+  weight = 3
 
 [[socials]]
   name = "Facebook"
   icon = "facebook"
   url = "https://www.facebook.com/xchegu/"
+  weight = 4
 
 [[socials]]
   name = "Telegram"
   icon = "telegram"
   url = "https://t.me/atxcat"
+  weight = 5
 
 [[socials]]
   name = "RSS"
   icon = "rss"
-  url = "/rss.xml" 
+  url = "/rss.xml"
+  weight = 6
