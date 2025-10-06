@@ -176,7 +176,6 @@ notAlternative = true
 
 [outputs]
 page = ["HTML"]
-# home = ["HTML", "SectionsAtom", "SectionsRSS", "SearchIndex", "Algolia"]
 home = ["HTML", "SectionsAtom", "SectionsRSS", "SearchIndex"]
 section = ["HTML"]
 taxonomy = ["HTML"]
@@ -225,15 +224,15 @@ pre = "internal"
 post = "user-circle"
 [[menu.main]]
 weight = 6
-identifier = "lang-switcher"
-[[menu.main]]
-weight = 7
-identifier = "theme-switcher"
-post = "adjust"
-[[menu.main]]
-weight = 8
 identifier = "search"
 post = "search"
+[[menu.main]]
+weight = 7
+identifier = "lang-switcher"
+[[menu.main]]
+weight = 8
+identifier = "theme-switcher"
+post = "adjust"
 ##########################################
 
 # Theme Settings
@@ -245,42 +244,29 @@ post = "search"
 enableHeader = true
 
 enableHeaderAutoHide = false
-# Note: works for header layout flex only
 
 displayHeaderInHome = true
-# Note: invalid for header layout flex
 
 headerBackground = "linear-gradient(90deg, #f795331a 0, #f370551a 15%, #ef4e7b1a 30%, #a166ab1a 44%, #5073b81a 58%, #1098ad1a 72%, #07b39b1a 86%, #6dba821a 100%)"
-# Note: https://developer.mozilla.org/en-US/docs/Web/CSS/background
 
 headerLayout = "flex"
-# Note: center or flex (restored to flex for original right-aligned menu)
 
-# Hide menu bar and display a toggle on narrow screen?
 enableNavToggle = true
 
 navHeight = "3.5rem"
-# Note: menu bar height when it’s toggled (fixed to 3.5rem to prevent multi-row stacking)
 
 menuItemPadding = "0.5rem"
-# Note: added padding between menu items for better spacing (if theme supports)
 
-# Force remote rebuild v2.0
-nano hugo.toml  # 或 code hugo.toml
 
 ######################################
 # Brand Bar (inside header)
 
-# Use SVG?
 siteBrandSVG = true
-# If true, put your SVG in the SVG.toml file and configure the following options.
-# Unit: px
+
 siteBrandSVGWidth = 180
 siteBrandSVGHeight = 100
 siteBrandSVGFill = "#fff"
-# If false, your site title will be used as the default and displayed as text.
-# The font size and font color can be configured below. The font family can be configured in typography section at the bottom of this file.
-# Unit: em
+
 siteBrandFontSize = 1
 siteBrandFontColor = "var(--color-contrast-high)"
 
@@ -289,15 +275,10 @@ siteBrandFontColor = "var(--color-contrast-high)"
 # Menu Bar
 
 enableMenu = true
-# Note: invalid for header layout flex
 
 displayMenuInHome = true
-# Note: invalid for header layout flex
 
-# Highlight current menu item by section?
 activeInSection = false
-# Note: if true, the menu item in the post page will be highlighted
-# also if that post’s section is the url of that menu item
 
 
 ######################################
@@ -305,14 +286,10 @@ activeInSection = false
 
 homeLayout = "posts"
 
-## Poetry
-# Verse (Markdown supported)
 homePoetry = []
-# Padding of links at the bottom
-# Unit: em
+
 homeLinksPadding = 1
 
-## Footage
 homePoster = ""
 homeVideoWebm = ""
 homeVideoMp4 = ""
@@ -324,53 +301,38 @@ homeDescription = "何故的小站，记录生活、思考与写作。"
 homeKeywords = ""
 homeLinksDelimiter = ""
 
-## Posts
 enableHideInHomepage = false
-# Note: enable hideInHomepage front matter support (disabled by default for performance concern)
 
 
 ######################################
 # Site Info
-customHead = '<link rel="manifest" href="/manifest.json">'
 
 siteLogo = "/icons/mylogo.png"
-# Note: used for JSON-LD, Open Graph
 
 favicon = "/favicon.ico" 
 
 siteDescription = "何故的小站，记录生活、思考与写作"
-# Note: used for HTML head meta, JSON-LD, Open Graph, Atom, RSS
 
 siteCreatedTime = "2024-10-06T15:00:00+08:00"
-# ATTENTION: keep this format, changed to current year for consistency
 
 siteTwitter = "1txcat"
-# Note: used for Twitter Cards
 
 
 ######################################
 # Category By
 
 categoryBy = "categories"
-# ATTENTION: If you set it to sections, be sure to delete categories in taxonomies at the top
-# of this file. Otherwise, the categories page will be invalid.
-# Also, you need to create a new content/categories/_index.md file by yourself.
 
 
 ######################################
 # Categories Page
 
-# Enable tree structure layout?
 enableTree = true
-# ATTENTION: This option cannot be disabled if you set categoryBy to sections
 
-# Display title of posts?
 displayPosts = true
 
-# Display count of posts under each category?
 displayPostsCount = true
 
-# Set to a non-negative number to limit the number of posts displayed per category/section.
 limitPostsLimit = -1
 
 
@@ -388,35 +350,26 @@ smallestFontSize = 1
 # List Page
 
 listWidth = 36
-# Note: you can leave it empty("") to fallback to the default value: 42 Unit: em
 
 displayListTitle = true
 
 listDateFormat = "January 2"
-# ATTENTION: be sure to follow the specified format https://gohugo.io/functions/format/
 
 listDatePosition = "right"
-# Note: left or right
 
-# Separate the list by month?
 groupByMonth = true
 
-# Enable Chinese zodiac?
 chineseZodiac = true
 
-# Translate the year? (valid for title)
 i18nYear = false
-# Translate the month? (valid for title)
 i18nMonth = false
 
 
 ######################################
 # Taxonomy List Page
 
-# Display count of posts in each taxonomy term?
 displayTaxonomyTermCount = true
 
-# Set to a non-negative number to limit the number of posts displayed per taxonomy term.
 limitEntriesLimit = -1
 
 
@@ -429,10 +382,8 @@ limitEntriesLimit = -1
 ######################################
 # Atom & RSS
 
-# Include full content?
 includeContent = true
 
-# Custom Footer (Supports Template and Markdown syntax)
 feedFooter = """> Read original: <{{ .Permalink }}>  
 > Notice: This blog now offers email subscriptions—feel free to [subscribe via Substack](https://username.substack.com) to support my work!"""
 
@@ -442,7 +393,6 @@ feedFooter = """> Read original: <{{ .Permalink }}>
 enableDarkMode = true
 
 defaultTheme = "dark"
-# Note: light or dark
 
 hideThemeToggle = false
 hideThemeToggleInHome = false
@@ -600,6 +550,9 @@ trackingCodeType = "gtag"
 
 trackingID = "G-HS7L12NVNJ"
 
+googleAnalyticsPrivacy = true
+noAttribution = true
+
 
 ######################################
 # Google Site Verification
@@ -612,10 +565,8 @@ googleSiteVerification = "GCW3EwP2jAhK22WZTH5ZVTOCCZU4FtdrzKNTks-AzNw"
 
 googleAdClient = ""
 
-## Auto Ads
 enableGoogleAutoAds = false
 
-## Ad Units
 enableGoogleAdUnits = false
 googleAdSlot = ""
 googleAdSlotInArticle = ""
@@ -634,7 +585,7 @@ yandexMetrikaId = ""
 duration = 0.5
 
 primaryColorLight = "220, 90%, 56%"
-primaryColorDark = "200, 70%, 50%"  # Warmer blue-gray for less 'cold' feel
+primaryColorDark = "200, 70%, 50%"
 
 postWidth = 36
 
@@ -769,7 +720,7 @@ fontFamilyQuote = ""
 fontFamilyTOC = ""
 fontFamilyCaption = ""
 fontFamilyFooter = ""
-fontFamilyBody = "'IBM Plex Serif', 'Inter', serif"  # Added Inter fallback for modern readability
+fontFamilyBody = "'IBM Plex Serif', 'Inter', serif"
 
 fontsLink = "https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,400;0,500;0,700;1,400;1,700&family=Inter:wght@400;500;700&family=Source+Code+Pro:ital,wght@0,400;0,700;1,400;1,700&family=Comfortaa:wght@700&display=swap"
 
@@ -976,9 +927,8 @@ busuanziSiteUVIcon = "user"
 busuanziSitePVText = "访问量"
 busuanziSitePVIcon = "eye"
 
-# Socials
 enableSocials = true
-# Note: see data/Socials.toml (now active with 6 icons)
+
 
 ######################################
 # Multilingual
@@ -997,7 +947,6 @@ enableHighlight = true
 
 enableOverflowY = true
 maxHeight = 20
-# Unit: em
 
 enableCopy = true
 enableCopyAutoHide = true
@@ -1091,17 +1040,12 @@ utterances = "https://utteranc.es/client.js"
 ######################################
 # Author’s information
 [params.author]
-# Name
 name = "何故"
-# Email
 email = "comitist@gmail.com"
-# Motto or introduction
 motto = "Viva La Vida"
-# Avatar
 avatar = "/icons/mylogo.png"
-# Personal website, default: baseURL
 website = "https://www.hegu.me"
-# Twitter
 twitter = "1txcat"
-# Fediverse
 fediverse = "@1txcat@mastodon.social"
+
+# Force remote rebuild v2.0
