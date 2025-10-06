@@ -1,18 +1,18 @@
 {
-    "name": "何故小站",         // <-- 对应你的 site.Title: "何故小站"
-    "short_name": "何故",        // <-- 简短的名称，用于手机主屏幕图标下方
-    "icons": [
-        {
-            "src": "./icons/mylogo.png",  // <-- 确保路径指向你的 Logo
-            "sizes": "555x557",           // <-- 调整为你 Logo 实际的大小，或使用多个图标
-            "type": "image/png",
-            "purpose": "any"
-        },
-        // ... (保留或添加其他尺寸的图标)
-    ],
-    "theme_color": "#fff",
-    "background_color": "#fff",
-    "display": "standalone",
-    "orientation": "portrait-primary",
-    "start_url": "./"
+  "name": "何故小站",
+  "short_name": "何故",
+  "icons": [
+    {
+      "src": "/icons/mylogo.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ],
+  "theme_color": "#fff",
+  "theme_color_dark": "#16171d",
+  "background_color": "#fff",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "start_url": "/"
 }
