@@ -1,38 +1,44 @@
 name: Deploy GitHub Pages
 
 on:
-  # 当代码被推送到 main 分支时，自动执行此工作流程
   push:
     branches:
       - main
-      
-  # 允许你在 GitHub Actions 页面手动点击按钮来触发
   workflow_dispatch:
 
 jobs:
   build-and-deploy:
-    # 任务运行在最新版的 Ubuntu 虚拟机上
     runs-on: ubuntu-latest
     
-    # 并发设置：确保同一时间只有一个部署任务在运行，新的任务会取消旧的
     concurrency:
       group: "pages"
       cancel-in-progress: true
       
     steps:
-      # 第 1 步：检出（下载）你的仓库代码
-      - name: Checkout repository and submodules
+      # 第 1 步：检出主仓库（不处理子模块，因为我们将手动处理）
+      - name: Checkout repository (Main Project Only)
         uses: actions/checkout@v4
         with:
-          # ✅ 启用子模块拉取
-          submodules: true
-          # ✅ 拉取完整的 Git 历史记录
+          submodules: false
           fetch-depth: 0
+
+      # 【关键修复步骤】强制克隆主题子模块
+      - name: Force Clone Theme Submodule
+        run: |
+          # 1. 设置 Git 凭证：使用 PAT 令牌作为认证，解决权限问题
+          # 这将允许 Actions 虚拟机通过 HTTPS/Token 访问你的私人主题仓库
+          git config --global url."https://cnhegu:${{ secrets.DEPLOY_TOKEN }}@github.com/".insteadOf "git@github.com:"
           
-          # 【最终认证修复】
-          # 使用 PAT 令牌进行认证，解决 SSH 密钥格式错误导致的拉取失败。
-          # 你必须在 GitHub Secrets 中设置一个名为 DEPLOY_TOKEN 的 Secret。
-          token: ${{ secrets.DEPLOY_TOKEN }} 
+          # 2. 强制删除并克隆你的主题仓库
+          # 使用 HTTPS URL 克隆，确保克隆成功。请确保 cnhegu/hugo-theme-meme.git 是你的 Fork 仓库。
+          rm -rf themes/meme
+          git clone --depth 1 https://github.com/cnhegu/hugo-theme-meme.git themes/meme
+          
+          # 3. 检查主题是否成功克隆，如果失败则报错
+          if [ ! -d "themes/meme" ]; then
+            echo "::error::Theme cloning failed. Check DEPLOY_TOKEN and repository URL."
+            exit 1
+          fi
 
       # 第 2 步：安装 Hugo 环境
       - name: Setup Hugo
