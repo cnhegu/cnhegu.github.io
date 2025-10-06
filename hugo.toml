@@ -326,7 +326,7 @@ siteDescription = "何故的小站，记录生活、思考与写作"
 siteCreatedTime = "2024-10-06T15:00:00+08:00"
 # ATTENTION: keep this format, change the number
 
-siteTwitter = "1txcat"
+
 # Note: used for Twitter Cards
 
 
@@ -1078,8 +1078,7 @@ email = "comitist@gmail.com"
 motto = "Viva La Vida"
 avatar = "/icons/mylogo.png"
 website = "https://www.hegu.me"
-twitter = "1txcat"
-fediverse = "@1txcat@mastodon.social"
+
 
 # Force remote rebuild v2.0
 
