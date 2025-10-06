@@ -226,6 +226,7 @@ post = "user-circle"
 [[menu.main]]
 weight = 6
 identifier = "theme-switcher"
+post = "adjust"
 [[menu.main]]
 weight = 7
 identifier = "lang-switcher"
@@ -252,11 +253,11 @@ displayHeaderInHome = true
 headerBackground = "linear-gradient(90deg, #f795331a 0, #f370551a 15%, #ef4e7b1a 30%, #a166ab1a 44%, #5073b81a 58%, #1098ad1a 72%, #07b39b1a 86%, #6dba821a 100%)"
 # Note: https://developer.mozilla.org/en-US/docs/Web/CSS/background
 
-headerLayout = "flex"
+headerLayout = "center"
 # Note: center or flex
 
 # Hide menu bar and display a toggle on narrow screen?
-enableNavToggle = true
+enableNavToggle = false
 
 navHeight = "10em"
 # Note: menu bar height when it’s toggled
@@ -426,7 +427,7 @@ limitEntriesLimit = -1
 includeContent = true
 
 # Custom Footer (Supports Template and Markdown syntax)
-feedFooter = """> Read original: <{{ .Permalink }}>  
+feedFooter = """> Read original: <{{ .Permalink }}>  
 > Notice: This blog now offers email subscriptions—feel free to [subscribe via Substack](https://username.substack.com) to support my work!"""
 
 ######################################
@@ -971,8 +972,7 @@ busuanziSitePVIcon = "eye"
 
 # Socials
 enableSocials = true
-# Note: see data/Socials.toml
-
+# Note: see data/Socials.toml (create this file for links to show, see example above)
 
 ######################################
 # Multilingual
