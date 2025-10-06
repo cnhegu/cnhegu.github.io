@@ -1,76 +1,92 @@
 ##########################################
+
 # Site Settings
 
 baseURL = "https://www.hegu.me/"
 title = "何故小站"
 languageCode = "en"
 hasCJKLanguage = true
+
 # Copyright information (Markdown supported)
-copyright = "[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en)"
+
+copyright = "CC BY-NC-SA 4.0"
 
 # Name of theme
+
 theme = "meme"
 
-# ✅ 添加这一行来启用 Google Analytics
-googleAnalytics = 'G-HS7L12NVNJ' 
+# hugo new automatically opened text editor
 
-# `hugo new` automatically opened text editor
 newContentEditor = ""
 
 # i18n
+
 defaultContentLanguage = "zh-cn"
 defaultContentLanguageInSubdir = false
 
 # Title case style
+
 # https://gohugo.io/getting-started/configuration/#configure-title-case
+
 titleCaseStyle = "none"
 
 # Pluralize list titles
+
 pluralizeListTitles = false
 
 # The length of text in words to show in summary
+
 summaryLength = 42
 
 # Enable Emoji emoticons support?
+
 enableEmoji = false
 
 # Text to display for footnote return links
+
 footnoteReturnLinkContents = "↩"
 
-# Enable `.GitInfo` object for each page?
+# Enable .GitInfo object for each page?
+
 enableGitInfo = false
 
-# Enable generation of `robots.txt` file?
+# Enable generation of robots.txt file?
+
 enableRobotsTXT = true
 
 # URL related
+
 disablePathToLower = false
 relativeURLs = false
 uglyURLs = false
 
 # URL structure
+
 [permalinks]
-    categories = "/categories/:slug/"
-    tags = "/tags/:slug/"
+categories = "/categories/:slug/"
+tags = "/tags/:slug/"
 
 # Taxonomies
+
 [taxonomies]
-    category = "categories"
-    tag = "tags"
+category = "categories"
+tag = "tags"
 
 # Modified date
+
 [frontmatter]
-    lastmod = ["lastmod", ":git", ":fileModTime", ":default"]
+lastmod = ["lastmod", ":git", ":fileModTime", ":default"]
 
 [pagination]
     disableAliases = false
     # Number of items per page in paginated
-    # lists (valid for the `posts` homepage
+    # lists (valid for the posts homepage
     # layout in MemE)
     pagerSize = 5
     path = 'page'
 
 # Markdown renderer
+
 [markup]
     defaultMarkdownHandler = "goldmark"
     [markup.goldmark]
@@ -102,10 +118,12 @@ uglyURLs = false
         ordered = true
 
 # HTML minify
+
 [minify.tdewolff.html]
     keepWhitespace = false
 
 # Related content
+
 [related]
     threshold = 80
     includeNewer = true
@@ -122,25 +140,30 @@ uglyURLs = false
         pattern = "2006"
 
 # MIME type of Atom
+
 [mediaTypes."application/atom+xml"]
     suffixes = ["xml"]
 
 # Custom Atom template of MemE
+
 [outputFormats.SectionsAtom]
     mediaType = "application/atom+xml"
     baseName = "atom"
 
 # Custom RSS template of MemE
+
 [outputFormats.SectionsRSS]
     mediaType = "application/rss+xml"
     baseName = "rss"
 
 # Search index for lunr.js
+
 [outputFormats.SearchIndex]
     mediaType = "application/json"
     baseName = "search"
 
 # Search index for Algolia
+
 [outputFormats.Algolia]
     mediaType = "application/json"
     baseName = "algolia"
@@ -148,6 +171,7 @@ uglyURLs = false
     notAlternative = true
 
 # Hugo’s output control
+
 [outputs]
     page = ["HTML"]
     # home = ["HTML", "SectionsAtom", "SectionsRSS", "SearchIndex", "Algolia"]
@@ -157,12 +181,12 @@ uglyURLs = false
     term = ["HTML"]
 
 # Maximum number of items in the Atom & RSS feed
+
 [services.rss]
     limit = 20
 
-
-
 ##########################################
+
 # Menu Settings
 
 [menu]
@@ -208,10 +232,10 @@ uglyURLs = false
         identifier = "search"
         post = "search"
 
-
-
+---
 
 ##########################################
+
 # Theme Settings
 
 [params]
@@ -240,13 +264,12 @@ uglyURLs = false
     # Note: menu bar height when it’s
     #       toggled
 
-
     ######################################
     # Brand Bar (inside header)
 
     # Use SVG?
     siteBrandSVG = true
-    # If true, put your SVG in the `SVG.toml`
+    # If true, put your SVG in the SVG.toml
     # file and configure the following options.
     # Unit: px
     siteBrandSVGWidth = 250
@@ -262,7 +285,6 @@ uglyURLs = false
     siteBrandFontSize = 1
     siteBrandFontColor = "var(--color-contrast-high)"
 
-
     ######################################
     # Menu Bar
 
@@ -277,8 +299,7 @@ uglyURLs = false
     # Note: if true, the menu item in the
     #       post page will be highlighted
     #       also if that post’s section is
-    #       the `url` of that menu item
-
+    #       the url of that menu item
 
     ######################################
     # Homepage Layout
@@ -306,10 +327,9 @@ uglyURLs = false
 
     ## Posts
     enableHideInHomepage = false
-    # Note: enable `hideInHomepage` front
+    # Note: enable hideInHomepage front
     #       matter support (disabled by
     #       default for performance concern)
-
 
     ######################################
     # Site Info
@@ -317,7 +337,7 @@ uglyURLs = false
     siteLogo = "/icons/mylogo.png"
     # Note: used for JSON-LD, Open Graph
 
-    favicon = "/favicon.ico" 
+    favicon = "/favicon.ico"
 
     siteDescription = "何故的小站，记录生活、思考与写作"
     # Note: used for HTML head meta, JSON-LD,
@@ -325,26 +345,24 @@ uglyURLs = false
 
     siteCreatedTime = "2025-07-17T15:00:00+08:00"
     # ATTENTION: keep this format, change
-    #            the number
+    #           the number
 
     siteTwitter = "1txcat"
     # Note: used for Twitter Cards
-
 
     ######################################
     # Category By
 
     categoryBy = "categories"
-    # ATTENTION: If you set it to `sections`,
-    #            be sure to delete `categories`
-    #            in `taxonomies` at the top
-    #            of this file. Otherwise,
-    #            the categories page will
-    #            be invalid. Also, you need
-    #            to create a new
-    #            `content/categories/_index.md`
-    #            file by yourself.
-
+    # ATTENTION: If you set it to sections,
+    #           be sure to delete categories
+    #           in taxonomies at the top
+    #           of this file. Otherwise,
+    #           the categories page will
+    #           be invalid. Also, you need
+    #           to create a new
+    #           content/categories/_index.md
+    #           file by yourself.
 
     ######################################
     # Categories Page
@@ -352,8 +370,8 @@ uglyURLs = false
     # Enable tree structure layout?
     enableTree = true
     # ATTENTION: This option cannot be
-    #            disabled if you set
-    #            `categoryBy` to `sections`
+    #           disabled if you set
+    #           categoryBy to sections
 
     # Display title of posts?
     displayPosts = true
@@ -367,7 +385,6 @@ uglyURLs = false
     # category/section.
     limitPostsLimit = -1
 
-
     ######################################
     # Tags Page
 
@@ -376,7 +393,6 @@ uglyURLs = false
     fontUnit = "em"
     largestFontSize = 2.5
     smallestFontSize = 1
-
 
     ######################################
     # List Page
@@ -390,8 +406,8 @@ uglyURLs = false
 
     listDateFormat = "January 2"
     # ATTENTION: be sure to follow the
-    #            specified format
-    #            https://gohugo.io/functions/format/
+    #           specified format
+    #           https://gohugo.io/functions/format/
 
     listDatePosition = "right"
     # Note: left or right
@@ -407,7 +423,6 @@ uglyURLs = false
     # Translate the month? (valid for title)
     i18nMonth = false
 
-
     ######################################
     # Taxonomy List Page
 
@@ -420,12 +435,10 @@ uglyURLs = false
     # taxonomy term.
     limitEntriesLimit = -1
 
-
     ######################################
     # Post Sections
 
     # mainSections = ["posts"]
-
 
     ######################################
     # Atom & RSS
@@ -434,9 +447,9 @@ uglyURLs = false
     includeContent = true
 
     # Custom Footer (Supports Template and Markdown syntax)
-    feedFooter = """> Read original: <{{ .Permalink }}>  
-> Notice: This blog now offers email subscriptions—feel free to [subscribe via Substack](https://username.substack.com) to support my work!"""
+    feedFooter = """> Read original: <{{ .Permalink }}>
 
+Notice: This blog now offers email subscriptions—feel free to subscribe via Substack to support my work!"""
 
     ######################################
     # Dark Mode
@@ -451,13 +464,11 @@ uglyURLs = false
 
     overrideSystemPreferences = false
 
-
     ######################################
     # Web App
 
     themeColor = "#fff"
     themeColorDark = "#16171d"
-
 
     ######################################
     # HTML Head Meta, SEO & Social Discovery
@@ -468,18 +479,15 @@ uglyURLs = false
 
     autoDetectImages = true
 
-
     ######################################
     # Service Worker
 
     enableServiceWorker = false
 
-
     ######################################
     # KaTeX (chemical equation supported)
 
     enableKaTeX = false
-
 
     ######################################
     # MathJax (chemical equation supported)
@@ -487,7 +495,6 @@ uglyURLs = false
     enableMathJax = false
 
     disableMathJaxMenu = false
-
 
     ######################################
     # Mermaid (https://github.com/mermaid-js/mermaid)
@@ -497,12 +504,11 @@ uglyURLs = false
     mermaidTheme = 'default'
     mermaidThemeDark = 'dark'
 
-
     ######################################
     # Comments
 
     enableComments = true
-    
+
     autoLoadComments = true
 
     ## Disqus
@@ -592,7 +598,6 @@ uglyURLs = false
     remark42SimpleView = false
     remark42NoFooter = false
 
-
     ######################################
     # Google Analytics
 
@@ -602,12 +607,10 @@ uglyURLs = false
 
     trackingID = "G-HS7L12NVNJ"
 
-
     ######################################
     # Google Site Verification
 
     googleSiteVerification = "GCW3EwP2jAhK22WZTH5ZVTOCCZU4FtdrzKNTks-AzNw"
-
 
     ######################################
     # Google AdSense
@@ -623,12 +626,10 @@ uglyURLs = false
     googleAdSlotInArticle = ""
     googleAdSlotAutoRelaxed = ""
 
-
     ######################################
     # Yandex.Metrika
 
     yandexMetrikaId = ""
-
 
     ######################################
     # Post Settings
@@ -642,12 +643,10 @@ uglyURLs = false
 
     original = true
 
-
     ######################################
     # Post Description
 
     displayPostDescription = true
-
 
     ######################################
     # Post Meta Info
@@ -680,12 +679,10 @@ uglyURLs = false
     displayBusuanziPagePV = false
     busuanziPagePVIcon = "eye"
 
-
     ######################################
     # Markdown Related
 
     hrefTargetBlank = true
-
 
     ######################################
     # Table of Contents
@@ -697,7 +694,6 @@ uglyURLs = false
     displayTOCNum = true
 
     linkHeadingsToTOC = true
-
 
     ######################################
     # Headings Anchor
@@ -714,14 +710,12 @@ uglyURLs = false
 
     enableAnchorAutoHide = false
 
-
     ######################################
     # Caption
 
     enableCaption = true
 
     captionPrefix = "※ "
-
 
     ######################################
     # Image Hosting
@@ -732,14 +726,12 @@ uglyURLs = false
 
     headAlso = false
 
-
     ######################################
     # Video Hosting
 
     enableVideoHost = false
 
     videoHostURL = "https://example.com/"
-
 
     ######################################
     # Footnotes
@@ -750,11 +742,9 @@ uglyURLs = false
 
     insertHrBySelf = true
 
-
     ######################################
     # Scrollbar
     customizeScrollbar = true
-
 
     ######################################
     # Typography
@@ -775,7 +765,6 @@ uglyURLs = false
 
     fontsLink = "https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,400;0,500;0,700;1,400;1,700&family=Source+Code+Pro:ital,wght@0,400;0,700;1,400;1,700&family=Comfortaa:wght@700&display=swap"
 
-
     ######################################
     ## Font Size (unit: px)
 
@@ -791,7 +780,6 @@ uglyURLs = false
 
     lineHeight = 1.618
 
-
     ######################################
     ## Paragraph Indents
 
@@ -801,12 +789,10 @@ uglyURLs = false
 
     paragraphStyle = "margin"
 
-
     ######################################
     ## Text Justification
 
     enableJustify = false
-
 
     ######################################
     ## Drop Cap
@@ -817,12 +803,10 @@ uglyURLs = false
 
     deleteHrBeforeDropCap = false
 
-
     ######################################
     ## Small Caps
 
     enableSmallCaps = true
-
 
     ######################################
     ## Emphasis Point (Chinese)
@@ -834,14 +818,12 @@ uglyURLs = false
 
     enableChinesePunctuationGlyphCorrection = false
 
-
     ######################################
     # Post Copyright
 
     enablePostCopyright = true
 
     displayPostCopyright = true
-
 
     ######################################
     # Post Updated Badge
@@ -852,7 +834,6 @@ uglyURLs = false
 
     enableBadgeTitle = true
     badgeTitlePrefix = "Updated @ "
-
 
     ######################################
     # Post Gitinfo
@@ -879,7 +860,6 @@ uglyURLs = false
     editIcon = "edit"
     editText = "Edit Me?"
 
-
     ######################################
     # Post Share
 
@@ -893,7 +873,6 @@ uglyURLs = false
 
     fetchFediverseInstances = false
 
-
     ######################################
     # Related Posts
 
@@ -905,14 +884,12 @@ uglyURLs = false
 
     relatedPostsIcon = "plus-circle"
 
-
     ######################################
     # Post Tags
 
     enablePostTags = true
 
     postTagsIcon = "tag"
-
 
     ######################################
     # Previous/Next Post
@@ -921,7 +898,6 @@ uglyURLs = false
 
     postNavInSection = true
 
-
     ######################################
     # Minimal Footer
 
@@ -929,7 +905,6 @@ uglyURLs = false
     enableVerticalBarStructure = false
 
     enableAboutPageMinimalFooter = false
-
 
     ######################################
     # Back to Top
@@ -943,7 +918,6 @@ uglyURLs = false
     displayBackToTopOnMobile = false
 
     backToTopIcon = "arrow-up"
-
 
     ######################################
     # Footer
@@ -979,7 +953,6 @@ uglyURLs = false
     enableSocials = true
     # Note: see data/Socials.toml
 
-
     ######################################
     # Multilingual
 
@@ -988,7 +961,6 @@ uglyURLs = false
     hideLangToggleInHome = false
 
     autoHideLangToggle = true
-
 
     ######################################
     # Code Blocks
@@ -1002,7 +974,6 @@ uglyURLs = false
     enableCopy = true
     enableCopyAutoHide = true
 
-
     ######################################
     # Fingerprinting and SRI
 
@@ -1010,36 +981,30 @@ uglyURLs = false
 
     enableSRI = false
 
-
     ######################################
     # Force HTTPS Redirection
 
     enableForceHTTPS = false
-
 
     ######################################
     # Smooth Scroll
 
     enableSmoothScroll = true
 
-
     ######################################
     # Medium Zoom
 
     enableMediumZoom = true
-
 
     ######################################
     # Instant Page
 
     enableInstantPage = true
 
-
     ######################################
     # Lunr search
 
     enableLunrSearch = true
-
 
     ######################################
     # Algolia search
@@ -1050,7 +1015,6 @@ uglyURLs = false
     algoliaApiKey = ""
     algoliaIndexName = ""
 
-
     ######################################
     # 404 Page
 
@@ -1059,34 +1023,32 @@ uglyURLs = false
     fofVideoWebm = ""
     fofVideoMp4 = ""
 
-
     ######################################
     # Customize host for third-party libraries
 
     [params.lib]
         host = "https://cdn.jsdelivr.net"
-    [params.lib.path]
-        clipboard = "/npm/clipboard-polyfill@2.8.6/dist/clipboard-polyfill.min.js"
-        instantsearch = "/npm/instantsearch.js@2/dist/instantsearch.min.js"
-        gitalk = "/npm/gitalk@1/dist/gitalk.min.js"
-        gitalk_css = "/npm/gitalk@1/dist/gitalk.css"
-        instantpage = "/npm/instant.page@5.1.0/instantpage.min.js"
-        katex = "/npm/katex@0.13.0/dist/katex.min.js"
-        katex_css = "/npm/katex@0.13.0/dist/katex.min.css"
-        katex_mhchem = "/npm/katex@0.13.0/dist/contrib/mhchem.min.js"
-        katex_auto_render = "/npm/katex@0.13.0/dist/contrib/auto-render.min.js"
-        lunr = "/npm/lunr@2.3.9/lunr.min.js"
-        lunr_tinyseg = "/npm/lunr-languages@1.4.0/tinyseg.js"
-        lunr_stemmer = "/npm/lunr-languages@1.4.0/min/lunr.stemmer.support.min.js"
-        lunr_lang = "/npm/lunr-languages@1.4.0/min/lunr.de.min.js"
-        mathjax = "/npm/mathjax@3.1.2/es5/tex-mml-chtml.js"
-        medium_zoom = "/npm/medium-zoom@latest/dist/medium-zoom.min.js"
-        mermaid = "/npm/mermaid@8.8.3/dist/mermaid.min.js"
-        qrcode = "/npm/qrcode-generator@1.4.4/qrcode.min.js"
-        valine = "/npm/valine@1.4.14/dist/Valine.min.js"
-        busuanzi = "https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"
-        utterances = "https://utteranc.es/client.js"
-
+        [params.lib.path]
+            clipboard = "/npm/clipboard-polyfill@2.8.6/dist/clipboard-polyfill.min.js"
+            instantsearch = "/npm/instantsearch.js@2/dist/instantsearch.min.js"
+            gitalk = "/npm/gitalk@1/dist/gitalk.min.js"
+            gitalk_css = "/npm/gitalk@1/dist/gitalk.css"
+            instantpage = "/npm/instant.page@5.1.0/instantpage.min.js"
+            katex = "/npm/katex@0.13.0/dist/katex.min.js"
+            katex_css = "/npm/katex@0.13.0/dist/katex.min.css"
+            katex_mhchem = "/npm/katex@0.13.0/dist/contrib/mhchem.min.js"
+            katex_auto_render = "/npm/katex@0.13.0/dist/contrib/auto-render.min.js"
+            lunr = "/npm/lunr@2.3.9/lunr.min.js"
+            lunr_tinyseg = "/npm/lunr-languages@1.4.0/tinyseg.js"
+            lunr_stemmer = "/npm/lunr-languages@1.4.0/min/lunr.stemmer.support.min.js"
+            lunr_lang = "/npm/lunr-languages@1.4.0/min/lunr.de.min.js"
+            mathjax = "/npm/mathjax@3.1.2/es5/tex-mml-chtml.js"
+            medium_zoom = "/npm/medium-zoom@latest/dist/medium-zoom.min.js"
+            mermaid = "/npm/mermaid@8.8.3/dist/mermaid.min.js"
+            qrcode = "/npm/qrcode-generator@1.4.4/qrcode.min.js"
+            valine = "/npm/valine@1.4.14/dist/Valine.min.js"
+            busuanzi = "https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"
+            utterances = "https://utteranc.es/client.js"
 
     ######################################
     # Author’s information

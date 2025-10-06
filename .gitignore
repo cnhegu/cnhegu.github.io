@@ -1,3 +1,53 @@
+###########################
+
+Hugo Modules / Cache
+
+###########################
+
+忽略所有 hugo 缓存目录
+
+/resources/
+
+忽略所有模块缓存 (Hugo Modules)
+
+/assets/mod/
+
+###########################
+
+Generated Files
+
+###########################
+
+忽略 Hugo 构建生成的静态文件目录
+
+/public/
+
+忽略所有的临时或日志文件
+
+*.log
+*.tmp
+*.bak
+
+忽略 VS Code 临时文件
+
+.vscode/
+
+###########################
+
+Operating System Files
+
+###########################
 .DS_Store
-/public
-/resources
+Thumbs.db
+
+###########################
+
+Themes (Old Submodule Fixes)
+
+###########################
+
+如果未来切换到 Hugo Modules，这个主题目录会被忽略
+
+但由于我们目前在调试，如果您手动维护 themes/meme，请保持注释
+
+#/themes/
