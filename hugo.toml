@@ -11,55 +11,39 @@ hasCJKLanguage = true
 
 copyright = "[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en)"
 
-# Name of theme
-
-theme = "meme"
-
 # Google Analytics (已启用)
 
-googleAnalytics = 'G-HS7L12NVNJ' 
+# Moved to [params] below
 
 # hugo new automatically opened text editor
-
-newContentEditor = ""
+# Moved to [params] below
 
 # i18n
-
-defaultContentLanguage = "zh-cn"
-defaultContentLanguageInSubdir = false
+# Moved to [params] below
 
 # Title case style (https://gohugo.io/getting-started/configuration/#configure-title-case)
-titleCaseStyle = "none"
+# Moved to [params] below
 
 # Pluralize list titles
-
-pluralizeListTitles = false
+# Moved to [params] below
 
 # The length of text in words to show in summary
-
-summaryLength = 42
+# Moved to [params] below
 
 # Enable Emoji emoticons support?
-
-enableEmoji = false
+# Moved to [params] below
 
 # Text to display for footnote return links
-
-footnoteReturnLinkContents = "↩"
+# Moved to [params] below
 
 # Enable .GitInfo object for each page?
-
-enableGitInfo = false
+# Moved to [params] below
 
 # Enable generation of robots.txt file?
-
-enableRobotsTXT = true
+# Moved to [params] below
 
 # URL related
-
-disablePathToLower = false
-relativeURLs = false
-uglyURLs = false
+# Moved to [params] below
 
 # URL structure
 
@@ -250,12 +234,25 @@ displayHeaderInHome = true
 headerBackground = "linear-gradient(90deg, #f795331a 0, #f370551a 15%, #ef4e7b1a 30%, #a166ab1a 44%, #5073b81a 58%, #1098ad1a 72%, #07b39b1a 86%, #6dba821a 100%)"
 
 headerLayout = "flex"
-
-enableNavToggle = true
-
-navHeight = "3.5rem"
-
 menuItemPadding = "0.5rem"
+
+######################################
+# Moved root-level settings here
+
+googleAnalytics = 'G-HS7L12NVNJ'
+newContentEditor = ""
+defaultContentLanguage = "zh-cn"
+defaultContentLanguageInSubdir = false
+titleCaseStyle = "none"
+pluralizeListTitles = false
+summaryLength = 42
+enableEmoji = false
+footnoteReturnLinkContents = "↩"
+enableGitInfo = false
+enableRobotsTXT = true
+disablePathToLower = false
+relativeURLs = false
+uglyURLs = false
 
 
 ######################################
@@ -1049,3 +1046,8 @@ twitter = "1txcat"
 fediverse = "@1txcat@mastodon.social"
 
 # Force remote rebuild v2.0
+
+[module]
+ [[module.imports]]
+    path = "github.com/cnhegu/hugo-theme-meme"
+    disable = false
