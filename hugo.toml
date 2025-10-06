@@ -329,6 +329,7 @@ enableHideInHomepage = false
 
 ######################################
 # Site Info
+customHead = '<link rel="manifest" href="/manifest.json">'
 
 siteLogo = "/icons/mylogo.png"
 # Note: used for JSON-LD, Open Graph
