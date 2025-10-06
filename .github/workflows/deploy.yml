@@ -15,42 +15,43 @@ jobs:
       cancel-in-progress: true
       
     steps:
-      # 第 1 步：检出主仓库
+      # 第 1 步：安装 Hugo 环境 (NEW: Moved this step up)
+      # 必须在调用任何 'hugo' 命令之前完成
+      - name: Setup Hugo Environment
+        uses: peaceiris/actions-hugo@v2
+        with:
+          hugo-version: 'latest'
+          extended: true
+
+      # 第 2 步：检出主仓库
       - name: Checkout repository (Main Project Only)
         uses: actions/checkout@v4
         with:
           submodules: false
           fetch-depth: 0
 
-      # 【关键修复步骤】强制克隆、设置权限和清理缓存
+      # 【关键修复步骤】强制克隆主题、设置权限和清理缓存
       - name: Force Clone Theme Submodule & Set Permissions
         run: |
           # 1. 设置 Git 凭证 (使用 PAT 令牌)
           git config --global url."https://cnhegu:${{ secrets.DEPLOY_TOKEN }}@github.com/".insteadOf "git@github.com:"
           
           # 2. 强制删除并克隆你的主题仓库
-          # 使用 HTTPS URL 克隆，并确保克隆到 themes/meme 目录。
           rm -rf themes/meme
           git clone --depth 1 https://github.com/cnhegu/hugo-theme-meme.git themes/meme
           
           # 3. 强制设置权限：确保 Actions 虚拟机用户对主题文件有完全的读取权限
           chmod -R 755 themes/meme
           
-          # 4. 清理 Hugo 缓存（防止主题缓存残留）
+          # 4. 清理 Hugo 模块缓存
+          # 注意：现在 'hugo' 命令是可用的
           hugo mod clean
           
-          # 5. 检查主题是否成功克隆，如果失败则报错
+          # 5. 检查主题是否成功克隆
           if [ ! -d "themes/meme" ]; then
             echo "::error::Theme cloning failed."
             exit 1
           fi
-
-      # 第 2 步：安装 Hugo 环境
-      - name: Setup Hugo
-        uses: peaceiris/actions-hugo@v2
-        with:
-          hugo-version: 'latest'
-          extended: true
 
       # 第 3 步：运行 hugo 命令，生成静态网站文件
       - name: Build with Hugo
