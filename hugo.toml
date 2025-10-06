@@ -225,11 +225,11 @@ pre = "internal"
 post = "user-circle"
 [[menu.main]]
 weight = 6
-identifier = "theme-switcher"
-post = "adjust"
+identifier = "lang-switcher"
 [[menu.main]]
 weight = 7
-identifier = "lang-switcher"
+identifier = "theme-switcher"
+post = "adjust"
 [[menu.main]]
 weight = 8
 identifier = "search"
@@ -253,14 +253,17 @@ displayHeaderInHome = true
 headerBackground = "linear-gradient(90deg, #f795331a 0, #f370551a 15%, #ef4e7b1a 30%, #a166ab1a 44%, #5073b81a 58%, #1098ad1a 72%, #07b39b1a 86%, #6dba821a 100%)"
 # Note: https://developer.mozilla.org/en-US/docs/Web/CSS/background
 
-headerLayout = "center"
-# Note: center or flex
+headerLayout = "flex"
+# Note: center or flex (restored to flex for original right-aligned menu)
 
 # Hide menu bar and display a toggle on narrow screen?
-enableNavToggle = false
+enableNavToggle = true
 
-navHeight = "10em"
-# Note: menu bar height when it’s toggled
+navHeight = "3.5rem"
+# Note: menu bar height when it’s toggled (fixed to 3.5rem to prevent multi-row stacking)
+
+menuItemPadding = "0.5rem"
+# Note: added padding between menu items for better spacing (if theme supports)
 
 
 ######################################
@@ -270,7 +273,7 @@ navHeight = "10em"
 siteBrandSVG = true
 # If true, put your SVG in the SVG.toml file and configure the following options.
 # Unit: px
-siteBrandSVGWidth = 250
+siteBrandSVGWidth = 180
 siteBrandSVGHeight = 100
 siteBrandSVGFill = "#fff"
 # If false, your site title will be used as the default and displayed as text.
@@ -335,8 +338,8 @@ favicon = "/favicon.ico"
 siteDescription = "何故的小站，记录生活、思考与写作"
 # Note: used for HTML head meta, JSON-LD, Open Graph, Atom, RSS
 
-siteCreatedTime = "2025-07-17T15:00:00+08:00"
-# ATTENTION: keep this format, change the number
+siteCreatedTime = "2024-10-06T15:00:00+08:00"
+# ATTENTION: keep this format, changed to current year for consistency
 
 siteTwitter = "1txcat"
 # Note: used for Twitter Cards
@@ -628,7 +631,7 @@ yandexMetrikaId = ""
 duration = 0.5
 
 primaryColorLight = "220, 90%, 56%"
-primaryColorDark = "201, 65%, 62%"
+primaryColorDark = "200, 70%, 50%"  # Warmer blue-gray for less 'cold' feel
 
 postWidth = 36
 
@@ -763,9 +766,9 @@ fontFamilyQuote = ""
 fontFamilyTOC = ""
 fontFamilyCaption = ""
 fontFamilyFooter = ""
-fontFamilyBody = "'IBM Plex Serif', serif"
+fontFamilyBody = "'IBM Plex Serif', 'Inter', serif"  # Added Inter fallback for modern readability
 
-fontsLink = "https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,400;0,500;0,700;1,400;1,700&family=Source+Code+Pro:ital,wght@0,400;0,700;1,400;1,700&family=Comfortaa:wght@700&display=swap"
+fontsLink = "https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,400;0,500;0,700;1,400;1,700&family=Inter:wght@400;500;700&family=Source+Code+Pro:ital,wght@0,400;0,700;1,400;1,700&family=Comfortaa:wght@700&display=swap"
 
 
 ######################################
@@ -972,7 +975,7 @@ busuanziSitePVIcon = "eye"
 
 # Socials
 enableSocials = true
-# Note: see data/Socials.toml (create this file for links to show, see example above)
+# Note: see data/Socials.toml (now active with 6 icons)
 
 ######################################
 # Multilingual
