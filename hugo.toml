@@ -265,6 +265,8 @@ navHeight = "3.5rem"
 menuItemPadding = "0.5rem"
 # Note: added padding between menu items for better spacing (if theme supports)
 
+# Force remote rebuild v2.0
+nano hugo.toml  # 或 code hugo.toml
 
 ######################################
 # Brand Bar (inside header)
