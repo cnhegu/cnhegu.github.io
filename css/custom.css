@@ -1,4 +1,4 @@
-/* 强制覆盖主题菜单横排 */
+/* 通用导航基础 (PC 正常) */
 .main-menu, .menu, nav ul {
   display: flex !important;
   flex-wrap: wrap !important;
@@ -7,10 +7,10 @@
   gap: 0.5rem !important;
 }
 
-/* 移动端：隐藏菜单 + 全屏垂直 overlay (强 !important) */
+/* 移动端：强制隐藏菜单 + 全屏垂直 overlay (强覆盖主题) */
 @media (max-width: 768px) {
   .main-menu, .menu, nav ul {
-    display: none !important;  /* 强制隐藏横排 */
+    display: none !important;  /* 隐藏横排挤压 */
     flex-direction: column !important;
     align-items: flex-start !important;
     gap: 1.5rem !important;
@@ -24,14 +24,14 @@
     padding: 3rem 1rem !important;
     box-sizing: border-box !important;
     overflow-y: auto !important;
-    transform: translateX(-100%) !important;  /* 初始滑动外 */
-    transition: transform 0.3s ease !important;
+    transform: translateX(-100%) !important;
+    transition: transform 0.3s ease-in-out !important;
   }
   .main-menu.active, .menu.active, nav ul.active {
     display: flex !important;
     transform: translateX(0) !important;
   }
-  .hamburger, .menu-toggle, .nav-toggle, [aria-label="menu"] {  /* 通用汉堡 */
+  .hamburger, .menu-toggle, .nav-toggle, [aria-label*="menu"] {  /* 汉堡 */
     display: block !important;
     cursor: pointer !important;
     z-index: 1001 !important;
@@ -42,18 +42,20 @@
   .hamburger.open, .menu-toggle.open {
     transform: rotate(90deg) !important;
   }
-  /* 搜索框强制可见 */
-  .search, .search-icon {
+  /* 搜索框强制末尾可见 */
+  .search, .search-icon, .search-box {
     display: block !important;
     visibility: visible !important;
+    order: 999 !important;  /* 放菜单末尾 */
     margin-left: auto !important;
   }
 }
 
-/* 明暗模式按钮 (强可见 + 图标 fallback) */
-.theme-switcher, .theme-toggle, .adjust {
+/* 明暗模式按钮 (强可见 + 防消失) */
+.theme-switcher, .theme-toggle, .adjust, [data-theme-toggle] {
   display: block !important;
   visibility: visible !important;
+  opacity: 1 !important;
   position: fixed !important;
   top: 10px !important;
   right: 10px !important;
@@ -69,18 +71,16 @@
   line-height: 24px !important;
   font-size: 1.2rem !important;
   border: none !important;
+  transition: none !important;  /* 防消失动画 */
 }
-.theme-switcher::before, .theme-toggle::before {
-  content: "🌙" !important;  /* Fallback 月亮图标 */
+.theme-switcher::before, .theme-toggle::before, .adjust::before {
+  content: "🌙" !important;  /* Fallback 图标 */
   font-size: 1.5rem !important;
 }
 
 @media (max-width: 768px) {
-  .theme-switcher, .theme-toggle {
+  .theme-switcher, .theme-toggle, .adjust {
     top: 50px !important;  /* 避汉堡 */
-  }
-  .search {
-    order: 3 !important;  /* 搜索放末尾 */
   }
 }
 
