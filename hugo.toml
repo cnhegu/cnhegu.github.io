@@ -253,9 +253,10 @@ headerLayout = "flex"
 # Hide menu bar and display a toggle on narrow screen?
 enableNavToggle = true
 
-navHeight = "3.5rem" # 保持这个默认值
+navHeight = "3.5rem"
 
-menuItemPadding = "0.3rem"
+# 移除这个字段，让主题使用默认值
+# menuItemPadding = "0.5rem" 
 
 
 ######################################
