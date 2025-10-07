@@ -260,6 +260,10 @@ navHeight = "3.5rem"
 # 原本是 "0.5rem"，设置为 0，强制消除可能的冲突间距
 menuItemPadding = "0" 
 
+customCSS = ["/css/custom.css"]
+customHead = '<link rel="manifest" href="/manifest.json"><script src="/css/custom.js"></script>'  # 加 JS 支持
+
+mobileMenu = true  # 启用移动菜单（Gemini 建议，如果主题支持）
 
 ######################################
 # Brand Bar (inside header)

@@ -1,0 +1,78 @@
+/* 通用导航基础 */
+.menu {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* 移动端：隐藏菜单 + 全屏 overlay (Meme 主题优化) */
+@media (max-width: 768px) {
+  .menu {
+    display: none;  /* 默认隐藏横排菜单 */
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.95);
+    z-index: 999;
+    padding: 2rem 1rem;
+    box-sizing: border-box;
+    gap: 1rem;
+  }
+  .menu.active {  /* 点击展开 */
+    display: flex !important;
+    transform: translateX(0);
+  }
+  .nav-toggle {  /* 汉堡图标显示 & 点击变 X */
+    display: block !important;
+    cursor: pointer;
+    z-index: 1001;
+    position: relative;
+  }
+  .nav-toggle.open {
+    transform: rotate(90deg);
+  }
+}
+
+/* 明暗模式按钮强制可见 (fixed 右上) */
+.theme-toggle {
+  display: block !important;
+  visibility: visible !important;
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  z-index: 1000;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  padding: 10px;
+  cursor: pointer;
+  color: white;
+  text-align: center;
+  line-height: 24px;
+  font-size: 1.2rem;
+  border: none;
+}
+
+/* 移动端按钮调整 (避开汉堡) */
+@media (max-width: 768px) {
+  .theme-toggle {
+    top: 60px;
+    right: 10px;
+    min-width: 44px;
+    min-height: 44px;
+  }
+}
+
+/* 暗模式全局 (如果主题未全覆盖) */
+body.dark {
+  --bg-color: #121212;
+  --text-color: #ffffff;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
