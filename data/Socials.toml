@@ -19,7 +19,7 @@
 
 [[socials]]
   name = "Twitter/X"
-  icon = "x"
+  icon = "twitter" # 关键修复：使用旧的 'twitter' 图标名称，确保 Font Awesome 兼容性
   url = "https://twitter.com/1txcat"
   weight = 3
 

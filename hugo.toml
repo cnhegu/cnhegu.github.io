@@ -210,16 +210,24 @@ name = "关于"
 weight = 5
 pre = "internal"
 post = "user-circle"
+
+# 明暗模式切换按钮 (已移除冲突字段)
 [[menu.main]]
 weight = 6
-identifier = "lang-switcher"
+identifier = "theme-switcher"
+
+# 语言切换 (已移除冲突字段)
 [[menu.main]]
 weight = 7
-identifier = "theme-switcher"
+identifier = "lang-switcher"
+
+# 搜索按钮
 [[menu.main]]
 weight = 8
 identifier = "search"
 post = "search"
+
+# [module] 配置块将放在文件底部，请勿放这里
 
 ##########################################
 # Theme Settings
@@ -245,9 +253,9 @@ headerLayout = "flex"
 # Hide menu bar and display a toggle on narrow screen?
 enableNavToggle = true
 
-navHeight = "3.5rem"
+navHeight = "3.5rem" # 保持这个默认值
 
-menuItemPadding = "0.5rem"
+menuItemPadding = "0.3rem"
 
 
 ######################################
