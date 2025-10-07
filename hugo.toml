@@ -260,8 +260,8 @@ navHeight = "3.5rem"
 # 原本是 "0.5rem"，设置为 0，强制消除可能的冲突间距
 menuItemPadding = "0" 
 
-customCSS = ["/css/custom.css"]  # 后加载覆盖主题
-customHead = '<script defer src="/css/custom.js"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">'  # 加 Font Awesome + defer JS
+customCSS = ["/css/custom.css"]  # 后加载覆盖主题 CSS
+customHead = '<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"><script defer src="/css/custom.js"></script>'  # Font Awesome + defer JS 防冲突
 
 mobileMenu = true  # 启用移动菜单（Gemini 建议，如果主题支持）
 
@@ -430,7 +430,7 @@ limitEntriesLimit = -1
 includeContent = true
 
 # Custom Footer (Supports Template and Markdown syntax)
-feedFooter = """> Read original: <{{ .Permalink }}>  
+feedFooter = """> Read original: <{{ .Permalink }}>  
 > Notice: This blog now offers email subscriptions—feel free to [subscribe via Substack](https://username.substack.com) to support my work!"""
 
 
@@ -468,7 +468,7 @@ autoDetectImages = true
 ######################################
 # Service Worker
 
-enableServiceWorker = false
+enableServiceWorker = true
 
 
 ################3######################
@@ -1100,4 +1100,4 @@ website = "https://www.hegu.me"
 [module]
 [[module.imports]]
   path = "github.com/cnhegu/hugo-theme-meme"
-  disable = false   
+  disable = false

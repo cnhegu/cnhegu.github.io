@@ -22,22 +22,27 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
 
-  // 明暗模式 (通用 + fallback)
-  const themeBtn = document.querySelector('.theme-switcher, .theme-toggle, .adjust');
+  // 明暗模式 (通用 + 防消失)
+  const themeBtn = document.querySelector('.theme-switcher, .theme-toggle, .adjust, [data-theme-toggle]');
   if (themeBtn) {
+    themeBtn.style.opacity = '1';  // 防消失
+    themeBtn.innerHTML = '<i class="fas fa-adjust"></i>';  // Font Awesome 图标
     themeBtn.addEventListener('click', function(e) {
       e.stopPropagation();
       document.body.classList.toggle('dark');
       localStorage.setItem('theme', document.body.classList.contains('dark') ? 'dark' : 'light');
+      // 防消失：强制重设 visibility
+      setTimeout(() => {
+        themeBtn.style.visibility = 'visible';
+      }, 100);
     });
-    // 加载偏好
-    if (localStorage.getItem('theme') === 'dark' || window.matchMedia('(prefers-color-scheme: dark)').matches) {
-      document.body.classList.add('dark');
-    }
+    // 加载偏好 (防初始消失)
+    const savedTheme = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+    document.body.classList.add(savedTheme);
   }
 
-  // 搜索框可见 (如果隐藏)
-  const search = document.querySelector('.search, .search-icon');
+  // 搜索框可见
+  const search = document.querySelector('.search, .search-icon, .search-box');
   if (search) {
     search.style.display = 'block';
     search.style.visibility = 'visible';
