@@ -253,12 +253,11 @@ headerLayout = "flex"
 # Hide menu bar and display a toggle on narrow screen?
 enableNavToggle = true
 
-# 导航栏高度，尝试设置为更小的 rem 值，让抽屉菜单更紧凑
-navHeight = "3.5rem" 
+# navHeight = "3.5rem" 
+# 注释掉自定义导航栏高度，让主题使用默认样式
 
-# 菜单项内边距，尝试设置为 0，让主题使用默认样式
-# 原本是 "0.5rem"，设置为 0，强制消除可能的冲突间距
-menuItemPadding = "0" 
+# menuItemPadding = "0" 
+# 注释掉自定义菜单项内边距，让主题使用默认样式
 
 
 ######################################
