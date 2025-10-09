@@ -86,3 +86,43 @@
     background: url("/icons/logo.png") no-repeat center left / contain; 
 }
 /* 如果您仍想显示标题文字，请注释掉上面的 text-indent: -9999px; */
+
+
+/* -------------------------------------------
+   关于页面 - 图片向左浮动，文字环绕样式 (新添加的代码)
+   ------------------------------------------- */
+
+/* 定义一个用于图片向左浮动的类 */
+.left {
+    float: left;            /* 关键：让元素向左浮动，文字会环绕在右侧 */
+    margin-right: 1.5em;    /* 在图片右侧添加边距，防止文字紧贴着图片 */
+    margin-bottom: 1em;     /* 在图片下方也添加一些边距 */
+
+    max-width: 200px;       /* 设置一个最大宽度，防止图片过大。可以根据你的需求调整 */
+    width: 40%;             /* 也可以使用百分比，让它自适应 */
+}
+
+/* 模仿截图中图片的样式（可选） */
+.left img {
+    border-radius: 8px; /* 给图片本身也加点圆角 */
+    display: block;     /* 确保图片是块级元素，避免底部多余的空白 */
+}
+
+/* 为了让截图中的外框效果更逼真，我们可以给 figure 元素加样式 */
+figure.left {
+    background-color: #2d2d2d; /* 一个深色的背景 */
+    border: 1px solid #444;   /* 一个细微的边框 */
+    border-radius: 12px;      /* 圆角 */
+    padding: 6px;             /* 图片和边框之间的内边距 */
+}
+
+/* 响应式设计：在小屏幕上（比如手机），取消浮动，让图片居中显示 */
+@media (max-width: 600px) {
+    .left {
+        float: none;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 60%; /* 在手机上可以适当调大宽度 */
+    }
+}
