@@ -1094,6 +1094,6 @@ website = "https://www.hegu.me"
 
 [module]
 [[module.imports]]
-  path = "github.com/cnhegu/hugo-theme-meme@main"
+  path = "github.com/cnhegu/hugo-theme-meme"
   disable = false
   

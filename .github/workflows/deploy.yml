@@ -1,62 +1,72 @@
-name: Deploy GitHub Pages
+# .github/workflows/deploy.yml
+
+name: Deploy Hugo site to GitHub Pages
 
 on:
   push:
     branches:
-      - main
+      - main # 确保这是你的主分支名
   workflow_dispatch:
 
+# 关键：为工作流设置权限，使其可以部署到 GitHub Pages
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# 设置并发控制，确保每次只有一个部署在运行
+concurrency:
+  group: "pages"
+  cancel-in-progress: true
+
 jobs:
-  build-and-deploy:
+  # 构建任务
+  build:
     runs-on: ubuntu-latest
-    
-    # 使用 Concurrency 确保每次只有一个部署在运行
-    concurrency:
-      group: "pages"
-      cancel-in-progress: true
-      
     steps:
-      # 第 1 步：检出主仓库（包含主题子模块）
-      - name: Checkout repository and Theme Submodule
+      # 第 1 步：检出你的仓库代码
+      - name: Checkout
         uses: actions/checkout@v4
         with:
-          # 必须启用 submodules: true 才能正确克隆主题
-          submodules: true      
-          fetch-depth: 0
-          # 使用 GITHUB_TOKEN 安全认证克隆主仓库
-          token: ${{ secrets.GITHUB_TOKEN }} 
+          submodules: recursive # 如果你同时有子模块，这会拉取它们
+          fetch-depth: 0       # 拉取所有 Git 历史，某些 Hugo 功能需要
 
-      # 第 2 步：安装 Hugo 环境
-      - name: Setup Hugo Environment
-        uses: peaceiris/actions-hugo@v2
+      # 第 2 步：安装最新版的 Hugo (Extended 版本)
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v3 # 👈 升级到了 v3 版本
         with:
           hugo-version: 'latest'
           extended: true
 
-      # ==========================================================
-      # 第 3 步：【新增】配置 Git 使用 PAT 进行认证 (解决您的 Action 错误)
-      # ==========================================================
-      - name: Configure Git for Private Module Access
-        env:
-          # 引用您在 GitHub Secrets 中设置的 PAT。请确保名称为 HUGO_MOD_PAT。
-          GH_PAT: ${{ secrets.HUGO_MOD_PAT }} 
-        run: |
-          # 告诉 Git 在访问 https://github.com/ 时，使用 PAT 作为凭证替换 URL，实现认证。
-          git config --global url."https://${GH_PAT}@github.com/".insteadOf "https://github.com/"
+      # 第 3 步：【核心修复】下载并更新 Hugo 模块 (包括你的主题)
+      # 之前的错误就是因为缺少了这一步
+      - name: Update Hugo Modules
+        run: hugo mod get -u # 👈 这个命令会下载 go.mod 中定义的所有模块
 
-      # 第 4 步：清理 Hugo 模块缓存
-      # 现在执行 hugo mod clean 时，Go/Git 可以通过配置的认证访问私有模块
-      - name: Clean Hugo Module Cache
-        run: hugo mod clean
-        
-      # 第 5 步：运行 hugo 命令，生成静态网站文件
+      # 第 4 步：执行 Hugo 构建，生成网站
       - name: Build with Hugo
-        run: hugo
-      
-      # 第 6 步：部署到 GitHub Pages
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
+        run: hugo --minify # 👈 使用 --minify 压缩输出文件，提升网站速度
+
+      # 第 5 步：配置 GitHub Pages
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+
+      # 第 6 步：将构建好的网站 (public 目录) 打包成构件
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./public
-          cname: www.hegu.me
+          # 从 'public' 目录上传
+          path: ./public
+
+  # 部署任务
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build # 👈 依赖于 'build' 任务成功完成
+    steps:
+      # 第 7 步：从构件部署到 GitHub Pages
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4 # 👈 使用官方最新的部署 Action
