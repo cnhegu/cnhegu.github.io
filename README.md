@@ -17,4 +17,3 @@ MemE is a powerful and highly customizable [GoHugo](https://github.com/gohugoio/
 ### Browser support
 
 MemE uses [CSS variables](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties) and [let statements](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/let) extensively. These features are supported by the following browsers:
- 

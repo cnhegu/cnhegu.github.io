@@ -21,9 +21,9 @@ jobs:
         uses: actions/checkout@v4
         with:
           # 必须启用 submodules: true 才能正确克隆主题
-          submodules: true       
+          submodules: true      
           fetch-depth: 0
-          # 使用 GITHUB_TOKEN 安全认证克隆主题
+          # 使用 GITHUB_TOKEN 安全认证克隆主仓库
           token: ${{ secrets.GITHUB_TOKEN }} 
 
       # 第 2 步：安装 Hugo 环境
@@ -33,16 +33,27 @@ jobs:
           hugo-version: 'latest'
           extended: true
 
-      # 第 3 步：清理 Hugo 模块缓存
-      # （旧的复杂手动克隆脚本已移除）
+      # ==========================================================
+      # 第 3 步：【新增】配置 Git 使用 PAT 进行认证 (解决您的 Action 错误)
+      # ==========================================================
+      - name: Configure Git for Private Module Access
+        env:
+          # 引用您在 GitHub Secrets 中设置的 PAT。请确保名称为 HUGO_MOD_PAT。
+          GH_PAT: ${{ secrets.HUGO_MOD_PAT }} 
+        run: |
+          # 告诉 Git 在访问 https://github.com/ 时，使用 PAT 作为凭证替换 URL，实现认证。
+          git config --global url."https://${GH_PAT}@github.com/".insteadOf "https://github.com/"
+
+      # 第 4 步：清理 Hugo 模块缓存
+      # 现在执行 hugo mod clean 时，Go/Git 可以通过配置的认证访问私有模块
       - name: Clean Hugo Module Cache
         run: hugo mod clean
         
-      # 第 4 步：运行 hugo 命令，生成静态网站文件
+      # 第 5 步：运行 hugo 命令，生成静态网站文件
       - name: Build with Hugo
         run: hugo
       
-      # 第 5 步：部署到 GitHub Pages
+      # 第 6 步：部署到 GitHub Pages
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
