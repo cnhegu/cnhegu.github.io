@@ -1,4 +1,0 @@
-<div id="tocBox">
-  <h4>{{ i18n "tocTitle" }}</h4>
-  {{ .Page.TableOfContents }}
-</div>
