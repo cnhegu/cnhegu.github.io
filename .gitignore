@@ -50,4 +50,7 @@ Themes (Old Submodule Fixes)
 
 但由于我们目前在调试，如果您手动维护 themes/meme，请保持注释
 
-#/themes/
+#/themes/.tmp.driveupload/
+
+# 忽略云同步服务的临时上传文件夹
+.tmp.driveupload/
