@@ -42,22 +42,15 @@ jobs:
       - name: Update Hugo Modules
         run: hugo mod get -u
 
-      # 第 4 步（调试用）：检查文件内容
-      - name: 🕵️ Check Content of _index.md
-        run: |
-          echo "--- Verifying content of _index.md on the runner ---"
-          cat ./content/about/_index.md
-          echo "--- End of file content ---"
-
-      # 第 5 步：执行 Hugo 构建，并强制忽略缓存
+      # 第 4 步：执行 Hugo 构建，并强制忽略缓存
       - name: Build with Hugo
         run: hugo --minify --ignoreCache # <--- 这里是唯一的修改
 
-      # 第 6 步：配置 GitHub Pages
+      # 第 5 步：配置 GitHub Pages
       - name: Setup Pages
         uses: actions/configure-pages@v5
 
-      # 第 7 步：将构建好的网站 (public 目录) 打包成构件
+      # 第 6 步：将构建好的网站 (public 目录) 打包成构件
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
@@ -71,7 +64,7 @@ jobs:
     runs-on: ubuntu-latest
     needs: build
     steps:
-      # 第 8 步：从构件部署到 GitHub Pages
+      # 第 7 步：从构件部署到 GitHub Pages
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
