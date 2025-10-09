@@ -43,6 +43,14 @@ jobs:
       - name: Update Hugo Modules
         run: hugo mod get -u # 👈 这个命令会下载 go.mod 中定义的所有模块
 
+      # VVVV 我们在这里添加了调试步骤 VVVV
+      - name: 🕵️ Check Content of _index.md
+        run: |
+          echo "--- Verifying content of _index.md on the runner ---"
+          cat ./content/about/_index.md
+          echo "--- End of file content ---"
+      # ^^^^ 调试步骤结束 ^^^^
+
       # 第 4 步：执行 Hugo 构建，生成网站
       - name: Build with Hugo
         run: hugo --minify # 👈 使用 --minify 压缩输出文件，提升网站速度
