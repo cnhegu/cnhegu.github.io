@@ -16,34 +16,33 @@ jobs:
       cancel-in-progress: true
       
     steps:
-      # 第 1 步：检出主仓库 (同时拉取子模块)
-      # 启用 submodules: true 和 token: ${{ secrets.GITHUB_TOKEN }} 来安全认证并克隆主题
-      - name: Checkout repository and Submodules
+      # 第 1 步：检出主仓库（包含主题子模块）
+      - name: Checkout repository and Theme Submodule
         uses: actions/checkout@v4
         with:
-          submodules: true       # <-- 修改：设置为 true，让 actions/checkout 自动处理子模块
+          # 必须启用 submodules: true 才能正确克隆主题
+          submodules: true       
           fetch-depth: 0
-          token: ${{ secrets.GITHUB_TOKEN }} # <-- 新增/确认：使用内置 token 进行认证
+          # 使用 GITHUB_TOKEN 安全认证克隆主题
+          token: ${{ secrets.GITHUB_TOKEN }} 
 
-      # 第 2 步：安装 Hugo 环境 (保持不变)
+      # 第 2 步：安装 Hugo 环境
       - name: Setup Hugo Environment
         uses: peaceiris/actions-hugo@v2
         with:
           hugo-version: 'latest'
           extended: true
 
-      # 【原有的第 3 步：强制克隆主题...】请将这一步完全删除。
-      # 因为 actions/checkout 已经完成了主题克隆和认证。
-      
-      # 新的第 3 步：清理 Hugo 模块缓存 (这是唯一需要的清理操作)
+      # 第 3 步：清理 Hugo 模块缓存
+      # （旧的复杂手动克隆脚本已移除）
       - name: Clean Hugo Module Cache
-        run: hugo mod clean # 仅保留清理模块缓存，解决潜在的 Hugo 缓存问题
+        run: hugo mod clean
         
-      # 第 4 步：运行 hugo 命令，生成静态网站文件 (保持不变)
+      # 第 4 步：运行 hugo 命令，生成静态网站文件
       - name: Build with Hugo
         run: hugo
       
-      # 第 5 步：部署到 GitHub Pages (保持不变)
+      # 第 5 步：部署到 GitHub Pages
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
