@@ -616,7 +616,7 @@ googleAdSlotInArticle = ""
 googleAdSlotAutoRelaxed = ""
 
 
-######################################
+################3######################
 # Yandex.Metrika
 
 yandexMetrikaId = ""
@@ -824,7 +824,7 @@ enableSmallCaps = true
 enableEmphasisPoint = false
 
 
-######################################
+################3######################
 ## Chinese Punctuation Glyph Correction
 
 enableChinesePunctuationGlyphCorrection = false
@@ -889,7 +889,7 @@ postShareItems = ["facebook", "mastodon", "fediverse", "x", "linkedin", "telegra
 fetchFediverseInstances = false
 
 
-######################################
+################3######################
 # Related Posts
 
 enableRelatedPosts = true
@@ -1094,5 +1094,6 @@ website = "https://www.hegu.me"
 
 [module]
 [[module.imports]]
-  path = "github.com/cnhegu/hugo-theme-meme"
-  disable = false   
+  path = "github.com/cnhegu/hugo-theme-meme@main"
+  disable = false
+  
