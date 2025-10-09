@@ -28,42 +28,39 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
         with:
-          submodules: recursive # 如果你同时有子模块，这会拉取它们
-          fetch-depth: 0       # 拉取所有 Git 历史，某些 Hugo 功能需要
+          submodules: recursive
+          fetch-depth: 0
 
       # 第 2 步：安装最新版的 Hugo (Extended 版本)
       - name: Setup Hugo
-        uses: peaceiris/actions-hugo@v3 # 👈 升级到了 v3 版本
+        uses: peaceiris/actions-hugo@v3
         with:
           hugo-version: 'latest'
           extended: true
 
-      # 第 3 步：【核心修复】下载并更新 Hugo 模块 (包括你的主题)
-      # 之前的错误就是因为缺少了这一步
+      # 第 3 步：下载并更新 Hugo 模块 (包括你的主题)
       - name: Update Hugo Modules
-        run: hugo mod get -u # 👈 这个命令会下载 go.mod 中定义的所有模块
+        run: hugo mod get -u
 
-      # VVVV 我们在这里添加了调试步骤 VVVV
+      # 第 4 步（调试用）：检查文件内容
       - name: 🕵️ Check Content of _index.md
         run: |
           echo "--- Verifying content of _index.md on the runner ---"
           cat ./content/about/_index.md
           echo "--- End of file content ---"
-      # ^^^^ 调试步骤结束 ^^^^
 
-      # 第 4 步：执行 Hugo 构建，生成网站
+      # 第 5 步：执行 Hugo 构建，并强制忽略缓存
       - name: Build with Hugo
-        run: hugo --minify # 👈 使用 --minify 压缩输出文件，提升网站速度
+        run: hugo --minify --ignoreCache # <--- 这里是唯一的修改
 
-      # 第 5 步：配置 GitHub Pages
+      # 第 6 步：配置 GitHub Pages
       - name: Setup Pages
         uses: actions/configure-pages@v5
 
-      # 第 6 步：将构建好的网站 (public 目录) 打包成构件
+      # 第 7 步：将构建好的网站 (public 目录) 打包成构件
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          # 从 'public' 目录上传
           path: ./public
 
   # 部署任务
@@ -72,9 +69,9 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
-    needs: build # 👈 依赖于 'build' 任务成功完成
+    needs: build
     steps:
-      # 第 7 步：从构件部署到 GitHub Pages
+      # 第 8 步：从构件部署到 GitHub Pages
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v4 # 👈 使用官方最新的部署 Action
+        uses: actions/deploy-pages@v4
