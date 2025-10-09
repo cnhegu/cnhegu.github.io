@@ -52,5 +52,5 @@ Themes (Old Submodule Fixes)
 
 #/themes/.tmp.driveupload/
 
-# 忽略云同步服务的临时上传文件夹
-.tmp.driveupload/
+# 这条命令会添加忽略规则并创建 .gitignore 文件（如果它不存在）
+echo ".tmp.driveupload/" >> .gitignore
