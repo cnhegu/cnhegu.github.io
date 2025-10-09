@@ -50,7 +50,14 @@ Themes (Old Submodule Fixes)
 
 但由于我们目前在调试，如果您手动维护 themes/meme，请保持注释
 
+<<<<<<< HEAD
 #/themes/.tmp.driveupload/
 
 # 这条命令会添加忽略规则并创建 .gitignore 文件（如果它不存在）
 echo ".tmp.driveupload/" >> .gitignore
+=======
+#/themes/
+
+# Ignore temporary files from cloud sync tools
+.tmp.driveupload/
+>>>>>>> 8087a558e6052c48c2b5947a475dac066670fbcd

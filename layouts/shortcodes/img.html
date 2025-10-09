@@ -1,0 +1,8 @@
+<figure class="image-container {{ .Get "class" }}">
+  <img src="{{ .Get "src" }}" 
+       alt="{{ .Get "alt" }}"
+       loading="lazy">
+  {{ with .Get "caption" }}
+  <figcaption>{{ . }}</figcaption>
+  {{ end }}
+</figure>
