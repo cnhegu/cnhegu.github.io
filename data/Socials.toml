@@ -7,36 +7,30 @@
 
 [[socials]]
   name = "Email"
-  icon = "envelope"
   url = "mailto:comitist@gmail.com"
   weight = 1
 
 [[socials]]
   name = "GitHub"
-  icon = "github"
   url = "https://github.com/cnhegu"
   weight = 2
 
 [[socials]]
-  name = "Twitter/X"
-  icon = "twitter" # 关键修复：使用旧的 'twitter' 图标名称，确保 Font Awesome 兼容性
-  url = "https://twitter.com/1txcat"
+  name = "X"
+  url = "https://x.com/1txcat"
   weight = 3
 
 [[socials]]
   name = "Facebook"
-  icon = "facebook"
   url = "https://www.facebook.com/xchegu/"
   weight = 4
 
 [[socials]]
   name = "Telegram"
-  icon = "telegram"
   url = "https://t.me/atxcat"
   weight = 5
 
 [[socials]]
   name = "RSS"
-  icon = "rss"
   url = "/rss.xml"
   weight = 6
