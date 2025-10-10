@@ -805,7 +805,7 @@ enableJustify = false
 ################3######################
 ## Drop Cap
 
-enableDropCap = true
+enableDropCap = false
 
 enableDropCapAfterHr = false
 
