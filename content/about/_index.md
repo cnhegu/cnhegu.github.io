@@ -6,7 +6,7 @@ title: "Who I am"
 meta: false
 ---
 
-{{< img src="me.png" >}}
+<img src="/images/me.jpg" alt="My Photo" class="post-cover" />
 
 大家好，我是何故，一个来自湖北孝昌的老铁。  
 喜欢发呆，爱好音乐，也热衷于用代码折腾自己。  
