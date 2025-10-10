@@ -512,7 +512,7 @@ valinePageSize = 10
 valineLang = "en"
 valineVisitor = false
 valineHighlight = true
-valineAvatarForce = false
+valineAvatarForce = true
 valineRecordIP = false
 valineServerURLs = ""
 valineEmojiCDN = ""
@@ -1086,7 +1086,7 @@ utterances = "https://utteranc.es/client.js"
 name = "何故"
 email = "comitist@gmail.com"
 motto = "Viva La Vida"
-avatar = "/icons/mylogo.png"
+avatar = "/icons/my-avatar"
 website = "https://www.hegu.me"
 
 
