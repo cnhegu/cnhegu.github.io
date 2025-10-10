@@ -126,3 +126,7 @@ figure.left {
         width: 60%; /* 在手机上可以适当调大宽度 */
     }
 }
+
+.post-content p:first-letter {
+    text-transform: none;
+}
