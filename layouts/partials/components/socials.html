@@ -3,7 +3,10 @@
         <ul class="socials">
             {{- range sort .socials "weight" -}}
                 <li class="socials-item">
-                    <a href="{{ .url | safeURL }}" target="_blank" rel="external noopener" title="{{ .title }}">
+                    {{/* --- 修改开始 --- */}}
+                    {{- $isMailto := strings.HasPrefix .url "mailto:" -}}
+                    <a href="{{ .url | safeURL }}" title="{{ .title }}"{{ if not $isMailto }} target="_blank" rel="external noopener"{{ end }}>
+                    {{/* --- 修改结束 --- */}}
                         {{- partial "utils/icon.html" (dict "$" $ "name" .icon "class" "social-icon") -}}
                     </a>
                 </li>
