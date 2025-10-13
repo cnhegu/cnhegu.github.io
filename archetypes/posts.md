@@ -11,3 +11,5 @@ categories: []
 <!--more-->
 
 {{< figure src="/images/imgname.jpg" title="">}}
+
+_欢迎来到我的数字小屋_
