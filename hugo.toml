@@ -669,7 +669,7 @@ wordCountIcon = "pencil-alt"
 displayReadingTime = true
 readingTimeIcon = "clock"
 
-displayBusuanziPagePV = true
+displayBusuanziPagePV = false
 busuanziPagePVIcon = "eye"
 
 
@@ -965,9 +965,9 @@ displaySiteCopyright = true
 customFooter = ""
 
 displayBusuanziSiteUVAndPV = true
-busuanziSiteUVText = "访客数"
+busuanziSiteUVText = "Visits"
 busuanziSiteUVIcon = "user"
-busuanziSitePVText = "访问量"
+busuanziSitePVText = "Views"
 busuanziSitePVIcon = "eye"
 
 enableSocials = true
