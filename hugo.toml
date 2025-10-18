@@ -669,7 +669,7 @@ wordCountIcon = "pencil-alt"
 displayReadingTime = true
 readingTimeIcon = "clock"
 
-displayBusuanziPagePV = false
+displayBusuanziPagePV = true
 busuanziPagePVIcon = "eye"
 
 
