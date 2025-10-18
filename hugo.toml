@@ -964,7 +964,7 @@ displayPoweredBy = true
 displaySiteCopyright = true
 customFooter = ""
 
-displayBusuanziSiteUVAndPV = true
+displayBusuanziSiteUVAndPV = false
 busuanziSiteUVText = "Visits"
 busuanziSiteUVIcon = "user"
 busuanziSitePVText = "Views"
