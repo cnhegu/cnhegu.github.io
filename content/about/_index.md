@@ -18,6 +18,7 @@ meta: false
 这不是一个严肃的项目，也不是为了取悦搜索引擎而存在。  
 它更像是一座精神的小屋，容我停靠片刻，也欢迎你来逛逛。
 
+{{< figure src="/images/payme.jpg" title="一杯清茶">}}
+
 ---
 
-{{< figure src="/images/payme.jpg" title="一杯清茶">}}
