@@ -6,7 +6,7 @@ tags: ["图床","github","CDN加速"]
 categories: ["HugoTips"]
 ---
 
-## 第一步：创建一个新的、公开的图床仓库
+第一步：创建一个新的、公开的图床仓库
 
 1. 登录您的 GitHub 账号。  
 2. 点击页面右上角的 \+ 号，选择 **New repository**。  
@@ -19,7 +19,7 @@ categories: ["HugoTips"]
 
 <!--more-->
 
-## 第二步：上传图片到图床仓库
+第二步：上传图片到图床仓库
 
 上传图片最简单的方式就是直接使用 GitHub 的网页界面。
 
@@ -31,7 +31,7 @@ categories: ["HugoTips"]
 3. **（可选但推荐）组织文件夹**：为了方便管理，建议您在仓库里也创建文件夹。例如，您可以创建一个 posts 文件夹，然后在里面再为每篇文章创建对应的文件夹来存放图片。  
 4. 上传完成后，点击 **Commit changes** 保存。
 
-## 第三步：获取图片的公开链接（最关键的一步）
+第三步：获取图片的公开链接（最关键的一步）
 
 直接复制 GitHub 仓库里图片的地址是无法在博客中正常显示的。我们需要使用一个免费的 CDN 加速服务（例如 **jsDelivr**）来生成稳定、高速的图片链接。
 
@@ -47,13 +47,13 @@ https://cdn.jsdelivr.net/gh/您的用户名/您的图床仓库名@分支名/图�
 将以上信息拼接起来，您得到的最终图片链接就是：  
 https://cdn.jsdelivr.net/gh/cnhegu/my-images@main/posts/my-first-post/cat.jpg
 
-## 第四步：在博客文章中引用图片
+第四步：在博客文章中引用图片
 
 现在，您可以在您的 .md 文章文件中，使用标准的 Markdown 语法，插入您刚刚得到的 jsDelivr 链接。
 
 \!\[我的猫\](https://cdn.jsdelivr.net/gh/cnhegu/my-images@main/posts/my-first-post/cat.jpg)
 
-## 优点与注意事项
+优点与注意事项
 
 * **优点**：完全免费、无限容量、所有图片都享受版本控制、全球 CDN 加速。  
 * **注意事项**：  
