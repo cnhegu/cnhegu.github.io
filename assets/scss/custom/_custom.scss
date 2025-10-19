@@ -40,18 +40,19 @@
 
 
 /* ===========================================
-   Shortcode 样式 (新添加)
+   Shortcode 样式 (已修正)
    =========================================== */
 
 /* 1. 优化 Figure Shortcode 的标题 (figcaption) 样式
    - 针对 {{< figure >}} shortcode 生成的图片标题
+   - 使用 !important 强制覆盖主题默认样式
    ------------------------------------------- */
 .post-content figure figcaption {
-    font-size: 1.1rem;                /* 与正文段落字体大小保持一致 */
-    text-align: center;               /* 文本居中对齐 */
-    margin-top: 0.8em;                /* 在图片和标题之间添加一些垂直间距 */
-    color: var(--color-contrast-medium); /* 使用中等对比度的颜色，更柔和 */
-    /* font-style: italic; */          /* 可选：如果您希望标题是斜体，请取消此行的注释 */
+    font-size: 1.1rem !important;                /* 与正文段落字体大小保持一致 */
+    text-align: center !important;               /* 文本居中对齐 */
+    margin-top: 0.8em !important;                /* 在图片和标题之间添加一些垂直间距 */
+    color: var(--color-contrast-medium) !important; /* 使用中等对比度的颜色，更柔和 */
+    font-style: normal !important;               /* 确保字体不是斜体 */
 }
 
 
