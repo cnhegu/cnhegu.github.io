@@ -3,10 +3,10 @@ categories:
 date: 2025-07-17T15:10:00+08:00
 description: ""
 title: "Who I am"
-meta: false
+meta: true
 ---
 
-<img src="/images/me.jpg" alt="My Photo" class="post-cover" />
+{{< figure src="/images/me.jpg" title="me">}}
 
 大家好，我是何故，一个来自湖北孝昌的老铁。  
 喜欢发呆，爱好音乐，也热衷于用代码折腾自己。  
@@ -19,4 +19,5 @@ meta: false
 它更像是一座精神的小屋，容我停靠片刻，也欢迎你来逛逛。
 
 ---
-  
+
+{{< figure src="/images/payme.jpg" title="pay me a cup of coffee">}}
