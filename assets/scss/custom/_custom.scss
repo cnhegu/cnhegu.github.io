@@ -1,8 +1,64 @@
-/* 提升文章元信息（日期、分类等）的颜色对比度 */
-.post-meta-item {
-    color: #9e9e9e; /* 将默认的较暗灰色，调整为一个更亮的灰色 */
+/* ---
+   Hugo Theme MemE Custom SCSS
+   优化版本 - 专注于提升阅读舒适度和视觉效果
+   --- */
+
+/* ===========================================
+   文章内容排版优化 (核心)
+   =========================================== */
+
+/* 1. 优化文章内文字体（段落）
+   - 略微增大字体，增加行高，让眼睛更放松
+   ------------------------------------------- */
+.post-content p {
+    font-size: 1.1rem;    /* 从默认的 1rem 增大，约 17.6px */
+    line-height: 1.8;     /* 增加行间距，避免文字拥挤 */
 }
-/* 为“加载评论”按钮添加高亮效果 (增强版) */
+
+/* 2. 优化文章内容标题（H2, H3 子标题）
+   - 增强标题间的视觉层级
+   ------------------------------------------- */
+.post-content h2 {
+    font-size: 2rem;      /* ## 标题，使其更醒目 */
+    margin-top: 2.5em;    /* 增加标题上方的间距，清晰地分隔段落 */
+}
+
+.post-content h3 {
+    font-size: 1.7rem;    /* ### 标题 */
+}
+
+.post-content h4 {
+    font-size: 1.4rem;    /* #### 标题 */
+}
+
+/* 3. 修正首字母大写问题
+   - 确保段落首字母不会被意外地强制大写
+   ------------------------------------------- */
+.post-content p:first-letter {
+    text-transform: none;
+}
+
+
+/* ===========================================
+   界面元素样式微调
+   =========================================== */
+
+/* 1. 提升文章元信息（日期、分类等）的颜色对比度
+   - 使用主题变量，确保在深色/浅色模式下都兼容
+   ------------------------------------------- */
+.post-meta-item {
+    color: var(--color-contrast-medium); /* 替换硬编码的 #9e9e9e */
+}
+
+/* 2. 将导航栏的搜索框变为圆角胶囊形状
+   ------------------------------------------- */
+.header .nav .search-form .search-input {
+    border-radius: 999px; /* 使用一个很大的值来确保两端是完美的半圆形 */
+    border: 1px solid var(--color-border);
+}
+
+/* 3. 为“加载评论”按钮添加高亮效果
+   ------------------------------------------- */
 #comments > button, .load-comments {
     display: inline-block !important;
     margin-top: 1.5em !important;
@@ -14,119 +70,92 @@
     font-weight: bold !important;
     cursor: pointer !important;
     transition: all 0.3s ease !important;
-    font-size: 1em !important; /* 确保字体大小正常 */
-    text-decoration: none !important; /* 移除可能的下划线 */
+    font-size: 1em !important;
+    text-decoration: none !important;
 }
-/* 添加鼠标悬浮效果 (增强版) */
+
 #comments > button:hover, .load-comments:hover {
     background-color: transparent !important;
     color: var(--color-primary) !important;
 }
-/* 将导航栏的搜索框变为圆角胶囊形状 */
-.header .nav .search-form .search-input {
-    /* ... 省略里面的具体样式 ... */
-}
 
-/* -------------------------------------------
-   自定义 Logo/品牌样式覆盖 (解决 M 形 Logo 和主题名称问题)
+
+/* ===========================================
+   自定义 Logo/品牌样式 (已优化)
+   =========================================== */
+
+/* 1. 隐藏默认的 "Hugo Theme MemE" 文字和 M 形 SVG 图标
    ------------------------------------------- */
-
-/* 1. 隐藏默认的 "Hugo Theme MemE" 文字 */
-.site-brand span {
-    display: none !important;
-}
-
-/* 2. 隐藏默认的蓝色 M 形 SVG 图标 */
+.site-brand span,
 .site-brand svg {
     display: none !important;
 }
 
-/* 3. 替换为您的自定义 Logo 图片 */
-/* 我们使用 ::before 伪元素来插入您的 /icons/logo.png 图片 */
+/* 2. 插入您的自定义 Logo 图片，并与您的博客名称 "何故小站" 并排显示
+   - 使用 ::before 伪元素，这是同时显示图片和文字的最佳方式
+   ------------------------------------------- */
 .site-brand a::before {
-    content: ""; /* 伪元素需要 content 才能显示 */
+    content: ""; /* 伪元素必需 */
     display: inline-block;
-    vertical-align: middle; /* 垂直居中 */
-    margin-right: 0.5em; /* 在 Logo 和文字之间添加一些间距 */
+    vertical-align: middle; /* 确保 Logo 和文字垂直对齐 */
+    margin-right: 0.5em;    /* Logo 和文字之间的间距 */
     
-    /* 引用您的 Logo 图片。请确保您的 Logo 在 /static/icons/logo.png */
+    /* 引用您的 Logo 图片 (请确保图片位于 /static/icons/logo.png) */
     background-image: url("/icons/logo.png"); 
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
     
-    /* 调整 Logo 的大小，您可以根据需要修改 width 和 height */
+    /* 调整 Logo 的大小 */
     width: 2.2em;
     height: 2.2em;
-    
-    /* 可选：如果您的 Logo 是圆形，可以添加 border-radius: 50%; */
 }
-
-/* 4. 调整品牌标题的样式，确保您的博客名称 "何故小站" 字体醒目 */
+/* 3. 确保您的博客名称 "何故小站" 样式正确
+   ------------------------------------------- */
 .site-brand {
-    font-size: 1.5em !important; /* 确保字体大小足够 */
+    font-size: 1.5em !important;
     font-weight: bold !important;
-    color: var(--color-contrast-high) !important; /* 确保颜色对比度高 */
+    color: var(--color-contrast-high) !important;
 }
 
-/* -------------------------------------------
-   强制插入 Logo 图片（针对非 SVG 模式）
+
+/* ===========================================
+   “关于”页面 - 图片文字环绕效果
+   =========================================== */
+
+/* 1. 定义一个用于图片向左浮动的类
    ------------------------------------------- */
-
-/* 找到品牌链接，在其文字前添加您的图片 */
-.site-brand a {
-    /* 如果您的 Logo 是图片，请移除这行 CSS，因为它只适用于文本标题 */
-    text-indent: -9999px; /* 隐藏文本标题，只显示图片 */
-    display: block; /* 允许它占据空间 */
-    
-    /* 调整高度以适应 Logo 大小 */
-    height: 2.2em; 
-    
-    /* 引用您的 Logo 图片 */
-    background: url("/icons/logo.png") no-repeat center left / contain; 
+figure.left, .left {
+    float: left;             /* 关键：向左浮动 */
+    margin-right: 1.5em;     /* 图片右侧的边距 */
+    margin-bottom: 1em;      /* 图片下方的边距 */
+    max-width: 200px;        /* 图片最大宽度 */
+    width: 40%;              /* 宽度自适应 */
 }
-/* 如果您仍想显示标题文字，请注释掉上面的 text-indent: -9999px; */
 
-
-/* -------------------------------------------
-   关于页面 - 图片向左浮动，文字环绕样式 (新添加的代码)
+/* 2. 为图片添加样式
    ------------------------------------------- */
-
-/* 定义一个用于图片向左浮动的类 */
-.left {
-    float: left;            /* 关键：让元素向左浮动，文字会环绕在右侧 */
-    margin-right: 1.5em;    /* 在图片右侧添加边距，防止文字紧贴着图片 */
-    margin-bottom: 1em;     /* 在图片下方也添加一些边距 */
-
-    max-width: 200px;       /* 设置一个最大宽度，防止图片过大。可以根据你的需求调整 */
-    width: 40%;             /* 也可以使用百分比，让它自适应 */
-}
-
-/* 模仿截图中图片的样式（可选） */
 .left img {
-    border-radius: 8px; /* 给图片本身也加点圆角 */
-    display: block;     /* 确保图片是块级元素，避免底部多余的空白 */
+    border-radius: 8px;      /* 图片圆角 */
+    display: block;          /* 避免底部多余空白 */
 }
 
-/* 为了让截图中的外框效果更逼真，我们可以给 figure 元素加样式 */
+/* 3. 为 figure 元素添加边框和背景，模仿截图效果
+   ------------------------------------------- */
 figure.left {
-    background-color: #2d2d2d; /* 一个深色的背景 */
-    border: 1px solid #444;   /* 一个细微的边框 */
-    border-radius: 12px;      /* 圆角 */
-    padding: 6px;             /* 图片和边框之间的内边距 */
+    background-color: #2d2d2d; /* 深色背景 (在深色模式下效果好) */
+    border: 1px solid #444;    /* 细边框 */
+    border-radius: 12px;       /* 边框圆角 */
+    padding: 6px;              /* 内边距 */
 }
 
-/* 响应式设计：在小屏幕上（比如手机），取消浮动，让图片居中显示 */
+/* 4. 响应式设计：在小屏幕上取消浮动，让图片居中
+   ------------------------------------------- */
 @media (max-width: 600px) {
-    .left {
+    figure.left, .left {
         float: none;
         display: block;
-        margin-left: auto;
-        margin-right: auto;
-        width: 60%; /* 在手机上可以适当调大宽度 */
+        margin: 1em auto 1.5em; /* 上、水平自动（居中）、下 */
+        width: 60%;
     }
-}
-
-.post-content p:first-letter {
-    text-transform: none;
 }
