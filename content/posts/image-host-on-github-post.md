@@ -1,5 +1,5 @@
 ---
-title: "使用GitHub仓库作为免费图床的详细指南"
+title: "GitHub免费图床指南"
 date: 2025-07-21T12:35:00+08:00
 draft: false
 tags: ["图床","github","CDN加速"]

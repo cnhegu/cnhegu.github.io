@@ -1,5 +1,5 @@
 ---
-title: "在Hugo中添加图片和视频的方式"
+title: "在Hugo中添加图片和视频"
 date: 2025-07-17T19:35:00+08:00
 draft: false
 tags: ["hugo","媒体内容","tips"]

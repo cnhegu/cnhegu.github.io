@@ -1,5 +1,5 @@
 ---
-title: "Markdown:基础语法精粹"
+title: "Markdown基础语法精粹"
 date: 2025-07-25T16:56:03+08:00
 draft: false
 author: "Gemini"
