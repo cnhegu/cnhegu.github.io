@@ -3,7 +3,7 @@ categories:
 date: 2025-07-17T15:10:00+08:00
 description: ""
 title: "Who I am"
-meta: false
+meta: true
 ---
 
 <img src="/images/me.jpg" alt="my pic">
