@@ -10,6 +10,6 @@ categories: []
 
 <!--more-->
 
-{{< figure src="/images/imgname.jpg" title="">}}
+<img src="/images/.jpg" alt="">
 
 _欢迎来到我的数字小屋_
