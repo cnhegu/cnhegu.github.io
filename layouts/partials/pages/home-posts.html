@@ -1,5 +1,14 @@
 <main class="main single" id="main">
     <div class="main-inner">
+        {{/* --- 添加首页描述 --- */}}
+        {{ with .Site.Params.homeDescription }}
+          <div class="home-description" style="text-align: center; margin: 0 auto 2rem; font-size: 1.1rem; color: var(--color-contrast-medium); max-width: 42rem; padding: 0 1rem;">
+            {{ . | markdownify }}
+          </div>
+        {{ end }}
+        {{/* --- 首页描述结束 --- */}}
+
+        {{/* --- 以下是你原来的文件内容 --- */}}
         {{ $pages := where .Site.RegularPages "Section" "in" .Site.Params.mainSections }}
         {{ if .Site.Params.enableHideInHomepage }}
             {{ $pages = where $pages ".Params.hideInHomepage" "ne" true }}
