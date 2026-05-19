@@ -38,6 +38,25 @@ jobs:
           hugo-version: 'latest'
           extended: true
 
+      # 第 2.5 步：为 go/git 模块下载配置凭据（支持 GITHUB_TOKEN 或 自定义 PAT 存在时使用）
+      - name: Configure credentials for downloading Hugo modules
+        env:
+          GITHUB_ACTOR: ${{ github.actor }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          MODULES_PAT: ${{ secrets.MODULES_PAT }} # 可选：如果你需要跨账号访问私有仓库，可建一个 PAT 存为 MODULES_PAT
+        run: |
+          set -e
+          # 如果仓库设置了 MODULES_PAT（个人访问令牌），优先使用它
+          if [ -n "$MODULES_PAT" ]; then
+            printf "machine github.com\nlogin x-access-token\npassword %s\n" "$MODULES_PAT" > ~/.netrc
+            git config --global url."https://x-access-token:${MODULES_PAT}@github.com/".insteadOf "https://github.com/"
+          else
+            # 否则尝试使用内置 GITHUB_TOKEN（仅在同账号/有权限的私有仓库可用）
+            printf "machine github.com\nlogin %s\npassword %s\n" "$GITHUB_ACTOR" "$GITHUB_TOKEN" > ~/.netrc
+            git config --global url."https://$GITHUB_ACTOR:$GITHUB_TOKEN@github.com/".insteadOf "https://github.com/"
+          fi
+          chmod 600 ~/.netrc
+
       # 第 3 步：下载并更新 Hugo 模块 (包括你的主题)
       - name: Update Hugo Modules
         run: hugo mod get -u
