@@ -39,6 +39,7 @@ jobs:
           extended: true
 
       # 第 2.5 步：为 go/git 模块下载配置凭据（支持 GITHUB_TOKEN 或 自定义 PAT 存在时使用）
+      # 保留此步骤以便在将来需要私有模块时使用；如果你直接把主题放到 themes/ 中，下面不再需要 hugo mod get
       - name: Configure credentials for downloading Hugo modules
         env:
           GITHUB_ACTOR: ${{ github.actor }}
@@ -57,13 +58,12 @@ jobs:
           fi
           chmod 600 ~/.netrc
 
-      # 第 3 步：下载并更新 Hugo 模块 (包括你的主题)
-      - name: Update Hugo Modules
-        run: hugo mod get -u
+      # 注意：已移除 “Update Hugo Modules (hugo mod get -u)” 步骤
+      # 因为你要把主题直接包含到站点 (themes/)，不再通过 Hugo modules 下载主题。
 
       # 第 4 步：执行 Hugo 构建，并强制忽略缓存
       - name: Build with Hugo
-        run: hugo --minify --ignoreCache # <--- 这里是唯一的修改
+        run: hugo --minify --ignoreCache
 
       # 第 5 步：配置 GitHub Pages
       - name: Setup Pages
