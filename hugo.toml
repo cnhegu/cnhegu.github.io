@@ -4,7 +4,7 @@
 
 baseURL = "https://www.hegu.me/"
 title = "何故小站"
-languageCode = "zh-CN"
+locale = "zh-cn"
 hasCJKLanguage = true
 
 # Copyright information (Markdown supported)
