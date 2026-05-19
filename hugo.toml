@@ -429,7 +429,7 @@ limitEntriesLimit = -1
 includeContent = true
 
 # Custom Footer (Supports Template and Markdown syntax)
-feedFooter = """> 阅读原文：<{{ .Permalink }}>
+feedFooter = """> 阅读原文：<{{ .Permalink }}>"""
 
 
 ######################################
