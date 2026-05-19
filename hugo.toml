@@ -4,7 +4,7 @@
 
 baseURL = "https://www.hegu.me/"
 title = "何故小站"
-languageCode = "en"
+languageCode = "zh-CN"
 hasCJKLanguage = true
 
 # Copyright information (Markdown supported)
@@ -337,7 +337,7 @@ favicon = "/favicon.ico"
 siteDescription = "何故的小站，记录生活、思考与写作"
 # Note: used for HTML head meta, JSON-LD, Open Graph, Atom, RSS
 
-siteCreatedTime = "2024-10-06T15:00:00+08:00"
+siteCreatedTime = "2025-10-06T15:00:00+08:00"
 # ATTENTION: keep this format, change the number
 
 
@@ -429,8 +429,7 @@ limitEntriesLimit = -1
 includeContent = true
 
 # Custom Footer (Supports Template and Markdown syntax)
-feedFooter = """> Read original: <{{ .Permalink }}>  
-> Notice: This blog now offers email subscriptions—feel free to [subscribe via Substack](https://username.substack.com) to support my work!"""
+feedFooter = """> 阅读原文：<{{ .Permalink }}>
 
 
 ######################################
