@@ -2,8 +2,9 @@
 title: "GitHub免费图床指南"
 date: 2025-07-21T12:35:00+08:00
 draft: false
-tags: ["图床","github","CDN加速"]
-categories: ["HugoTips"]
+tags: ["图床","CDN加速"]
+categories: ["技术笔记"]
+description: "本文详细教程：如何利用 GitHub 公开仓库搭配 jsDelivr CDN，零成本搭建一个免费、无限容量且高速稳定的专属博客图床。"
 ---
 
 第一步：创建一个新的、公开的图床仓库

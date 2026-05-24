@@ -685,7 +685,7 @@ hrefTargetBlank = true
 ######################################
 # Table of Contents
 
-enableTOC = false
+enableTOC = true
 
 displayTOCTitle = true
 
@@ -881,13 +881,13 @@ editText = "Edit Me?"
 ################3######################
 # Post Share
 
-enablePostShare = false
+enablePostShare = true
 
 displayPostShare = true
 
 displayShareOnText = false
 
-postShareItems = ["facebook", "mastodon", "fediverse", "x", "linkedin", "telegram", "weibo", "douban", "qq", "qzone", "pocket", "hackernews", "qrcode", "email"]
+postShareItems = ["facebook" , "x" , "telegram" , "douban" , "pocket"]
 
 fetchFediverseInstances = false
 
@@ -1099,4 +1099,3 @@ website = "https://www.hegu.me"
 [[module.imports]]
   path = "github.com/reuixiy/hugo-theme-meme"
   disable = false
-  

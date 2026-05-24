@@ -2,8 +2,8 @@
 title: "在Hugo中添加图片和视频"
 date: 2025-07-17T19:35:00+08:00
 draft: false
-tags: ["hugo","媒体内容","tips"]
-categories: ["HugoTips"]
+tags: ["hugo","tips"]
+categories: ["技术笔记"]
 description: "详细教程：如何在Hugo博客中添加和管理图片与视频，包括静态资源方法和页面捆绑方式，以及视频嵌入的最佳实践。"
 ---
 

@@ -2,9 +2,8 @@
 title: "Markdown基础语法精粹"
 date: 2025-07-25T16:56:03+08:00
 draft: false
-author: "Gemini"
-tags: ["markdown", "语法", "教程", "hugo"]
-categories: ["HugoTips"]
+tags: ["markdown","hugo"]
+categories: ["技术笔记"]
 description: "完整的Markdown语法指南，包括标题、文本样式、列表、链接、图片、代码块、表格等常用语法，帮助你快速掌握Markdown写作技能。"
 ---
 

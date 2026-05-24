@@ -3,7 +3,7 @@ title: "博客开张"
 date: 2025-07-17T15:00:00+08:00
 draft: false
 tags: ["life","blog"]
-categories: ["随笔"]
+categories: ["生活随笔"]
 description: "个人博客正式上线的开幕序言，记录从筹备到发布的心路历程，阐述建立这个数字小屋的初心和对未来创作的展望。"
 ---
 
