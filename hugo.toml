@@ -12,7 +12,7 @@ hasCJKLanguage = true
 copyright = "[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en)"
 
 # Name of theme
-theme = "hugo-theme-meme"
+theme = "meme"
 
 # Google Analytics (已启用)
 googleAnalytics = 'G-HS7L12NVNJ' 
