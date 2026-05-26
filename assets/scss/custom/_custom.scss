@@ -4,6 +4,21 @@
    --- */
 
 /* ===========================================
+   自定义主题色彩 (新增)
+   =========================================== */
+:root {
+    --color-link: #2a6df4;           /* 超链接颜色 (克莱因蓝) */
+    --color-link-hover: #1e52ba;     /* 超链接悬停颜色 */
+    --color-primary: #2a6df4;        /* 全局强调色 */
+}
+
+/* 针对暗黑模式（Dark Mode）的色彩微调 */
+[data-theme="dark"] {
+    --color-link: #6294f9;
+    --color-link-hover: #8eb1fa;
+}
+
+/* ===========================================
    文章内容排版优化 (核心)
    =========================================== */
 
@@ -36,6 +51,63 @@
    ------------------------------------------- */
 .post-content p:first-letter {
     text-transform: none;
+}
+
+
+/* ===========================================
+   交互动画与视觉增强 (新增)
+   =========================================== */
+
+/* 1. 正文区域超链接“平滑下划线”悬停动画
+   ------------------------------------------- */
+.post-body a {
+    text-decoration: none; /* 移除默认下划线 */
+    position: relative;
+    font-weight: 500;
+}
+
+.post-body a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: -2px;
+    left: 0;
+    background-color: var(--color-link);
+    transform-origin: bottom right;
+    transition: transform 0.3s ease-out;
+}
+
+.post-body a:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+/* 2. 顶部导航栏悬停上浮效果
+   ------------------------------------------- */
+.nav-item a {
+    transition: color 0.3s ease, transform 0.3s ease;
+    display: inline-block; /* 确保 transform 生效 */
+}
+
+.nav-item a:hover {
+    color: var(--color-link);
+    transform: translateY(-2px); /* 鼠标放上去微微上浮 2 像素 */
+}
+
+/* 3. 文章底部标签的呼吸感背景
+   ------------------------------------------- */
+.post-tags a {
+    transition: all 0.3s ease;
+    padding: 2px 8px;
+    border-radius: 4px;
+}
+
+.post-tags a:hover {
+    background-color: rgba(42, 109, 244, 0.08); /* 配合主色调的透明背景 */
+    color: var(--color-link);
+    transform: scale(1.05); /* 轻微放大 */
 }
 
 
@@ -185,4 +257,3 @@ figure.left {
         width: 60%;
     }
 }
-
