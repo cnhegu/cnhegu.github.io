@@ -19,15 +19,27 @@
 }
 
 /* ===========================================
+   全局字体栈优化 (新增)
+   =========================================== */
+body {
+    /* 优化中文字体显示，优先使用苹果/微软的现代无衬线体，阅读更干净 */
+    font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+    -webkit-font-smoothing: antialiased; /* 让字体在 Mac/iOS 屏幕上更平滑细腻 */
+}
+
+/* ===========================================
    文章内容排版优化 (核心)
    =========================================== */
 
-/* 1. 优化文章内文字体（段落）
+/* 1. 优化文章内文字体（段落）(已增加中文排版优化)
    - 略微增大字体，增加行高，让眼睛更放松
    ------------------------------------------- */
 .post-content p {
-    font-size: 1.1rem;    /* 从默认的 1rem 增大，约 17.6px */
-    line-height: 1.8;     /* 增加行间距，避免文字拥挤 */
+    font-size: 1.1rem;       /* 从默认的 1rem 增大，约 17.6px */
+    line-height: 1.8;        /* 增加行间距，避免文字拥挤 */
+    text-align: justify;     /* 【关键】中文两端对齐，右侧边缘更整齐 */
+    letter-spacing: 0.02em;  /* 【关键】极其微弱的字距拉开，降低汉字密集感 */
+    margin-bottom: 1.5em;    /* 确保段落之间有明确的分界留白 */
 }
 
 /* 2. 优化文章内容标题（H2, H3 子标题）
@@ -132,12 +144,27 @@
    界面元素样式微调
    =========================================== */
 
-/* 1. 调整文章主标题样式
-   - 减小字体大小并移除粗体效果
+/* 1. 调整文章主标题样式 (已重构)
+   - 修复视觉层级：主标题必须大于内文的 H2 (2rem)
    ------------------------------------------- */
+.post-title {
+    font-size: 2.2rem;       /* 显著增大主标题字号 */
+    font-weight: 600;        /* 恢复半粗体，压住全篇阵脚 */
+    line-height: 1.4;
+    text-align: center;      /* 主标题居中，提升阅读仪式感 */
+    margin-bottom: 0.8em;    /* 与正文拉开距离 */
+    color: var(--color-contrast-high); 
+}
+
 .post-title a {
-    font-size: 1.21rem;      /* 在 1.1rem 的基础上增加 10% */
-    font-weight: normal;     /* 关键：将字体粗细设置为 normal，移除粗体 */
+    font-size: inherit;      /* 继承父级大小，不要写死 */
+    font-weight: inherit;
+    color: inherit;
+    transition: color 0.3s ease;
+}
+
+.post-title a:hover {
+    color: var(--color-primary); /* 悬停时显示你的克莱因蓝色 */
 }
 
 /* 2. 提升文章元信息（日期、分类等）的颜色对比度
