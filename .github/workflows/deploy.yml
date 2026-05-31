@@ -1,5 +1,3 @@
-# .github/workflows/deploy.yml
-
 name: Deploy Hugo site to GitHub Pages
 
 on:
@@ -8,7 +6,7 @@ on:
       - main # 确保这是你的主分支名
   workflow_dispatch:
 
-# 关键：为工作流设置权限，使其可以部署到 GitHub Pages
+# 为工作流设置权限，使其可以部署到 GitHub Pages
 permissions:
   contents: read
   pages: write
@@ -20,9 +18,9 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  # 构建任务
+  # 构建任务（改回云端 Ubuntu 执行，速度极快且不会出错）
   build:
-    runs-on: self-hosted
+    runs-on: ubuntu-latest
     steps:
       # 第 1 步：检出你的仓库代码
       - name: Checkout
@@ -38,42 +36,19 @@ jobs:
           hugo-version: 'latest'
           extended: true
 
-      # 第 2.5 步：为 go/git 模块下载配置凭据
-      - name: Configure credentials for downloading Hugo modules
-        env:
-          GITHUB_ACTOR: ${{ github.actor }}
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          MODULES_PAT: ${{ secrets.MODULES_PAT }}
-        run: |
-          set -e
-          if [ -n "$MODULES_PAT" ]; then
-            printf "machine github.com\nlogin x-access-token\npassword %s\n" "$MODULES_PAT" > ~/.netrc
-            git config --global url."https://x-access-token:${MODULES_PAT}@github.com/".insteadOf "https://github.com/"
-          else
-            printf "machine github.com\nlogin %s\npassword %s\n" "$GITHUB_ACTOR" "$GITHUB_TOKEN" > ~/.netrc
-            git config --global url."https://$GITHUB_ACTOR:$GITHUB_TOKEN@github.com/".insteadOf "https://github.com/"
-          fi
-          chmod 600 ~/.netrc
-
-      # 第 3 步：在构建时把主题仓库检出到 themes/ 目录
+      # 第 3 步：直接克隆主题（精简了复杂的凭据验证，直接用官方 Action 检出）
       - name: Checkout theme repository into themes/
         uses: actions/checkout@v4
         with:
           repository: reuixiy/hugo-theme-meme
           path: themes/hugo-theme-meme
           fetch-depth: 1
-          token: ${{ secrets.GITHUB_TOKEN }}
 
       # 移除主题中的 .git 以避免嵌套 git 仓库问题
       - name: Remove theme .git directory
-        run: |
-          if [ -d "themes/hugo-theme-meme/.git" ]; then
-            rm -rf themes/hugo-theme-meme/.git
-          fi
+        run: rm -rf themes/hugo-theme-meme/.git
 
-      # ==========================================
-      # 新增步骤：缓存 Hugo 资源文件 (resources) 加快构建速度
-      # ==========================================
+      # 第 4 步：缓存 Hugo 资源文件 (resources) 加快构建速度
       - name: Cache Hugo resources
         uses: actions/cache@v3
         with:
@@ -82,16 +57,15 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-hugo-resources-
 
-      # 第 4 步：执行 Hugo 构建
-      # 已移除 --ignoreCache 参数，以确保缓存生效
+      # 第 5 步：执行 Hugo 构建
       - name: Build with Hugo
         run: hugo --minify
 
-      # 第 5 步：配置 GitHub Pages
+      # 第 6 步：配置 GitHub Pages
       - name: Setup Pages
         uses: actions/configure-pages@v5
 
-      # 第 6 步：将构建好的网站 (public 目录) 打包成构件
+      # 第 7 步：将构建好的网站打包成构件
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
@@ -105,7 +79,7 @@ jobs:
     runs-on: ubuntu-latest
     needs: build
     steps:
-      # 第 7 步：从构件部署到 GitHub Pages
+      # 第 8 步：从构件部署到 GitHub Pages
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
