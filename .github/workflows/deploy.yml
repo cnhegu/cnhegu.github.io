@@ -22,7 +22,7 @@ concurrency:
 jobs:
   # 构建任务
   build:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     steps:
       # 第 1 步：检出你的仓库代码
       - name: Checkout
