@@ -1,3 +1,5 @@
+# .github/workflows/deploy.yml
+
 name: Deploy Hugo site to GitHub Pages
 
 on:
@@ -70,13 +72,13 @@ jobs:
           fi
 
       # ==========================================
-      # 优化步骤：缓存 Hugo 资源文件 (resources) 加快构建速度
+      # 新增步骤：缓存 Hugo 资源文件 (resources) 加快构建速度
       # ==========================================
       - name: Cache Hugo resources
-        uses: actions/cache@v4
+        uses: actions/cache@v3
         with:
           path: resources
-          key: ${{ runner.os }}-hugo-resources-${{ hashFiles('**/config.*', 'themes/**') }}
+          key: ${{ runner.os }}-hugo-resources-${{ hashFiles('content/**') }}
           restore-keys: |
             ${{ runner.os }}-hugo-resources-
 
@@ -107,7 +109,3 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
-
-      # 修正缩进后的第 8 步：证明构建来源（增强安全性）
-      - name: Attest Build Provenance
-        uses: actions/attest-build-provenance@v1
