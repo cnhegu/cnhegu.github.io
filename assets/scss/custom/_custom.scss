@@ -147,8 +147,8 @@ body {
 /* 1. 调整文章主标题样式 (已重构)
    ------------------------------------------- */
 .post-title {
-    font-size: 1.5rem;       /* 减小主标题字号至一半 */
-    font-weight: normal;     /* 去除粗体格式 */
+    font-size: 1.5rem;       /* 保持主标题字号 */
+    font-weight: normal;     /* 保持无粗体格式 */
     line-height: 1.4;
     text-align: center;      /* 主标题居中，提升阅读仪式感 */
     margin-bottom: 0.8em;    /* 与正文拉开距离 */
